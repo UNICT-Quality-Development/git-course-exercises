@@ -1,19 +1,48 @@
 # git-course-exercises
 
-For each .cpp file you need to create a separate `branch`, be sure to create it from the `main` branch.
+### 1️⃣ How to start
 
-You need to use these commands:
-
+Fork this repository and clone your fork into your machine using:
 ```
-git add
-git rm
-
-git commit -m 'desc'
-
-git checkout -b new_branch_name
-git checkout branch_name
-
-git push -u origin branch_name
+git clone git@github.com:USERNAME/git-course-exercises.git
 ```
 
-Use them wisely.
+---
+
+### 2️⃣ How to make a branch
+
+To create a new `branch` from the main repository and work on a specific exercise (ex. `file.cpp`) you can use the following commands:
+```
+git checkout main
+
+git checkout -b new-branch-name
+```
+
+---
+
+### 3️⃣ How to make a commit
+
+From this step you can edit your `file.cpp` and makes some commits using:
+```
+git add modified-file.cpp
+
+git commit -m 'feat: description'
+```
+Use the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) when you write a commit description.
+
+---
+
+### 4️⃣ How to make a PR
+
+Push the commits into GitHub using:
+```
+git push -u origin new-branch-name
+```
+
+Afterwards, it is possible to create a Pull Request going to your fork `https://github.com/USERNAME/git-course-exercises.git` clicking on "create Pull Request" or going to the right section "Pull Request" -> "New Pull Request".
+
+If you want to work on another `file.cpp`, go to step 2️⃣.
+
+---
+
+Use git wisely.
