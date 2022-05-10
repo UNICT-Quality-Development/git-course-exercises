@@ -7,6 +7,11 @@ Fork this repository and clone your fork into your machine using:
 git clone git@github.com:USERNAME/git-course-exercises.git
 ```
 
+enter to your project directory using:
+```
+cd git-course-exercises
+```
+
 ---
 
 ### 2️⃣ How to make a branch
@@ -22,9 +27,9 @@ git checkout -b new-branch-name
 
 ### 3️⃣ How to make a commit
 
-From this step you can edit your `file.cpp` and makes some commits using:
+From this step you can edit your `file.cpp` and make some commits using:
 ```
-git add modified-file.cpp
+git add exercises/file.cpp
 
 git commit -m 'feat: description'
 ```
@@ -39,7 +44,7 @@ Push the commits into GitHub using:
 git push -u origin new-branch-name
 ```
 
-Afterwards, it is possible to create a Pull Request going to your fork `https://github.com/USERNAME/git-course-exercises.git` clicking on "create Pull Request" or going to the right section "Pull Request" -> "New Pull Request".
+Afterward, it is possible to create a Pull Request by going to your fork `https://github.com/USERNAME/git-course-exercises.git` clicking on "create Pull Request" or going to the right section "Pull Request" -> "New Pull Request".
 
 If you want to work on another `file.cpp`, go to step 2️⃣.
 
