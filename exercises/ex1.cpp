@@ -3,15 +3,9 @@
 #include <iostream>
 using namespace std;
 
-int main()
+void getDayOfTheWeek(int day)
 {
-  int week;
-
-  /* Input week number from user */
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
-
-  switch (week)
+  switch (day)
   {
   case 1:
     cout << "Monday" << endl;
@@ -39,6 +33,15 @@ int main()
     cout << "Invalid input! Please enter week number between 1-7." << endl;
     break;
   }
+}
+
+int main()
+{
+  int week;
+  /* Input week number from user */
+  cout << "Enter week number(1-7): " << endl;
+  cin >> week;
+  getDayOfTheWeek(week);
 
   return 0;
 }
