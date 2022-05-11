@@ -14,12 +14,17 @@ double sum(double n1, double n2){
 	return n1 + n2;
 }
 
+double getNumber(){
+	double n;
+	cout << "Insert a number: ";
+        cin >> n;
+	return n;
+}
+
 int main(){
 	double n1, n2;
-	cout<<"Insert the first number: ";
-	cin>>n1;
-	cout<<"Insert the second number: ";
-	cin>>n2;
-	cout<<"Sum: "<<sum(n1,n2);
+	n1 = getNumber();
+	n2 = getNumber();
+	cout << "Sum: " << sum(n1,n2);
 	return 0;
 }
