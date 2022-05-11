@@ -6,7 +6,7 @@
   Insert the second number: 2
   Sum: 3
 */
-#include <iostrema>
+#include <iostream>
 using namespace std;
 
 int sum(int a, int b){
