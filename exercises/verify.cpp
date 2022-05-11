@@ -15,16 +15,15 @@ int main()
   int numberToFind;
 
   cout<<"Insert number ";
-  cin>>numberToFind<<endl;
+  cin>>numberToFind;
 
-  cout<<numberToFind;
 
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int N[10] = { 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 };
 
   for(int i=0;i<10;i++){
     if(N[i]==numberToFind){
-      cout<<"The number 3 is present in the predefined array"<<endl;
+      cout<<"The number "<<numberToFind<<" is present in the predefined array"<<endl;
       return 0;
     }
   }
