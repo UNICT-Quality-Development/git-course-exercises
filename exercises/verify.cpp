@@ -14,5 +14,9 @@ int main()
   // placeholder
   int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
 
+  for(int i=0;i<10;i++){
+    if(N[i]==3) return 1;
+  }
+
   return 0;
 }
