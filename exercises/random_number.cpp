@@ -10,6 +10,7 @@
 using namespace std;
 
 int main(){
-	int num = rand()%10;
+	srand(111222333444);
+	int num = rand();
 	cout << "The random number is : " << num << endl;
 	}
