@@ -32,4 +32,5 @@ int main(){
 	cout << "\nNon è possibile dividere per 0" << endl;
 	}
 	cout << "\nSum = " << x + y << endl << "\nDiff = " << x - y << endl << "\nMult = " << x * y << endl;
+	return 0;
 }
