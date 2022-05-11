@@ -10,6 +10,14 @@
 using namespace std;
 
 int* toBinary(int n){
+  int* binaryNumber = new int[20];
+  int i = 0;
+  while (n != 0){
+    binaryNumber[i] = n%2;
+    i++;
+    n /= 2;
+  }
+  return binaryNumber;
 
 }
 
