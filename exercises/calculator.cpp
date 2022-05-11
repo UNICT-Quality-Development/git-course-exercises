@@ -49,4 +49,6 @@ int main() {
 
     cout << "division: " << a/b << endl;
   }
+
+  return 0;
 }
