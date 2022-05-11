@@ -9,23 +9,29 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
+void requestInput(int *numberToBeVerified) {
+  cout << "Insert number: ";
+  cin >> *numberToBeVerified;
+}
+
+void lookForNumber(int *defaultArray, int numberToBeVerified) {
+  for (int i=0; i<10; i++) {
+    if (defaultArray[i] == numberToBeVerified) {
+      return;
+    }
+  }
+  cout << " not";
+}
+
 int main() {
   // placeholder
   int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
   int verify;
-  bool isPresent = false;
 
-  cout << "Insert number: ";
-  cin >> verify;
-  
-  for (int i=0; i<10 && !isPresent; i++) {
-    isPresent = N[i] == verify;
-  }
+  requestInput(&verify);
 
   cout << "The number " << verify << " is";
-  if (!isPresent) {
-    cout << " not"; 
-  }
+  lookForNumber(N, verify);
   cout << " present in the array.\n";
 
   return 0;
