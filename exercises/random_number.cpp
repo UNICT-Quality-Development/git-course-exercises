@@ -12,5 +12,5 @@ int genRandomNum(int range){
 }
 int main(){
   srand(time(NULL));
-  cout<<"The random number is "<<genRandomNum()<<"\n";
+  cout<<"The random number is "<<genRandomNum(10)<<"\n";
 }
