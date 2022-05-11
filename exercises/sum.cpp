@@ -17,5 +17,4 @@ int main() {
 	cin >> y;
 	s = x+y;
 	cout << "Sum: " << s;
-	return 0;
 }
