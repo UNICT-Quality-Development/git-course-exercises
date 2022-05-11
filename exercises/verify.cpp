@@ -11,8 +11,16 @@ using namespace std;
 
 int main()
 {
-  // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  bool find=false;
+  int n;
+  int N[10] = { 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 };
+  cout<< "insert number to verify"<<endl;
+  cin>>n;
+  for (int i=0;i<10;i++){
+	if(N[i]==n) find=true;
+  }
+  if(find) cout<<"the number "<<n<<" is present in the array"<<endl;
+  else cout<<"the number "<<n<<" is not present in the array"<<endl;
 
   return 0;
 }
