@@ -15,7 +15,6 @@ using namespace std;
 
 
 string toBinary(int num) {
-  //stringstream ss;
   string bin;
 
   if(num/2 == 0) {
