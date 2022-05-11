@@ -6,3 +6,13 @@
   Insert the second number: 2
   Sum: 3
 */
+#include <iostrema>
+using namespace std;
+
+int sum(int a, int b){
+	return a+b;
+}
+
+int main(){
+	cout<<sum(1, 2)<<endl;
+}
