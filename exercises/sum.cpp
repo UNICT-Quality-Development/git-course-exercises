@@ -13,12 +13,12 @@ using namespace std;
 int main()
 {
     int a,b;
-    cout<<"Input A"<<endl;
-    cin>>a;
-    cout<<"Input B"<<endl;
-    cin>>b;
+    cout << "Input A" << endl;
+    cin >> a;
+    cout << "Input B" << endl;
+    cin >> b;
 
-    cout<<"Sum:"<<a+b<<endl;
+    cout << "Sum:" << a+b << endl;
 
     return 0;
 }
