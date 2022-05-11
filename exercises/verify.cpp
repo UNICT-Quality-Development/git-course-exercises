@@ -12,7 +12,21 @@ using namespace std;
 int main()
 {
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+  int num;
+
+  cout << "Insert a number: ";
+  cin >> num;
+
+  bool found = false;
+  for(int i = 0; i < 10; i++){
+     if(N[i] == num){
+      found = true;
+      break;
+     }
+  }
+
+  cout << "The number " << num << ((found) ? " is":" is not") << " present in the array!" << endl;
 
   return 0;
 }
