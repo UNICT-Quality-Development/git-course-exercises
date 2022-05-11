@@ -15,7 +15,7 @@ int main()
   int numberToFind;
 
   cout<<"Insert number ";
-  cin>>numberToFind;
+  cin>>numberToFind<<endl;
 
   cout<<numberToFind;
 
@@ -24,12 +24,12 @@ int main()
 
   for(int i=0;i<10;i++){
     if(N[i]==numberToFind){
-      cout<<"The number 3 is present in the predefined array";
+      cout<<"The number 3 is present in the predefined array"<<endl;
       return 0;
     }
   }
 
-  cout<<"The number "<<numberToFind<<" is [not] present in the array";
+  cout<<"The number "<<numberToFind<<" is [not] present in the array"<<endl;
 
   return 0;
 }
