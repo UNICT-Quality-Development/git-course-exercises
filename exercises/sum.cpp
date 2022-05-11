@@ -12,9 +12,9 @@ using namespace std;
 
 int main(){
   int a, b;
-  cout << "Insert first number:" << endl;
+  cout << "Insert first number:" ;
   cin >> a;
-  cout << "Insert second number:" << endl;
+  cout << "Insert second number:" ;
   cin >> b;
   cout << "the sum is:" << a + b;
 }
