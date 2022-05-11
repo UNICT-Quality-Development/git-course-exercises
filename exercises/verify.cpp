@@ -9,10 +9,32 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
-int main()
-{
+bool checkingArray(int key, int arr[], int length) {
+  bool found = false;
+  
+  for(int i=0; i<length; i++) {
+    if(arr[i] == key) {
+      found = true;
+      break;
+    }
+  }
+  return found;
+}
+
+
+int main() {
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+  int num;
+
+  cout << "Insert number: ";
+  cin >> num;
+
+  if(checkingArray(num, N, 10))
+    cout << "The number " << num << " is present in the array";
+  else 
+    cout << "The number " << num << " is not present in the array";
+
 
   return 0;
 }
