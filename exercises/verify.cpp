@@ -29,14 +29,7 @@ int main() {
 
   cout << "Insert number: ";
   cin >> num;
-
- /* if(checkingArray(num, N, 10))
-    cout << "The number " << num << " is present in the array";
-  else 
-    cout << "The number " << num << " is not present in the array";*/
-
   
-  checkingArray(num, N, 10) ? cout << "The number " << num << " is present in the array": cout << "The number " << num << " is not present in the array";
-
+  cout << "The number " << num << " is " << (checkingArray(num, N, DIM) ? "" : "not ") << "present in the array" << endl;
   return 0;
 }
