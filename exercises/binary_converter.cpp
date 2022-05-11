@@ -21,18 +21,22 @@ int* toBinary(int n){
 
 }
 
+void printnumber(int bin[20]){
+  bool flag = false;
+  for(int i  = 19; i >= 0; i--){
+    if(bin[i] == 1) flag = true;
+    if(flag){
+      cout << bin[i];
+    }
+  }
+  return;
+}
+
 int main(){
     int n;
     cout << "decimal number: " << endl;
     cin >> n;
     int* bin = toBinary(n);
     cout << endl;
-    bool flag = false;
-    for(int i  = 19; i >= 0; i--){
-      if(bin[i] == 1) flag = true;
-      if(flag){
-        cout << bin[i];
-      }
-    }
-
+    printnumber(bin);
 }
