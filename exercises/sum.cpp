@@ -10,6 +10,9 @@
 #include <iostream>
 using namespace std;
 
+
+int sum(int x, int y);
+
 int main()
 {
     int a,b;
@@ -18,7 +21,12 @@ int main()
     cout << "Input B" << endl;
     cin >> b;
 
-    cout << "Sum:" << a+b << endl;
+    cout << "Sum: " << sum(a,b) << endl;
 
     return 0;
+}
+
+int sum(int x, int y)
+{
+  return x+y;
 }
