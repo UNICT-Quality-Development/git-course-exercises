@@ -25,5 +25,10 @@ int main(){
     int n;
     cout << "decimal number: " << endl;
     cin >> n;
-    toBinary(n);
+    int* bin = toBinary(n);
+    cout << endl;
+    for(int i  = 19; i >= 0; i--){
+      cout <<bin[i];
+    }
+
 }
