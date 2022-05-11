@@ -27,8 +27,12 @@ int main(){
     cin >> n;
     int* bin = toBinary(n);
     cout << endl;
+    bool flag = false;
     for(int i  = 19; i >= 0; i--){
-      cout <<bin[i];
+      if(bin[i] == 1) flag = true;
+      if(flag){
+        cout << bin[i];
+      }
     }
 
 }
