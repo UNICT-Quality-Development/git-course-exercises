@@ -11,10 +11,8 @@ using namespace std;
 
 template<typename T>
 void find(T A[],short N, T val){
-	bool found = false;
 	for(int i=0; i<N; i++){
 		if(A[i] == val){
-		found = true;
 		cout << "Element Found" << endl;
 		return;
 		}
