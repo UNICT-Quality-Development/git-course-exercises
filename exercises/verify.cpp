@@ -9,10 +9,23 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
+void verify(int array[],int dim, int val){
+	bool found=false;
+	for(int i=0; i<dim; i++){
+		if(array[i] == val){
+			cout << "Il valore è stato trovato alla poszione " << i << endl;
+			found=true;
+			break;
+		}
+	}
+	if(!found)
+		cout << "Il valore non è stato trovato" << endl;
+}
+
 int main()
 {
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int N[10] = { 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 };
 
-  return 0;
+  verify(N, 10, 3);
 }
