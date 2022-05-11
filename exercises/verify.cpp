@@ -11,12 +11,25 @@ using namespace std;
 
 int main()
 {
+  
+  int numberToFind;
+
+  cout<<"Insert number ";
+  cin>>numberToFind;
+
+  cout<<numberToFind;
+
   // placeholder
   int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
 
   for(int i=0;i<10;i++){
-    if(N[i]==3) return 1;
+    if(N[i]==numberToFind){
+      cout<<"The number 3 is present in the predefined array";
+      return 0;
+    }
   }
+
+  cout<<"The number "<<numberToFind<<" is [not] present in the array";
 
   return 0;
 }
