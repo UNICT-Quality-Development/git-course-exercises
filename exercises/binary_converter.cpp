@@ -5,3 +5,17 @@
   Insert first number: 8
   The binary number is: 1000
 */
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int* toBinary(int n){
+
+}
+
+int main(){
+    int n;
+    cout << "decimal number: " << endl;
+    cin >> n;
+    toBinary(n);
+}
