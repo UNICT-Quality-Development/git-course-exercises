@@ -27,3 +27,54 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+string check_win(int a, int b)
+{
+    if (a > b)
+        return "red win";
+    return "blue win";
+}
+
+void print_results(int red[], int blue[])
+{
+    cout << "M " << red[0] << " vs " << blue[0] << " => " << check_win(red[0], blue[0]) << endl;
+    cout << "N " << red[1] << " vs " << blue[1] << " => " << check_win(red[1], blue[1]) << endl;
+    cout << "O " << red[2] << " vs " << blue[2] << " => " << check_win(red[2], blue[2]) << endl;
+}
+
+void roll_dices(int a[], int n)
+{
+    for (int i = 0; i < n; i++)
+        a[i] = (rand() % 6) + 1;
+}
+
+void bubble_sort(int a[])
+{
+    for (int i = 0; i < 3; i++)
+        for (int j = i + 1; j < 3; j++)
+            if (a[i] < a [j])
+            {
+                int tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+}
+
+int main()
+{
+    srand(time(NULL));
+
+    int red[3], blue[3];
+    roll_dices(red, 3);
+    roll_dices(blue, 3);
+
+    bubble_sort(red);
+    bubble_sort(blue);
+
+    print_results(red, blue);
+}
