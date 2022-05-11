@@ -41,4 +41,6 @@ int main() {
   cin >> num;
 
   cout << "The binary number is: " << toBinary(num) << endl;
+
+  return 0;
 }
