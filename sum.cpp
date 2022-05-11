@@ -9,7 +9,7 @@ int main(){
     cin >> x;
     cout << "inserisci il secondo numero intero";
     cin >> y;
-    cout <<"la somma di due valori è: " << sum(x, y) << endl;
+    cout <<"la somma di due valori è: " << sum(x, y) <<endl;
 }
 
 int sum(int x, int y){
