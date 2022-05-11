@@ -14,26 +14,22 @@
 
 using namespace std;
 
+
+double get(){
+	double val;
+	cout << "\nInsert Value " << endl;
+	cin >> val;
+	return val;
+}
 int main(){
 
-	int x,y;
+	double x = get();
+	double y = get();
 
-	cout << "Insert First Number" << endl;
-	cin >> x;
-
-	cout << "Insert Second Number" << endl;
-	cin >> y;
-
-	int Sum = 0, Diff = 0, Mult = 0;
-	double Div = 0.0;
-	Sum = x + y;
-	Diff = x - y;
-	Mult = x * y;
 	if(y != 0 ){
-	Div = (double)x/(double)y;
-	cout << "Div = " << Div;
+	cout << "\nDiv = " << (double)x/y << endl;
 	} else {
-	cout << "Non è possibile dividere per 0" << endl;
+	cout << "\nNon è possibile dividere per 0" << endl;
 	}
-	cout << "Sum = " << Sum << endl << "Diff = " << Diff << endl << "Mult = " << Mult << endl;
+	cout << "\nSum = " << x + y << endl << "\nDiff = " << x - y << endl << "\nMult = " << x * y << endl;
 }
