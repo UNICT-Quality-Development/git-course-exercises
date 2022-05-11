@@ -14,23 +14,24 @@
 
 #include<iostream>
 
-
 using namespace std;
+
+void insertNumber(int& a) {
+  cout << "Insert number: ";
+  cin >> a;
+  cout << endl;
+}
 
 
 int main() {
   
-  int a,b;
+  int a, b;
 
   //Inserting first number
-  cout << "Insert first number: ";
-  cin >> a;
-  cout << endl;
+  insertNumber(a);
 
   //Inserting second number
-  cout << "Insert second number: ";
-  cin >> b;
-  cout << endl;
+  insertNumber(b);
 
   cout << "Insert first number: " << a << "\n Insert second number: " << b << endl << endl;
 
@@ -38,9 +39,9 @@ int main() {
   cout << "difference: " << a-b << endl;
   cout << "multiplication: " << a*b << endl;
 
-  if(b!=0)
+  if (b!=0) {
     cout << "division: " << a/b << endl;
-  else {
+  } else {
     do{
     cout << "Impossible division by zero!\n Insert new divider: ";
     cin >> b; 
