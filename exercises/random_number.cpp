@@ -14,14 +14,14 @@
 
 using namespace std;
 
-
 int main() {
   
   srand(time(0));
 
-  //Generating the random number
+  // Generating the random number
   int random_num = rand()%RAND_MAX;
 
   cout << "The random number is: " << random_num << endl;
 
+  return 0;
 }
