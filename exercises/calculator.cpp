@@ -33,4 +33,5 @@ int main(){
 	}
 
 	cout << "\nSum = " << x + y << endl << "\nDiff = " << x - y << endl << "\nMult = " << x * y << endl;
+	return 0;
 }
