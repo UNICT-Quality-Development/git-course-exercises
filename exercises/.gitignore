@@ -1,3 +1,7 @@
 *.out
 *.exe
+<<<<<<< HEAD
 
+=======
+.vscode/
+>>>>>>> origin
