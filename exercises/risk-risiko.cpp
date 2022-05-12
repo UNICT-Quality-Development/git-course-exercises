@@ -29,13 +29,13 @@
 */
 #include <iostream>
 using namespace std;
-//The number of faces of each dice
+// The number of faces of each dice
 #define DICES_FACES_NUM 6
-//The number of dices
+// The number of dices
 #define DICES_NUM 3
-//The number of labels to be printed
+// The number of labels to be printed
 #define LABELS_NUM 4
-//The labels for the scoreboard
+// The labels for the scoreboard
 char labels[] = {'N', 'M', 'O', 'E'};
 class Dice
 {
@@ -97,7 +97,7 @@ void printDices(int *player1, int *player2)
     i < LABELS_NUM ? cout << labels[i] : cout << labels[LABELS_NUM - 1];
     cout << ")" << endl;
   }
-  cout<<endl;
+  cout << endl;
   cout << "Blue dices:" << endl;
   for (int i = 0; i < DICES_NUM; i++)
   {
@@ -105,7 +105,7 @@ void printDices(int *player1, int *player2)
     i < LABELS_NUM ? cout << labels[i] : cout << labels[LABELS_NUM - 1];
     cout << ")" << endl;
   }
-  cout<<endl;
+  cout << endl;
 }
 
 void gameEsit(int *player1, int *player2)
