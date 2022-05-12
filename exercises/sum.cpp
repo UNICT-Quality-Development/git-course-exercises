@@ -11,23 +11,18 @@
 using namespace std;
 
 template<typename T>
-T sum(T a, T b){
+T sum(T &a, T &b){
 	return a + b;
 };
 
-
-int get(){
-	int x;
-	cout << "\nInsert Value" << endl;
-	cin >> x;
-	return x;
-}
-
-
-
 int main(){
 
-	int a = get(), b = get();
+	int a, b;
+	cout << "\nInsert Value" << endl;
+	cin >> a;
+	
+	cout << "Insert Value" << endl;
+	cin >> b;
 
 	cout << "Sum  = " << sum(a, b) << endl;
 	return 0;
