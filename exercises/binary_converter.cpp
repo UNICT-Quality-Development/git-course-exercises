@@ -31,10 +31,10 @@ int get(){
 
 int main(){
 
-cout << "\nHello";
+  cout << "\nHello";
 
-int y = get();
+  int y = get();
 
-cout << "\nThe Binary Value is : " << Binary(y) << endl;
+  cout << "\nThe Binary Value is : " << Binary(y) << endl;
 
 }
