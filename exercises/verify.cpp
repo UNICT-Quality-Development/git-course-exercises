@@ -9,10 +9,29 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
+bool check(int array[], int dim, int number)
+{
+  for (int i = 0; i < dim; i++)
+  {
+    if (array[i] == number)
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
 int main()
 {
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int DIM = 10;
+  int N[DIM] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+  int number;
+
+  cout << "Insert number: ";
+  cin >> number;
+
+  cout << "The number " << number << " is " << (check(N, DIM, number) ? "" : "not ") << "present in the array." << endl;
 
   return 0;
 }
