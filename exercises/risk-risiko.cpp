@@ -35,9 +35,7 @@ using namespace std;
 
 string check_win(int a, int b)
 {
-    if (a > b)
-        return "red win";
-    return "blue win";
+    return a < b ? "red win" : "blue win";
 }
 
 void print_results(int red[], int blue[])
@@ -50,19 +48,25 @@ void print_results(int red[], int blue[])
 void roll_dices(int a[], int n)
 {
     for (int i = 0; i < n; i++)
+    {
         a[i] = (rand() % 6) + 1;
+    }
 }
 
 void bubble_sort(int a[])
 {
     for (int i = 0; i < 3; i++)
+    {
         for (int j = i + 1; j < 3; j++)
+        {
             if (a[i] < a [j])
             {
                 int tmp = a[i];
                 a[i] = a[j];
                 a[j] = tmp;
-            }
+            }    
+        }
+    }
 }
 
 int main()
