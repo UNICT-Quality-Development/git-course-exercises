@@ -29,13 +29,21 @@
 */
 #include <iostream>
 using namespace std;
+//The number of faces of each dice
+#define DICES_FACES_NUM 6
+//The number of dices
+#define DICES_NUM 3
+//The number of labels to be printed
+#define LABELS_NUM 4
+//The labels for the scoreboard
+char labels[] = {'N', 'M', 'O', 'E'};
 class Dice
 {
 public:
   int value;
-  Dice(int n)
+  Dice()
   {
-    value = (rand() % n) + 1;
+    value = (rand() % DICES_FACES_NUM) + 1;
   }
 };
 
@@ -50,7 +58,7 @@ int getMaxIndex(Dice *dice_array)
 {
   int max, k;
   max = k = 0;
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < DICES_NUM; i++)
   {
     if (max < dice_array[i].value)
     {
@@ -68,11 +76,11 @@ int getMaxFromIndex(int index, Dice *dice_array)
   return tmp;
 }
 
-int *getMax3(Dice *dice_array)
+int *getMax(Dice *dice_array)
 {
-  int *res = new int[3];
+  int *res = new int[DICES_NUM];
   int k = 0;
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < DICES_NUM; i++)
   {
     k = getMaxIndex(dice_array);
     res[i] = getMaxFromIndex(k, dice_array);
@@ -83,22 +91,31 @@ int *getMax3(Dice *dice_array)
 void printDices(int *player1, int *player2)
 {
   cout << "Red dices:" << endl;
-  cout << player1[0] << " (N)" << endl;
-  cout << player1[1] << " (M)" << endl;
-  cout << player1[2] << " (O)" << endl;
-  cout << endl;
+  for (int i = 0; i < DICES_NUM; i++)
+  {
+    cout << player1[i] << " (";
+    i < LABELS_NUM ? cout << labels[i] : cout << labels[LABELS_NUM - 1];
+    cout << ")" << endl;
+  }
+  cout<<endl;
   cout << "Blue dices:" << endl;
-  cout << player2[0] << " (N)" << endl;
-  cout << player2[1] << " (M)" << endl;
-  cout << player2[2] << " (O)" << endl;
+  for (int i = 0; i < DICES_NUM; i++)
+  {
+    cout << player2[i] << " (";
+    i < LABELS_NUM ? cout << labels[i] : cout << labels[LABELS_NUM - 1];
+    cout << ")" << endl;
+  }
+  cout<<endl;
 }
 
 void gameEsit(int *player1, int *player2)
 {
+
   cout << "\tR\tB" << endl;
-  for (int i = 0; i < 3; i++)
+  for (int i = 0; i < DICES_NUM; i++)
   {
-    cout << "N\t" << player1[i] << "\t" << player2[i] << "\t=> ";
+    i < LABELS_NUM ? cout << labels[i] : cout << labels[LABELS_NUM - 1];
+    cout << "\t" << player1[i] << "\t" << player2[i] << "\t=> ";
     player2[i] >= player1[i] ? cout << "blue win" : cout << "red win";
     cout << endl;
   }
@@ -107,10 +124,10 @@ void gameEsit(int *player1, int *player2)
 int main()
 {
   srand(current_time_nanoseconds());
-  Dice red_array[] = {Dice(6), Dice(6), Dice(6)};
-  Dice blue_array[] = {Dice(6), Dice(6), Dice(6)};
-  int *redMax = getMax3(red_array);
-  int *blueMax = getMax3(blue_array);
+  Dice *red_array = new Dice[DICES_NUM];
+  Dice *blue_array = new Dice[DICES_NUM];
+  int *redMax = getMax(red_array);
+  int *blueMax = getMax(blue_array);
   printDices(redMax, blueMax);
   gameEsit(redMax, blueMax);
   return 0;
