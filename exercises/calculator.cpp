@@ -27,11 +27,11 @@ int main(){
 	double y = get();
 
 	if(y != 0 ){
-		cout << "\nDiv = " << (double)x/y << endl;
+		cout << "\n Div = " << (double)x/y << endl;
 	} else {
-		cout << "\nNon è possibile dividere per 0" << endl;
+		cout << "\n Non è possibile dividere per 0" << endl;
 	}
 
-	cout << "\nSum = " << x + y << endl << "\nDiff = " << x - y << endl << "\nMult = " << x * y << endl;
+	cout << "\n Sum = " << x + y << endl << "\n Diff = " << x - y << endl << "\n Mult = " << x * y << endl;
 	return 0;
 }
