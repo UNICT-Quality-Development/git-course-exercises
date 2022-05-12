@@ -7,7 +7,7 @@ The number 3 is [not] present in the array.
 */
 
 #include <iostream>
-#define arraySize 10
+#define ARRAY_SIZE 10
 
 using namespace std;
 
@@ -17,7 +17,7 @@ void requestInput(int *numberToBeVerified) {
 }
 
 bool isForNumber(int *defaultArray, int numberToBeVerified) {
-  for (int i = 0; i < arraySize; i++) {
+  for (int i = 0; i < ARRAY_SIZE; i++) {
     if (defaultArray[i] == numberToBeVerified) {
       return true;
     }
@@ -28,7 +28,7 @@ bool isForNumber(int *defaultArray, int numberToBeVerified) {
 
 int main() {
   // placeholder
-  int N[arraySize] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+  int N[ARRAY_SIZE] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
   int verify;
 
   requestInput(&verify);
