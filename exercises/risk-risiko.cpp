@@ -81,4 +81,6 @@ int main()
     bubble_sort(blue);
 
     print_results(red, blue);
+
+    return 0;
 }
