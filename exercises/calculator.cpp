@@ -26,7 +26,7 @@ int main(){
 	double x = get();
 	double y = get();
 
-	if(y != 0 ){
+	if (y != 0 ) {
 		cout << "\n Div = " << (double)x/y << endl;
 	} else {
 		cout << "\n Non è possibile dividere per 0" << endl;
