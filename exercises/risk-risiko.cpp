@@ -46,46 +46,37 @@ int current_time_nanoseconds()
   return tm.tv_nsec;
 }
 
+int getMaxIndex(Dice *dice_array)
+{
+  int max, k;
+  max = k = 0;
+  for (int i = 0; i < 3; i++)
+  {
+    if (max < dice_array[i].value)
+    {
+      max = dice_array[i].value;
+      k = i;
+    }
+  }
+  return k;
+}
+
+int getMaxFromIndex(int index, Dice *dice_array)
+{
+  int tmp = dice_array[index].value;
+  dice_array[index].value = 0;
+  return tmp;
+}
+
 int *getMax3(Dice *dice_array)
 {
-  int max1, max2, max3;
-  max1 = max2 = max3 = 0;
-
+  int *res = new int[3];
   int k = 0;
   for (int i = 0; i < 3; i++)
   {
-    if (max1 < dice_array[i].value)
-    {
-      max1 = dice_array[i].value;
-      k = i;
-    }
+    k = getMaxIndex(dice_array);
+    res[i] = getMaxFromIndex(k, dice_array);
   }
-  dice_array[k].value = 0;
-  k = 0;
-
-  for (int i = 0; i < 3; i++)
-  {
-    if (max2 < dice_array[i].value)
-    {
-      max2 = dice_array[i].value;
-      k = i;
-    }
-  }
-  dice_array[k].value = 0;
-
-  k = 0;
-  for (int i = 0; i < 3; i++)
-  {
-    if (max3 < dice_array[i].value)
-    {
-      max3 = dice_array[i].value;
-      k = i;
-    }
-  }
-  int *res = new int[3];
-  res[0] = max1;
-  res[1] = max2;
-  res[2] = max3;
   return res;
 }
 
@@ -108,8 +99,8 @@ void gameEsit(int *player1, int *player2)
   for (int i = 0; i < 3; i++)
   {
     cout << "N\t" << player1[i] << "\t" << player2[i] << "\t=> ";
-    player2[i] >= player1[i] ? cout<<"blue win" : cout<<"red win"; 
-    cout<<endl;
+    player2[i] >= player1[i] ? cout << "blue win" : cout << "red win";
+    cout << endl;
   }
 }
 
