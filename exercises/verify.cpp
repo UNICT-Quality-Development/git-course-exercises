@@ -7,12 +7,28 @@ The number 3 is [not] present in the array.
 */
 
 #include <iostream>
+#define DIM 10
+
 using namespace std;
 
-int main()
-{
-  // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+bool checkingArray(int key, int arr[], int length) {
 
-  return 0;
+    for (int i = 0; i < length; i++) {
+        if (arr[i] == key) {
+            return true;
+        }
+    }
+    return false;
+}
+
+int main() {
+    // placeholder
+    int N[DIM] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+    int num;
+
+    cout << "Insert number: ";
+    cin >> num;
+
+    cout << "The number " << num << " is " << (checkingArray(num, N, DIM) ? "" : "not ") << "present in the array" << endl;
+    return 0;
 }
