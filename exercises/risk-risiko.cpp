@@ -52,7 +52,7 @@ int *getMax3(Dice *dice_array)
   max1 = max2 = max3 = 0;
 
   int k = 0;
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 3; i++)
   {
     if (max1 < dice_array[i].value)
     {
@@ -63,7 +63,7 @@ int *getMax3(Dice *dice_array)
   dice_array[k].value = 0;
   k = 0;
 
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 3; i++)
   {
     if (max2 < dice_array[i].value)
     {
@@ -74,7 +74,7 @@ int *getMax3(Dice *dice_array)
   dice_array[k].value = 0;
 
   k = 0;
-  for (int i = 0; i < 6; i++)
+  for (int i = 0; i < 3; i++)
   {
     if (max3 < dice_array[i].value)
     {
@@ -108,18 +108,16 @@ void gameEsit(int *player1, int *player2)
   for (int i = 0; i < 3; i++)
   {
     cout << "N\t" << player1[i] << "\t" << player2[i] << "\t=> ";
-    if (player2[i] >= player1[i])
-      cout << "blue win" << endl;
-    else
-      cout << "red win" << endl;
+    player2[i] >= player1[i] ? cout<<"blue win" : cout<<"red win"; 
+    cout<<endl;
   }
 }
 
 int main()
 {
   srand(current_time_nanoseconds());
-  Dice red_array[] = {Dice(6), Dice(6), Dice(6), Dice(6), Dice(6), Dice(6)};
-  Dice blue_array[] = {Dice(6), Dice(6), Dice(6), Dice(6), Dice(6), Dice(6)};
+  Dice red_array[] = {Dice(6), Dice(6), Dice(6)};
+  Dice blue_array[] = {Dice(6), Dice(6), Dice(6)};
   int *redMax = getMax3(red_array);
   int *blueMax = getMax3(blue_array);
   printDices(redMax, blueMax);
