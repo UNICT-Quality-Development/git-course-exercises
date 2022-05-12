@@ -9,22 +9,26 @@
 
 using namespace std;
 
-string Binary(int val){
+void Binary(int val){
   string Bin = "";
+  int cont = 0;
   while(val>0){
     if(val%2 == 0){
         Bin += '0';
     } else {
         Bin += '1';
     }
+    cont++;
     val/=2;
   }
-  return Bin;
+  for(int i=cont; i>=0; i--){
+    cout << Bin[i];
+  }
 }
 
 int get(){
   int x;
-  cout << ", InsertValue" << endl;
+  cout << ", Insert Value" << endl;
   cin >> x;
   return x;
 }
@@ -35,6 +39,8 @@ cout << "\nHello";
 
 int y = get();
 
-cout << "\nThe Binary Value is : " << Binary(y) << endl;
+Binary(y);
+
+cout << endl;
 
 }
