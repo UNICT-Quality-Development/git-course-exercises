@@ -22,4 +22,6 @@ int main() {
 	int random_num = rand() % RAND_MAX;
 
 	cout << "The random number is: " << random_num << endl;
+
+	return 0;
 }
