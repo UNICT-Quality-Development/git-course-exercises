@@ -6,24 +6,30 @@
   The binary number is: 1000
 */
 
-#include <iostream>
 #include <cmath>
+#include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 string convert_to_binary(int number, int bits)
 {
-    string binary(bits, '0');
+    string binary("");
     
-    for (int i = 0; i < binary.length(); i++)
+    for (int i = 0; i < bits; i++)
     {
         if (number > 0)
         {
-            binary[bits - i - 1] = (char)(number % 2) + 48;
+            binary += (number % 2) + 48;
             number /= 2;
         }
+        else
+        {
+            binary += '0';
+        }
     }
-
+    
+    reverse(binary.begin(), binary.end());
     return binary;
 }
 
@@ -39,4 +45,6 @@ int main()
     cin >> n;
 
     cout << "The binary number is: " << convert_to_binary(n, bits) << endl;
+
+    return 0;
 }
