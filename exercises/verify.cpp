@@ -14,13 +14,14 @@ void requestInput(int *numberToBeVerified) {
   cin >> *numberToBeVerified;
 }
 
-void lookForNumber(int *defaultArray, int numberToBeVerified) {
-  for (int i=0; i<10; i++) {
+bool isForNumber(int *defaultArray, int numberToBeVerified) {
+  for (int i = 0; i < 10; i++) {
     if (defaultArray[i] == numberToBeVerified) {
-      return;
+      return true;
     }
   }
-  cout << " not";
+  
+  return false;
 }
 
 int main() {
@@ -30,9 +31,7 @@ int main() {
 
   requestInput(&verify);
 
-  cout << "The number " << verify << " is";
-  lookForNumber(N, verify);
-  cout << " present in the array.\n";
+  cout << "The number " << verify << " is" << ((isForNumber(N, verify)) ? "" : " not") << " present in the array.\n";
 
   return 0;
 }
