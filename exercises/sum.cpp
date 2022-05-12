@@ -11,19 +11,25 @@
 
 using namespace std;
 
-int sum(int a, int b)
+template <typename T>
+T sum(T a, T b)
 {
   return a + b;
+}
+
+template <typename T>
+void input(T &a, T &b)
+{
+  cout << "Insert the first number: ";
+  cin >> a;
+  cout << "Insert the second number: ";
+  cin >> b;
 }
 
 int main()
 {
   int a, b;
-
-  cout << "Insert the first number: ";
-  cin >> a;
-  cout << "Insert the second number: ";
-  cin >> b;
+  input(a, b);
 
   cout << "Sum: " << sum(a, b) << endl;
   return 0;
