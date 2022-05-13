@@ -3,46 +3,52 @@
 #include <iostream>
 using namespace std;
 
+/* Input week number from user */
+int input()
+{
+  int week_number;
+  cout << "Enter week number(1-7): ";
+  cin >> week_number;
+  return week_number;
+}
+
+void print_day(int week_number)
+{
+  string day;
+  switch (week_number)
+  {
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+  case 7:
+    day = "Sunday";
+    break;
+  default:
+    day = "Invalid input! Please enter week number between 1-7.";
+    break;
+  }
+  cout << day << endl;
+}
+
 int main()
 {
-  int week;
-
-  /* Input week number from user */
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
-
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
+  int week = input();
+  print_day(week);
 
   return 0;
 }
