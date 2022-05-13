@@ -14,19 +14,19 @@
 using namespace std;
 
 
-double sum(double a, double b){
+double sum(double a, double b) {
     return a+b;
 }
 
-double difference(double a, double b){
+double difference(double a, double b) {
     return a-b;
 }
 
-double multiplication(double a, double b){
+double multiplication(double a, double b) {
     return a*b;
 }
 
-double division(double a, double b){
+double division(double a, double b) {
     return a/b;
 }
 
@@ -36,18 +36,18 @@ int main(){
 
     cout << "Insert first number: " ;
     
-    cin>>a;
+    cin >> a;
 
     cout << "Insert second number: " ;
 
-    cin>>b;
+    cin >> b;
 
-    cout<<endl;
+    cout << endl;
 
-    cout<< "sum: " << sum(a,b) << endl;
-    cout<< "difference: " << difference(a,b) << endl;
-    cout<< "multiplication: " << multiplication(a,b) << endl;
-    cout<< "division: " << division(a,b) << endl;
+    cout << "sum: " << sum(a,b) << endl;
+    cout << "difference: " << difference(a,b) << endl;
+    cout << "multiplication: " << multiplication(a,b) << endl;
+    cout << "division: " << division(a,b) << endl;
 
 }
 
