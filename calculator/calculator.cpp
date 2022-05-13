@@ -49,5 +49,7 @@ int main(){
     cout << "multiplication: " << multiplication(a,b) << endl;
     cout << "division: " << division(a,b) << endl;
 
+    return 0;
+
 }
 
