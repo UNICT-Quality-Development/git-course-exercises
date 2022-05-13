@@ -7,45 +7,34 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int input()
 {
-  int week;
+  int week_number;
+  cout << "Enter week number(1-7): ";
+  cin >> week_number;
+  return week_number;
+}
 
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
-
-  if (week == 1)
+void print_day(string week[], int week_day)
+{
+  string day;
+  if (week_day >= 1 && week_day <= 7)
   {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
+    day = week[week_day];
   }
   else
   {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    day = "Invalid input! Please enter week number between 1-7.";
   }
 
+  cout << day << endl;
+}
+
+int main()
+{
+  int week_number = input();
+  string week[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+  print_day(week, week_number);
   return 0;
 }
