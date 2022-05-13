@@ -9,6 +9,8 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
+#define DIM 10
+
 bool check(int array[], int dim, int number)
 {
   for (int i = 0; i < dim; i++)
@@ -24,7 +26,6 @@ bool check(int array[], int dim, int number)
 int main()
 {
   // placeholder
-  int DIM = 10;
   int N[DIM] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
   int number;
 
