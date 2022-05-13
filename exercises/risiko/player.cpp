@@ -46,24 +46,16 @@ void risikoPlayer::comparePlayer(risikoPlayer p1) {
 
     // comparing first
     cout << "N " << this->first_highest_dice << " vs " << p1.first_highest_dice << "=> ";
-    if (this->first_highest_dice > p1.first_highest_dice)
-        cout << this->name << " win" << endl;
-    else
-        cout << p1.name << " win" << endl;
+    cout << (p1.first_highest_dice < first_highest_dice ? this->name : p1.name) << " win" << endl;
 
     // comparing second
     cout << "M " << this->second_highest_dice << " vs " << p1.second_highest_dice << "=> ";
-    if (this->second_highest_dice > p1.second_highest_dice)
-        cout << this->name << " win" << endl;
-    else
-        cout << p1.name << " win" << endl;
+    cout << (p1.second_highest_dice < second_highest_dice ? this->name : p1.name) << " win" << endl;
 
     // comparing third
     cout << "O " << this->third_highest_dice << " vs " << p1.third_highest_dice << "=> ";
-    if (this->third_highest_dice > p1.third_highest_dice)
-        cout << this->name << " win" << endl;
-    else
-        cout << p1.name << " win" << endl;
+    cout << (p1.third_highest_dice < third_highest_dice ? this->name : p1.name) << " win" << endl;
+    
 }
 
     
