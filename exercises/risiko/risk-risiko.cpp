@@ -31,7 +31,9 @@
 #include "player.h"
 
 int main() {
+    //generating a seed
     srand(time(NULL));
+
     risikoPlayer p1("red");
     risikoPlayer p2("blue");
 
@@ -39,4 +41,6 @@ int main() {
     cout << p2 << endl;
 
     p1.comparePlayer(p2);
+
+    return 0;
 }
