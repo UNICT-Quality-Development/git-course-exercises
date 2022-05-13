@@ -13,25 +13,28 @@
 
 using namespace std;
 
-
-double sum(double a, double b) {
+template <typename T>
+T sum(T a, T b) {
     return a+b;
 }
 
-double difference(double a, double b) {
+template <typename T>
+T difference(T a, T b) {
     return a-b;
 }
 
-double multiplication(double a, double b) {
+template <typename T>
+T multiplication(T a, T b) {
     return a*b;
 }
 
-double division(double a, double b) {
+template <typename T>
+T division(T a, T b) {
     return a/b;
 }
 
 int main(){
-
+    
     double a, b = 0;
 
     cout << "Insert first number: " ;
