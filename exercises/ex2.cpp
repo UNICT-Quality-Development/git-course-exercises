@@ -1,51 +1,33 @@
-/*
- Improve this program replacing if/else if with an array.
-
- Hint:  arr[3] = "Thursday";
-*/
-
 #include <iostream>
+
 using namespace std;
 
 int main()
 {
   int week;
+  char Char;
 
+  string arr[7] = {"monday" ,"tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"};
+
+  do{  
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
-
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
+  
+  if(week>=1 && week<=7){
+  	cout << arr[week-1];
   }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
+  else{
+  	cout<<"il numero immesso non corrisponde a nessun giorno della settimana" <<endl;
   }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
+  
+  cout<<endl <<"mettere un'altro giorno della settimana?('y' or 'n'): ";
+  cin>>Char;
+  cout<<endl;
   }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
+  
+  while(Char == 'y');{
   }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
-
+  
   return 0;
 }
+
