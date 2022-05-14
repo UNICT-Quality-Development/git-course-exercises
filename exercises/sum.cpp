@@ -18,7 +18,7 @@ Type sum(Type const first, Type const second)
 }
 
 template <class Type>
-Type insert_and_control(Type data) //cin control
+Type insert_and_control(Type data) // cin control
 {
   do
   {
@@ -38,9 +38,10 @@ Type insert_and_control(Type data) //cin control
 int main()
 {
   double first, second;
-  cout << "Insert the first number: ";
+  cout << "Insert the first number: " << endl;
   first = insert_and_control(first);
-  cout << "Insert the second number: ";
+  cout << "Insert the second number: " << endl;
   second = insert_and_control(second);
   cout << "Sum: " << sum<double>(first, second);
+  return 0;
 }
