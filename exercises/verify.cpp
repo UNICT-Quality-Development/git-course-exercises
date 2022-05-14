@@ -35,7 +35,9 @@ int *fill_array(int nArr) // fills the array with random numbers between 0 and 1
 {
   int *array = new int[nArr];
   for (int i = 0; i < nArr; i++)
+  {
     array[i] = rand() % 16;
+  }
   return array;
 }
 
@@ -53,7 +55,9 @@ void print_array(int array[], int nArr) // prints the array (duh)
 {
   cout << "[ ";
   for (int i = 0; i < nArr; i++)
+  {
     cout << array[i] << " ";
+  }
   cout << "]" << endl;
 }
 
