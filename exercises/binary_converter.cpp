@@ -21,31 +21,28 @@ void print_binary(bool *binary, int digits)
 
 bool isNegative(int number)
 {
-  if (number < 0)
-    return true;
-  else
-    return false;
+  return number < 0;
 }
 
-void binary_converter(int number) //this converter works with negative numbers too!
+void binary_converter(int number) // this converter works with negative numbers too!
 {
   int m = number, nDigits = 0;
-  bool check = isNegative(number); 
-  
+  bool check = isNegative(number);
+
   while (m != 0)
   {
     m /= 2;
-    nDigits++; //size of binary array
+    nDigits++; // size of binary array
   }
 
-  if (check) //i'm using the variable check instead of the "isNegative" function because the OG number will encounter some changes
+  if (check) // i'm using the variable check instead of the "isNegative" function because the OG number will encounter some changes
   {
-    ++nDigits; //i'm adding one more digit for the sign
-    number *= -1; //i'm doing this for 2 reasons: 1) positive numbers are easier to work with; 2) no graphic errors (ex: 1-1100 (should be 11100))
+    ++nDigits;    // i'm adding one more digit for the sign
+    number *= -1; // i'm doing this for 2 reasons: 1) positive numbers are easier to work with; 2) no graphic errors (ex: 1-1100 (should be 11100))
   }
 
   bool binary[nDigits];
-  for (int i = nDigits - 1; i >= 0; i--) //reversing the insertion order since i'm working with a bigger number that is going to decrease (EX: 8= 2^3, 4= 2^2, 2=2^1...)
+  for (int i = nDigits - 1; i >= 0; i--) // reversing the insertion order since i'm working with a bigger number that is going to decrease (EX: 8= 2^3, 4= 2^2, 2=2^1...)
   {
     binary[i] = number % 2;
     number /= 2;
@@ -58,7 +55,7 @@ void binary_converter(int number) //this converter works with negative numbers t
 }
 
 template <class Type>
-Type insert_and_control(Type data) //cin control
+Type insert_and_control(Type data) // cin control
 {
   do
   {
