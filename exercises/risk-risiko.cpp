@@ -86,24 +86,15 @@ public:
   }
   bool compareN(short enemyN) // false/0 = defender, true/1 = attacker
   {
-    if (this->N <= enemyN)
-      return false;
-    else
-      return true;
+    return this->N <= enemyN;
   }
   bool compareM(short enemyM) // false/0 = defender, true/1 = attacker
   {
-    if (this->M <= enemyM)
-      return false;
-    else
-      return true;
+    return this->M <= enemyM;
   }
   bool compareO(short enemyO) // false/0 = defender, true/1 = attacker
   {
-    if (this->O <= enemyO)
-      return false;
-    else
-      return true;
+    return this->O <= enemyO;
   }
   friend swap();
   short const getN() { return N; };
@@ -142,13 +133,13 @@ bool coin_flip()
            << endl;
       return true;
     }
-    else if (choice == "tails" && coin == 1)
+    if (choice == "tails" && coin == 1)
     {
       cout << "You're the attacker! (Red)" << endl
            << endl;
       return true;
     }
-    else if (choice != "heads" && choice != "tails")
+    if (choice != "heads" && choice != "tails")
     {
       cout << "But you wrote neither heads nor tails... try again." << endl;
       continue;
@@ -180,7 +171,7 @@ int main()
 
     cout << "  R    B" << endl; // false/0 = defender, true/1 = attacker
     // super cool graphics ahead! wowowowow! vvv
-    if (!Red.compareN(Blue.getN()))
+    if (Red.compareN(Blue.getN()))
     {
       cout << "N " << Red.getN() << " vs " << Blue.getN() << "=> blue wins!" << endl;
       scoreBlue++;
@@ -190,7 +181,7 @@ int main()
       cout << "N " << Red.getN() << " vs " << Blue.getN() << " => red wins!" << endl;
       scoreRed++;
     }
-    if (!Red.compareM(Blue.getM()))
+    if (Red.compareM(Blue.getM()))
     {
       cout << "M " << Red.getM() << " vs " << Blue.getM() << "=> blue wins!" << endl;
       scoreBlue++;
@@ -200,7 +191,7 @@ int main()
       cout << "M " << Red.getM() << " vs " << Blue.getM() << " => red wins!" << endl;
       scoreRed++;
     }
-    if (!Red.compareO(Blue.getO()))
+    if (Red.compareO(Blue.getO()))
     {
       cout << "O " << Red.getO() << " vs " << Blue.getO() << "=> blue wins!" << endl;
       scoreBlue++;
@@ -211,10 +202,7 @@ int main()
       scoreRed++;
     }
 
-    if (scoreBlue > scoreRed)
-      cout << "BLUE WINS! (" << scoreBlue << " to " << scoreRed << ")" << endl;
-    else
-      cout << "RED WINS! (" << scoreRed << " to " << scoreBlue << ")" << endl;
+    (scoreBlue > scoreRed) ? cout << "BLUE WINS! (" << scoreBlue << " to " << scoreRed << ")" << endl : cout << "RED WINS! (" << scoreRed << " to " << scoreBlue << ")" << endl;
 
     cout << endl;
     cout << "Play again? (y/n)" << endl; // restart
@@ -228,7 +216,7 @@ int main()
         cout << "Good luck!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"; // looks ugly, I know
         break;
       }
-      else if (choice2 == 'n')
+      if (choice2 == 'n')
       {
         cout << "See you soon!" << endl;
         return 0;
