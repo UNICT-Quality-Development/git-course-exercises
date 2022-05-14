@@ -144,11 +144,8 @@ bool coin_flip()
       cout << "But you wrote neither heads nor tails... try again." << endl;
       continue;
     }
-    else
-    {
-      cout << "You're the defender! (Blue)" << endl
-           << endl;
-    }
+    cout << "You're the defender! (Blue)" << endl
+         << endl;
     return false;
   } while (true);
 }
