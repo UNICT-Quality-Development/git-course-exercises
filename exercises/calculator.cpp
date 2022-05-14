@@ -23,7 +23,7 @@ private:
 
 public:
   Calculator() : first(0), second(0) {}
-  Calculator(Type first, Type second) //I implemented the calculator this way just because I wanted to copy the given output.
+  Calculator(Type first, Type second) // I implemented the calculator this way just because I wanted to copy the given output.
   {
     this->first = first;
     this->second = second;
@@ -51,7 +51,7 @@ public:
 };
 
 template <class Type>
-Type insert_and_control(Type data) //cin control
+Type insert_and_control(Type data) // cin control
 {
   do
   {
@@ -72,9 +72,10 @@ int main()
 {
   double first, second;
   cout << "Insert first number: ";
-  first=insert_and_control(first);
+  first = insert_and_control(first);
   cout << "Insert second number: ";
-  second=insert_and_control(second);
+  second = insert_and_control(second);
   cout << endl;
   Calculator(first, second);
+  return 0;
 }
