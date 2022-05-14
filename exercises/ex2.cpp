@@ -5,47 +5,43 @@
 */
 
 #include <iostream>
+#include <limits>
 using namespace std;
+
+template <class Type>
+Type insert_and_control(Type data) //cin control
+{
+  do
+  {
+    cin >> data;
+    if (cin.fail())
+    {
+      cerr << "Insert a number!" << endl;
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    else
+      break;
+  } while (true);
+  return data;
+}
 
 int main()
 {
   int week;
-
+  string arr[7] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
   cout << "Enter week number(1-7): " << endl;
-  cin >> week;
-
-  if (week == 1)
+  do
   {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
+    week = insert_and_control(week);
+    if (week >= 1 && week <= 7)
+    {
+      cout << arr[week - 1] << endl;
+      break;
+    }
+    else
+      cout << "Invalid input! Please enter week number between 1-7.\n" << endl;
+  } while (true);
 
   return 0;
 }
