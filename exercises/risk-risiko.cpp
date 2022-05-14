@@ -221,9 +221,10 @@ int main()
         cout << "See you soon!" << endl;
         return 0;
       }
-      else
-        cerr << "Invalid input. Try again!" << endl;
+      cerr << "Invalid input. Try again!" << endl;
     } while (true);
 
   } while (true);
+
+  return 0; //(for good measure)
 }
