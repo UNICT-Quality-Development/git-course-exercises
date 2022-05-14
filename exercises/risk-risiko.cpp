@@ -96,7 +96,7 @@ public:
   {
     return this->O <= enemyO;
   }
-  friend swap();
+  friend void swap();
   short const getN() { return N; };
   short const getM() { return M; };
   short const getO() { return O; };
