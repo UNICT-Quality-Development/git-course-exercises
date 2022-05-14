@@ -10,6 +10,7 @@ The number 3 is [not] present in the array.
 #include <cstdlib>
 #include <ctime>
 #include <limits>
+#define DIM 10
 using namespace std;
 
 template <class Type>
@@ -59,16 +60,14 @@ void print_array(int array[], int nArr) // prints the array (duh)
 int main()
 {
   srand(time(0));
-  int *randArray = fill_array(10); // 10 is the size of the array
-  cout << "Insert number: ";
+  int *randArray = fill_array(DIM);
+  cout << "Insert number: " << endl;
   int nToCheck = insert_and_control(nToCheck);
-  if (!check_array(randArray, 10, nToCheck))
-    cout << "The number " << nToCheck << " is [not] present in the array." << endl;
-  else
-    cout << "The number " << nToCheck << " IS present in the array." << endl;
+
+  (!check_array(randArray, DIM, nToCheck)) ? cout << "The number " << nToCheck << " is [not] present in the array." << endl : cout << "The number " << nToCheck << " IS present in the array." << endl;
 
   cout << endl;
-  print_array(randArray, 10);
+  print_array(randArray, DIM);
   delete[] randArray;
 
   return 0;
