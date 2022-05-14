@@ -24,9 +24,8 @@ int main(){
         case 7: std::cout << "Sunday" << std::endl;
             break;
 
-        deafult:{
+        deafult:
             std::cout << "Invalid input! Please enter week number between 1-7." << std::endl;
-        }
     }
     
     return 0;
