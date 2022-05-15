@@ -16,13 +16,13 @@
 
 using namespace std;
 int main(){
-    string input = "";
-    double output = 0;
-    double first = 0;
-    double second = 0;
-    bool exit = false;
-    char operatore = ' ';
-    bool operation = true;
+    string input = "";      //prima stringa, conterrà il primo operando o il comando di uscita
+    double output = 0;      //variabile in cui verrà conservato il risultato
+    double first = 0;       //primo operando (ottenuto da input dopo una conversione)
+    double second = 0;      //secondo operando
+    bool exit = false;      //booleano che ci segnala l'uscita dal programma
+    char operatore = ' ';   //carattere che determina l'opera<ione da effettuare
+    bool operation = true;  //booleano di supporto per determinare che un'operazione sia avvenuta (ovvero che sia stato inserito un operando valido)
 
     cout << "Enter the operation (type 'exit' to close): \n";
     while(!exit){
