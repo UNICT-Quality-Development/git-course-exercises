@@ -11,23 +11,22 @@
 
 using namespace std;
 
-int sum(int a, int b) {
+template<typename T>
+T sum(T a, T b) {
     return a+b;
 }
 
-int getNumber() {
-    int n;
-    cout << "\nInsert a number: ";
+template<typename T>
+void getNumber(T& n) {
+    cout << "Insert a number: ";
     cin >> n;
-
-    return n;
 }
 
 int main() {
 
-    int a, b;
-    a = getNumber();
-    b = getNumber();
+    double a, b;
+    getNumber(a);
+    getNumber(b);
 
     cout << "Sum: " << sum(a, b) << endl;
 
