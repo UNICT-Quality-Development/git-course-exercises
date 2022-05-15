@@ -20,8 +20,8 @@ int main(){
     double output = 0;      //variabile in cui verrà conservato il risultato
     double first = 0;       //primo operando (ottenuto da input dopo una conversione)
     double second = 0;      //secondo operando
+    char operatore = ' ';   //carattere che determina l'operazione da effettuare
     bool exit = false;      //booleano che ci segnala l'uscita dal programma
-    char operatore = ' ';   //carattere che determina l'opera<ione da effettuare
     bool operation = true;  //booleano di supporto per determinare che un'operazione sia avvenuta (ovvero che sia stato inserito un operando valido)
 
     cout << "Enter the operation (type 'exit' to close): \n";
