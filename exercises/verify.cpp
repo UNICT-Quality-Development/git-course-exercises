@@ -7,33 +7,32 @@ The number 3 is [not] present in the array.
 */
 
 #include <iostream>
+
+#define DIM 10
+
 using namespace std;
 
-bool search(int N[], int dim, int num) {
-    bool found = false;
+bool search(int N[], int num) {
 
-    for(int i = 0; i < dim && !found; i++) {
-        if(N[i] == num) found = true;
+    for(int i = 0; i < DIM; i++) {
+        if(N[i] == num) {
+            return true;
+        }
     }
 
-    return found;
+    return false;
 }
 
 int main()
 {
   // placeholder
-    int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+    int N[DIM] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
 
     int n;
     cout << "\nInsert a number: ";
     cin >> n;
 
-    if(search(N, 10, n)) {
-        cout << "The number " << n << " is present in the array" << endl;
-    }
-    else {
-        cout << "The number " << n << " is not present in the array" << endl;
-    }
+    cout << "The number " << n << " is " << (search(N, n) ? "" : "not ") << "present in the array" << endl;
 
     return 0;
 }
