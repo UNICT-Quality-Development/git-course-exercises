@@ -4,3 +4,13 @@
   Output:
   The random number is: 4
 */
+
+#include <stdlib.h>
+#include <time.h>
+#include <iostream>
+using namespace std;
+
+int main(){
+    srand(time(NULL));
+    cout << rand();
+}

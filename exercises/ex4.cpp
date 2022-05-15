@@ -1,6 +1,9 @@
 /* Surprise me. */
 
 #include <stdio.h>
+#include <string>
+
+using namespace std;
 
 int main()
 {
@@ -10,8 +13,7 @@ int main()
   printf("Enter month number(1-12): ");
   scanf("%d", &month);
 
-  switch (month)
-  {
+  switch (month){
   case 1:
     printf("31 days");
     break;

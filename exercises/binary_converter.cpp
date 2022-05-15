@@ -20,7 +20,7 @@ void print(T* array){
 
 bool* decToBin(long long dec){
     bool *bin = new bool[DIM] (); //initialize all elements with 0
-    bin[0] = (dec < 0) ? 1 : 0;   //bit of sign
+    bin[0] = (dec > 0);   //bit of sign
 
     dec = abs(dec);
     bool div = 0;

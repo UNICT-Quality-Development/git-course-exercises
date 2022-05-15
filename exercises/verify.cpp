@@ -7,12 +7,26 @@ The number 3 is [not] present in the array.
 */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
-int main()
-{
-  // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+int main(){
+    int N[] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+    int DIM = sizeof(N) / 4;
 
-  return 0;
+    int var;
+    bool check = false;
+
+    cout << "Insert a number: ";
+    cin >> var;
+
+    for(int i = 0; i < DIM; i++)
+          if(var == N[i]){
+              check = true;
+              break;
+          }
+
+    string str = (check) ? "" : "not ";
+    cout << "The number " << var << " is "<< str << "present in the array.";
+    return 0;
 }
