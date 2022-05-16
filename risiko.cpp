@@ -18,6 +18,7 @@ class Player{
         Color side;
         Player(Color c, string str);
 
+        string getRole()const{ return role;}
         int makeLaunch()const{ return rand()%(6-1+1)+1;}
 
 };
@@ -87,6 +88,8 @@ int main(){
 
     cout <<"Let's start risk/risiko fight with 6 dices" << endl;
     cout <<"RED TEAM VS BLUE TEAM!" << endl<<endl;
+    cout <<"Red player is the " << p1.getRole() << endl;
+    cout <<"Blue player is the " << p2.getRole() << endl << endl;
     match(p1, p2, A, B);
 
     return 0;
