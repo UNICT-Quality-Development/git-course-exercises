@@ -5,7 +5,7 @@
 using namespace std;
 
 template <class Type>
-Type insert_and_control(Type data) // cin control (there isn't much that I can do to surprise you (without writing some crazy random code), so there you go)
+Type insert_and_control(Type &data) // cin control (there isn't much that I can do to surprise you (without writing some crazy random code), so there you go)
 {
   do
   {
