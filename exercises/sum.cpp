@@ -12,13 +12,13 @@
 using namespace std;
 
 template <class Type>
-Type sum(Type const first, Type const second)
+Type sum(Type const &first, Type const &second)
 {
   return first + second;
 }
 
 template <class Type>
-Type insert_and_control(Type data) // cin control
+Type insert_and_control(Type &data) // cin control
 {
   do
   {
