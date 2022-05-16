@@ -11,7 +11,7 @@
 #include <limits>
 using namespace std;
 
-void print_binary(bool *binary, int digits)
+void printBinary(bool *binary, int digits)
 {
   for (int i = 0; i < digits; i++)
   {
@@ -24,7 +24,7 @@ bool isNegative(int number)
   return number < 0;
 }
 
-void binary_converter(int number) // this converter works with negative numbers too!
+void binaryConverter(int number) // this converter works with negative numbers too!
 {
   int m = number, nDigits = 0;
   bool check = isNegative(number);
@@ -51,11 +51,11 @@ void binary_converter(int number) // this converter works with negative numbers 
   if (check)
     binary[0] = 1;
 
-  print_binary(binary, nDigits);
+  printBinary(binary, nDigits);
 }
 
 template <class Type>
-Type insert_and_control(Type data) // cin control
+Type insert_and_control(Type &data) // cin control
 {
   do
   {
@@ -78,5 +78,5 @@ int main()
   cout << "Insert first number: ";
   number = insert_and_control(number);
   cout << "The binary number is: ";
-  binary_converter(number);
+  binaryConverter(number);
 }
