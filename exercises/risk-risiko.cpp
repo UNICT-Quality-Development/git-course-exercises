@@ -199,7 +199,10 @@ int main()
       scoreRed++;
     }
 
-    (scoreBlue > scoreRed) ? cout << "BLUE WINS! (" << scoreBlue << " to " << scoreRed << ")" << endl : cout << "RED WINS! (" << scoreRed << " to " << scoreBlue << ")" << endl;
+    if (scoreBlue > scoreRed)
+      cout << "BLUE WINS! (" << scoreBlue << " to " << scoreRed << ")" << endl;
+    else
+      cout << "RED WINS! (" << scoreRed << " to " << scoreBlue << ")" << endl;
 
     cout << endl;
     cout << "Play again? (y/n)" << endl; // restart
