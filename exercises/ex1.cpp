@@ -5,7 +5,7 @@
 using namespace std;
 
 template <class Type>
-Type insert_and_control(Type& data) //cin control
+void insert_and_control(Type &data) // cin control
 {
 	do
 	{
@@ -19,7 +19,7 @@ Type insert_and_control(Type& data) //cin control
 		else
 			break;
 	} while (true);
-	return data;
+	return;
 }
 
 int main()
@@ -30,8 +30,7 @@ int main()
 	cout << "Enter week number(1-7): " << endl;
 	do
 	{
-
-		week = insert_and_control(week); 
+		insert_and_control(week);
 		switch (week)
 		{
 		case 1:
@@ -56,7 +55,8 @@ int main()
 			cout << "Sunday" << endl;
 			break;
 		default:
-			cerr << "Invalid input! Please enter week number 1-7.\n"<< endl;
+			cerr << "Invalid input! Please enter week number 1-7.\n"
+				 << endl;
 			continue;
 		}
 		break;
