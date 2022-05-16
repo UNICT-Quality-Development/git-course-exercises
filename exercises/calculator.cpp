@@ -51,7 +51,7 @@ public:
 };
 
 template <class Type>
-Type insert_and_control(Type data) // cin control
+Type insert_and_control(Type &data) // cin control
 {
   do
   {
