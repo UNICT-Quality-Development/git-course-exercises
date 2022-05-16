@@ -19,7 +19,6 @@ void insert_and_control(Type &data) // cin control
 		else
 			break;
 	} while (true);
-	return;
 }
 
 int main()
