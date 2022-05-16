@@ -29,7 +29,7 @@ Player::Player(Color c, string str){
 }
 
 
-static void results(int* arr){
+void results(int* arr){
     cout << arr[2] <<"(N)\n";
     cout << arr[1] <<"(M)\n";
     cout << arr[0] <<"(O)\n";
