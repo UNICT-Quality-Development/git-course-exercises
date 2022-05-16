@@ -31,7 +31,7 @@ Type insert_and_control(Type data) // cin control
   return data;
 }
 
-int *fill_array(int nArr) // fills the array with random numbers between 0 and 15
+int *fillArray(int nArr) // fills the array with random numbers between 0 and 15
 {
   int *array = new int[nArr];
   for (int i = 0; i < nArr; i++)
@@ -41,7 +41,7 @@ int *fill_array(int nArr) // fills the array with random numbers between 0 and 1
   return array;
 }
 
-bool check_array(int array[], int nArr, int nToCheck) // checks whether the given input number is present or not
+bool checkArray(int array[], int nArr, int nToCheck) // checks whether the given input number is present or not
 {
   for (int i = 0; i < nArr; i++)
   {
@@ -51,7 +51,7 @@ bool check_array(int array[], int nArr, int nToCheck) // checks whether the give
   return false;
 }
 
-void print_array(int array[], int nArr) // prints the array (duh)
+void printArray(int array[], int nArr) // prints the array (duh)
 {
   cout << "[ ";
   for (int i = 0; i < nArr; i++)
@@ -64,14 +64,16 @@ void print_array(int array[], int nArr) // prints the array (duh)
 int main()
 {
   srand(time(0));
-  int *randArray = fill_array(DIM);
+  int *randArray = fillArray(DIM);
   cout << "Insert number: " << endl;
   int nToCheck = insert_and_control(nToCheck);
 
-  (!check_array(randArray, DIM, nToCheck)) ? cout << "The number " << nToCheck << " is [not] present in the array." << endl : cout << "The number " << nToCheck << " IS present in the array." << endl;
+  cout << "The number " << nToCheck;
+  (!checkArray(randArray, DIM, nToCheck)) ? cout << " is [not] " : cout << " IS ";
+  cout << "present in the array." << endl;
 
   cout << endl;
-  print_array(randArray, DIM);
+  printArray(randArray, DIM);
   delete[] randArray;
 
   return 0;
