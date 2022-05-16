@@ -80,11 +80,10 @@ int main(){
     Player p2(Player::BLUE, "Defender");
     int A[3] , B[3];
 
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < 3; i++){
         A[i] = p1.makeLaunch();
-
-    for(int i = 0; i < 3; i++)
         B[i] = p2.makeLaunch();
+    }
 
     cout <<"Let's start risk/risiko fight with 6 dices" << endl;
     cout <<"RED TEAM VS BLUE TEAM!" << endl<<endl;
