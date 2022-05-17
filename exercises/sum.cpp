@@ -10,17 +10,21 @@
 #include <iostream>
 using namespace std;
 
+int getNumber(){
+    int n;
+    cout << "Insert a number: ";
+    cin >> n;
+    return n;
+}
+
 int main(){
-     int a, b, sum;
-     cout << "Insert the first number: ";
-     cin >> a;
+     int a, b;
+    
+     a = getNumber();
 
-     cout << "Insert the second number: ";
-     cin >> b;
+     b = getNumber();
 
-     sum =  a + b;
-
-     cout << "Sum: " << sum << endl;
+     cout << "Sum: " << (a+b) << endl;
 
      return 0;
 }
