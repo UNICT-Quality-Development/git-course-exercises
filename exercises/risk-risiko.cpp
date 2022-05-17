@@ -27,3 +27,58 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+void swap(short &a, short &b){
+    short temp = a;
+    a = b;
+    b = temp;
+}
+
+void changeSort(short array[], int n){
+       
+      for(int i = 0; i < n; i++){
+        for(int j = i+1; j < n; j++){
+           if(array[j] > array[i])
+            swap(array[j],array[i]);
+        }
+      }
+}
+
+int main(){
+  const int N = 3;
+  short arrRed[N] = {};
+  short arrBlue[N] = {};
+  
+  srand(time(0));
+  for(int i = 0; i < N; i++){
+    arrRed[i] = rand() % 6 + 1;
+    arrBlue[i] = rand() % 6 + 1;
+  }
+
+  changeSort(arrRed,N);
+  changeSort(arrBlue,N);  
+  
+  std::string info = "NMO";
+  
+  std::cout << "Red dices: " << std::endl;
+  for(int i = 0; i < N; i++)
+   std::cout << arrRed[i] << "(" << info[i] << ")" << std::endl;
+   
+  std::cout << std::endl;
+
+  std::cout << "Blue dices: " << std::endl;
+  for(int i = 0; i < N; i++)
+   std::cout << arrBlue[i] << "(" << info[i] << ")" << std::endl;
+  
+  std::cout << std::endl;
+
+  std::cout << "  R    B" << std::endl;
+  for(int i = 0; i < N; i++){
+   std::cout << info[i] << " " << arrRed[i] << " vs " << arrBlue[i] << " => " 
+             << (arrRed[i] > arrBlue[i] ? "red" : "blue") << " win" << std::endl;
+  }
+}
