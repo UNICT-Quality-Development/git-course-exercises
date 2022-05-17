@@ -1,43 +1,44 @@
 /* Could you still use a switch case here? May you can use a map. */
 
+#include <map>
 #include <iostream>
+
 using namespace std;
 
-int main()
+string get_name()
 {
-  string textInput;
-
+  string input;
   cout << "Enter a famous name+surname, ex. BarackObama " << endl;
-  cin >> textInput;
+  cin >> input;
+  return input;
+}
 
-  if (textInput == "BarackObama")
+void check_description(map<string, string> map, string name)
+{
+  if (map.find(name) != map.end())
   {
-    cout << "44th president of the United States" << endl;
-  }
-  else if (textInput == "SandroPertini")
-  {
-    cout << "Former President of the Italian Republic" << endl;
-  }
-  else if (textInput == "NelsonMandela")
-  {
-    cout << "Former President of South Africa" << endl;
-  }
-  else if (textInput == "MahatmaGandhi")
-  {
-    cout << "Bapu" << endl;
-  }
-  else if (textInput == "DonaldKnuth")
-  {
-    cout << "Creator of LaTeX" << endl;
-  }
-  else if (textInput == "DennisRitchie")
-  {
-    cout << "Creator of C" << endl;
+    cout << map[name] << endl;
   }
   else
   {
     cout << "Invalid input! Please enter a good name!" << endl;
   }
+}
+
+int main()
+{
+  string textInput = get_name();
+
+  map<string, string> bios;
+
+  bios["BarackObama"] = "44th President of the United States";
+  bios["SandroPertini"] = "Former President of the Italian Republic";
+  bios["NelsonMandela"] = "Former President of South Africa";
+  bios["MahatmaGandhi"] = "Bapu";
+  bios["DonaldKnuth"] = "Creator of LaTeX";
+  bios["DennisRitchie"] = "Creator of C";
+
+  check_description(bios, textInput);
 
   return 0;
 }
