@@ -15,14 +15,7 @@ string get_name()
 
 void check_description(map<string, string> map, string name)
 {
-  if (map.find(name) != map.end())
-  {
-    cout << map[name] << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter a good name!" << endl;
-  }
+  cout << (map.find(name) != map.end() ? map[name] : "Invalid input! Please enter a good name!") << endl;
 }
 
 int main()
