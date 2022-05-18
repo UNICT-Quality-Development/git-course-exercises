@@ -48,9 +48,12 @@ int main(){
             cin >> input;
             exit = (input == "exit");
             if(exit)
-                return 0;
+                break;
             cin >> operatore >> second;
         }
+
+        if(exit)
+            continue;
 
         sscanf(input.c_str(), "%lf", &first);
 
