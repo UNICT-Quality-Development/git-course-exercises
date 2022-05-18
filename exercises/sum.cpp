@@ -1,24 +1,17 @@
-/*
-  Write a program that takes as input two numbers and print the sum.
-
-  Output:
-  Insert the first number: 1
-  Insert the second number: 2
-  Sum: 3
-*/
 #include<iostream>
 
 using namespace std;
 
-int main(){
+double getNumber(){
+	double number;
+	cout << "Inserisci un numero: ";
+	cin >> number;
+	return number;
+}
 
-	int a, b;
+int main() {
 
-	cout << "Inserisci il primo numero : " << endl;
-	cin >> a;
-	cout << "Inserisci il secondo numero : " << endl;
-	cin >> b;
+	cout << getNumber() + getNumber();
 
-	cout << a+b;
-
+	return 0;
 }
