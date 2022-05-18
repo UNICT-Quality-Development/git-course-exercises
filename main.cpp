@@ -12,9 +12,9 @@ int main(){
 
     Player p1(Player::RED, "Attacker");
     Player p2(Player::BLUE, "Defender");
-    int A[3] , B[3];
+    int A[L] , B[L];
 
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < L; i++){
         A[i] = p1.makeLaunch();
         B[i] = p2.makeLaunch();
     }

@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <string>
 #include </home/massimo/git-course-exercises/risiko.h>
+#define L 3
 
 using namespace std;
 void switchSort(int* , int);
@@ -24,8 +25,8 @@ void results(int* arr){
 
 
 static void match(Player& x, Player& y, int* arr1, int* arr2){
-    switchSort(arr1, 3);
-    switchSort(arr2, 3);
+    switchSort(arr1, L);
+    switchSort(arr2, L);
 
     cout << "Red dices:" << endl;
     results(arr1);
