@@ -26,8 +26,8 @@ T input(){
 
 int main(){
     
-    int x = input<int>();
-    int y = input<int>();
+    auto x = input<int>();
+    auto y = input<int>();
     cout << "sum: " << sum<int>(x, y) <<"\t diff: " << diff<int>(x, y) <<"\t mult: " << mult<int>(x, y);
     cout << "\t div: " << div<int>(x, y) << endl;
 
