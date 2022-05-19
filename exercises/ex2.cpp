@@ -10,18 +10,17 @@ using namespace std;
 
 int main()
 {
-  int week;
+    int week;
+    cout << "Enter week number(1-7): " << endl;
+    cin >> week;
 
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
+    if(week < 1 || week > 7){
+      cout << "Invalid input! Please enter week number between 1-7." << endl;
+      return 0;
+    }
 
-  if(week < 1 || week > 7){
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    string days[7] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+    cout << days[week - 1];
+
     return 0;
-  }
-
-  string days[7] = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
-  cout << days[week - 1];
-
-  return 0;
 }
