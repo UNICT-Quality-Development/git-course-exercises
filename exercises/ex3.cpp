@@ -5,22 +5,21 @@
 
 using namespace std;
 
-string get_name()
+void getName(string &input)
 {
-  string input;
   cout << "Enter a famous name+surname, ex. BarackObama " << endl;
   cin >> input;
-  return input;
 }
 
-void check_description(map<string, string> map, string name)
+void checkDescription(map<string, string> map, string name)
 {
   cout << (map.find(name) != map.end() ? map[name] : "Invalid input! Please enter a good name!") << endl;
 }
 
 int main()
 {
-  string textInput = get_name();
+  string textInput;
+  getName(textInput);
 
   map<string, string> bios;
 
@@ -31,7 +30,7 @@ int main()
   bios["DonaldKnuth"] = "Creator of LaTeX";
   bios["DennisRitchie"] = "Creator of C";
 
-  check_description(bios, textInput);
+  checkDescription(bios, textInput);
 
   return 0;
 }
