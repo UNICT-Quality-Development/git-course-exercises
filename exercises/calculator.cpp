@@ -2,8 +2,8 @@
   Write a program that given two numbers as input make the main operations.
 
   Output:
-  Insert first number: 4
-  Insert second number: 2
+  Insert operand_1 number: 4
+  Insert operand_2 number: 2
 
   Sum: 6
   Difference: 2
@@ -13,75 +13,71 @@
 #include <string>
 #include <iostream>
 #include <limits>
-
 using namespace std;
-int main(){
-    string input = "";      //prima stringa, conterrà il primo operando o il comando di uscita
-    double output = 0;      //variabile in cui verrà conservato il risultato
-    double first = 0;       //primo operando (ottenuto da input dopo una conversione)
-    double second = 0;      //secondo operando
-    char operatore = ' ';   //carattere che determina l'operazione da effettuare
-    bool exit = false;      //booleano che ci segnala l'uscita dal programma
-    bool operation = true;  //booleano di supporto per determinare che un'operazione sia avvenuta (ovvero che sia stato inserito un operando valido)
 
-    cout << "Enter the operation (type 'exit' to close): \n";
-    while(!exit){
+//get the input numbers and operator then check them, return false if no more inputs are needed (exit)
+bool getOperations(double &operand_1, char& _operator, double& operand_2){
+
+    string input = "";          //input is a string where is stored the first operand or the "exit" command
+    bool bad_operator = false;
+
+    cin >> input;
+    if(input == "exit")
+        return false;
+    cin >> _operator >> operand_2;
+
+    if(!(input[0] >= '0' && input[0] <= '9') && (input[0] != '.'))
+        input.clear();
+
+    if (_operator != '+' && _operator != '-' && _operator != '*' && _operator != '/' && _operator != '%')
+        bad_operator = true;
+
+    while (cin.fail() || input.empty() || bad_operator){
+        bad_operator = false;
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cerr << "Error! Enter a valid operation [NUMBER] [ +  -  *  /  % ] [NUMBER]\n\n";
+
         cin >> input;
-        exit = (input == "exit");
+        if(input == "exit")
+            return false;
+        cin >> _operator >> operand_2;
 
-        if(exit)
-            continue;
+        if(!(input[0] >= '0' && input[0] <= '9') && (input[0] != '.'))
+            input.clear();
 
-        cin >> operatore >> second;
-
-        for(int i = 0; i < input.length(); i++)
-            if(!(input[i] >= 48 && input[i] <= 57) && input[i] != '.'){
-                input = "";
-                break;
-            }
-
-
-        while (cin.fail() || input.empty()){
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            cerr << "Error! Enter a valid operation [NUMBER] [ +  -  *  /  % ] [NUMBER]\n";
-            cin >> input;
-            exit = (input == "exit");
-            if(exit)
-                break;
-            cin >> operatore >> second;
-        }
-
-        if(exit)
-            continue;
-
-        sscanf(input.c_str(), "%lf", &first);
-
-        switch(operatore){
-            case '+':
-                output = first + second;
-                break;
-            case '*':
-                output = first * second;
-                break;
-            case '-':
-                output = first - second;
-                break;
-            case '/':
-                output = first / second;
-                break;
-            case '%':
-                output = (int)first % (int)second;
-                break;
-            default:
-                operation = false;
-        }
-
-        if(!operation)
-            cerr << "Enter a valid operator [ +  -  *  /  % ]\n";
-        else
-            cout << first << ' ' << operatore << ' ' << second << " = " << output << "\n\n";
+        if (_operator != '+' && _operator != '-' && _operator != '*' && _operator != '/' && _operator != '%')
+            bad_operator = true;
     }
+    sscanf(input.c_str(), "%lf", &operand_1);
+
+    return true;
+}
+
+double calculator(double operand_1, char _operator, double operand_2){
+    switch(_operator){
+        case '+':
+            return operand_1 + operand_2;
+        case '*':
+            return operand_1 * operand_2;
+        case '-':
+            return operand_1 - operand_2;
+        case '/':
+            return operand_1 / operand_2;
+        case '%':
+            return (int)operand_1 % (int)operand_2;
+    }
+    return -1;
+}
+
+int main(){
+    double operand_1 = 0;
+    double operand_2 = 0;
+    char _operator = ' ';
+
+    cout << "Enter the operation (type 'exit' to close): \n\n";
+    while(getOperations(operand_1, _operator, operand_2))
+        cout << operand_1 << ' ' << _operator << ' ' << operand_2 << " = " << calculator(operand_1, _operator, operand_2) << "\n\n";
 
     return 0;
 }
