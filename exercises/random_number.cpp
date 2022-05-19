@@ -12,5 +12,5 @@ using namespace std;
 
 int main(){
     srand(time(NULL));
-    cout << rand();
+    cout << "The random number is: " << rand() % 101;
 }

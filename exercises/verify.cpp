@@ -26,7 +26,6 @@ int main(){
               break;
           }
 
-    string str = (check) ? "" : "not ";
-    cout << "The number " << var << " is "<< str << "present in the array.";
+    cout << "The number " << var << " is "<< ((check) ? "" : "not ") << "present in the array.";
     return 0;
 }
