@@ -13,6 +13,7 @@
 #include <string>
 #include <iostream>
 #include <limits>
+#include <cctype>
 using namespace std;
 
 //get the input numbers and operator then check them, return false if no more inputs are needed (exit)
@@ -26,7 +27,7 @@ bool getOperations(double &operand_1, char& _operator, double& operand_2){
         return false;
     cin >> _operator >> operand_2;
 
-    if(!(input[0] >= '0' && input[0] <= '9') && (input[0] != '.'))
+    if(!isdigit(input[0]) && (input[0] != '.'))
         input.clear();
 
     if (_operator != '+' && _operator != '-' && _operator != '*' && _operator != '/' && _operator != '%')
