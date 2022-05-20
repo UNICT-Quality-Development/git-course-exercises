@@ -14,7 +14,7 @@ int main()
 {
   srand(time(NULL));
 
-  cout << "The random number is: " << random() << endl;
+  cout << "The random number is: " << rand() << endl;
 
   return 0;
 }
