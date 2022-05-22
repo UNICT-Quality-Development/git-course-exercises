@@ -31,6 +31,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#define N 3
 
 void swap(short &a, short &b){
     short temp = a;
@@ -49,7 +50,6 @@ void changeSort(short array[], int n){
 }
 
 int main(){
-  const int N = 3;
   short arrRed[N] = {};
   short arrBlue[N] = {};
   
@@ -81,4 +81,6 @@ int main(){
    std::cout << info[i] << " " << arrRed[i] << " vs " << arrBlue[i] << " => " 
              << (arrRed[i] > arrBlue[i] ? "red" : "blue") << " win" << std::endl;
   }
+
+  return 0;
 }
