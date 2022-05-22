@@ -8,19 +8,23 @@
 #include <iostream>
 #include <string>
 
-int main() {
-    std::string num_tmp;
-    int n, lenght;
-    std::cin >> n;
 
+std::string binaryConv( int n){
+    std::string n_tmp;
     while(n != 0){
-        if(n%2 == 0){
-            num_tmp += '0';
-        }else {
-            num_tmp += '1';
-        }
+        n_tmp += n % 2 ? "1" : "0";
         n = n/2;
     }
-    std::string num_bin(num_tmp.rbegin(), num_tmp.rend());
-    std::cout << "Numero binario: " << num_bin;
+    return n_tmp;
+}
+
+int main() {
+    std::string num_tmp;
+    int num, lenght;
+    std::cin >> num;
+
+    num_tmp = binaryConv( num);
+    std::string n_bin(num_tmp.rbegin(), num_tmp.rend());
+    std::cout << "Numero binario: " << n_bin;
+    return 0;
 }
