@@ -37,6 +37,7 @@ static void match(Player& x, Player& y, int* arr1, int* arr2){
     cout << endl << endl;
     string s = "OMN";
 
+    cout <<"  "<< "A" <<"\t\t"<< "D" << endl;
     for(int i = 2; i >= 0; i--){
         if(arr1[i] <= arr2[i]){
             cout << s[i] <<" "<< arr1[i] <<"\tvs\t" << arr2[i] << "   " << "==>   ";
