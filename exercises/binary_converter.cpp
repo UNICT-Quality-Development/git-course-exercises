@@ -10,11 +10,12 @@
 
 
 std::string binaryConv( int n){
+    std::string bin_map[]{"0","1"};
     std::string n_tmp;
     while(n != 0){
         //n_tmp += n % 2 ? "1" : "0";
-        n_tmp += std::to_string(n % 2);
-        n = n/2;
+        n_tmp += bin_map[n % 2];
+        n = n / 2;
     }
     return n_tmp;
 }
