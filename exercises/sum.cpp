@@ -10,11 +10,16 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int sum() {
   int x,y;
+  cout<<"__Somma__"<<endl;
   cout<<"Insert the first number:\t";
   cin>>x;
   cout<<"Insert the second number:\t";
   cin>>y;
-  cout<<"Sum:\t\t\t\t"<<(x+y);
+  return x+y;
+}
+
+int main () {
+  cout<<sum();
 }
