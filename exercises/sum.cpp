@@ -11,13 +11,8 @@ using namespace std;
 
 int sum(int a, int b) {return a + b;}
 
-bool toRepeat(char ch){
-  if(ch=='y') return true;
-  return false;
-}
-
-int main(){
-  char choise='n';
+void makeSum(){
+  char choice='n';
   int n,m;
   do{
     cout << "Insert the first number: ";
@@ -25,8 +20,12 @@ int main(){
     cout << "inserisci il secondo addendo: ";
     cin >> m;
     cout << "Sum: " << sum(n,m) << "\nDo you want another sum? (y/n)\n";
-    cin >> choise;
+    cin >> choice;
     cout << endl;
-  }while(toRepeat(choise));
+  }while(choice=='y');
+}
+
+int main(){
+  makeSum();
   return 0;
 }
