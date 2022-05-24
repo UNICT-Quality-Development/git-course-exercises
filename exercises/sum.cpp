@@ -9,19 +9,37 @@
 #include <iostream>
 using namespace std;
 
-int sum(int a, int b) {return a + b;}
+int getInput(){
+  int nInput;
+  cout << "Insert the addend: ";
+  cin >> nInput;
+  return nInput;
+}
+
+void setAddend(int & n, int & m){
+  n = getInput();
+  m = getInput();
+}
+
+int sumOperation(int a, int b) {return a + b;}
+
+void printSum(int _n, int _m){
+  cout << "Sum: " << sumOperation(_n,_m);
+}
+
+void setChoice(char & _choice){
+  cout << "\nDo you want another sum? (y/n)\n";
+  cin >> _choice;
+  cout << endl;
+}
 
 void makeSum(){
   char choice='n';
   int n,m;
   do{
-    cout << "Insert the first number: ";
-    cin >> n;
-    cout << "inserisci il secondo addendo: ";
-    cin >> m;
-    cout << "Sum: " << sum(n,m) << "\nDo you want another sum? (y/n)\n";
-    cin >> choice;
-    cout << endl;
+    setAddend(n,m);
+    printSum(n,m);
+    setChoice(choice);
   }while(choice=='y');
 }
 
