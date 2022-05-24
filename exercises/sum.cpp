@@ -9,22 +9,17 @@
 #include <iostream>
 using namespace std;
 
-int getInput(){
-  int nInput;
-  cout << "Insert the addend: ";
-  cin >> nInput;
-  return nInput;
+void getInput(int & _n, int & _m){
+  cout << "Insert the first number: ";
+  cin >> _n;
+  cout << "Insert the second number: ";
+  cin >> _m;
 }
 
-void setAddend(int & n, int & m){
-  n = getInput();
-  m = getInput();
-}
-
-int sumOperation(int a, int b) {return a + b;}
+int sum(int a, int b) {return a + b;}
 
 void printSum(int _n, int _m){
-  cout << "Sum: " << sumOperation(_n,_m);
+  cout << "Sum: " << sum(_n,_m);
 }
 
 void setChoice(char & _choice){
@@ -37,7 +32,7 @@ void makeSum(){
   char choice='n';
   int n,m;
   do{
-    setAddend(n,m);
+    getInput(n,m);
     printSum(n,m);
     setChoice(choice);
   }while(choice=='y');
