@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
   // placeholder
-  int N[10] = [ 3, 4, 5, 1, 2, 3, 4, 9, 13, 0 ];
+  int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
 
   return 0;
 }
