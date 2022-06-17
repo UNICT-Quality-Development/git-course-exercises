@@ -10,42 +10,23 @@ using namespace std;
 int main()
 {
   int week;
+  string arr[8];
+  
+  arr[0]="Invalid input! Please enter week number between 1-7.";
+  arr[1]="Monday";
+  arr[2]="Tuesday";
+  arr[3]="Wednesday";
+  arr[4]="Thursday";
+  arr[5]="Friday";
+  arr[6]="Saturday";
+  arr[7]="Sunday";
+  
+  do{
+  	cout << "Enter week number(1-7): " << endl;
+	cin >> week;
+  }while(week>7 || week < 0);
 
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
-
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
-
+  cout << arr[week] << endl;  
+  
   return 0;
 }
