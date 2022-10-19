@@ -7,7 +7,7 @@
   Sum: 3
 */
 #include <iostream>
-
+#define EXIT_SUCCESS 0
 using namespace std;
 
 
@@ -15,7 +15,7 @@ int sum(int n, int n1){
   return n + n1;
 }
 
-void main(){
+int main(){
   int n, n1;
 
   cout << "Insert the first number:";
@@ -27,5 +27,7 @@ void main(){
   cout << endl;
 
   cout << "Sum:" << sum(n,n1);
+
+  return EXIT_SUCCESS;
 
 }
