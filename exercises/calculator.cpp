@@ -12,6 +12,7 @@
 */
 
 #include <iostream>
+#define EXIT_FAILURE 1
 #define EXIT_SUCCESS 0
 
 using namespace std;
@@ -28,9 +29,12 @@ int multiplication(int n1, int n2)
 {
   return n1 * n2;
 }
-int division(int n1, int n2)
+void division(int n1, int n2)
 {
-  return n1 / n2;
+  if (n2 == 0)
+    cout << "Non puoi dividere per 0" << endl;
+  else
+    cout << "La divisione tra i due numeri e': " << n1 / n2;
 }
 
 int main()
@@ -43,7 +47,6 @@ int main()
   cout << "La somma tra i due numeri e': " << sum(n1, n2) << endl;
   cout << "La differenza tra i due numeri e': " << difference(n1, n2) << endl;
   cout << "La moltiplicazione tra i due numeri e': " << multiplication(n1, n2) << endl;
-  cout << "La divisione intera tra i due numeri e': " << division(n1, n2) << endl;
-  
+  division(n1, n2);
   return EXIT_SUCCESS;
 }
