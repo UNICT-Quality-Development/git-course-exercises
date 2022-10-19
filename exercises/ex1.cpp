@@ -1,6 +1,9 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
+
+#define EXIT_SUCCESS 0
+
 using namespace std;
 
 int main()
@@ -43,8 +46,7 @@ int main()
 
     default:
       cout << "\nInvalid input! Please enter week number between 1-7.\n";
-
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
