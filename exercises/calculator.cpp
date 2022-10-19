@@ -12,21 +12,22 @@
 */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 
 int sum(int a, int b) {
-    return a+b;
+    return a + b;
 }
 
 int difference(int a, int b) {
-    return a-b;
+    return a - b;
 }
 
 int multiplication(int a, int b) {
-    return a*b;
+    return a * b;
 }
 
 int division(int a, int b) {
-    return a/b;
+    return a / b;
 }
 
 using namespace std;
@@ -41,6 +42,14 @@ int main() {
   cout<<"SUM: "<<sum(a, b)<<endl;
   cout<<"Difference: "<<difference(a, b)<<endl;
   cout<<"Multiplication: "<<multiplication(a, b)<<endl;
-  cout<<"Division: "<<division(a, b)<<endl;
-  return 0;
+  
+  cout<<"Division: ";
+  if (b == 0) {
+      cout<<"infinite";
+  } else {
+      cout<<division(a, b);
+  }
+  
+  cout<<endl;
+  return EXIT_SUCCESS;
 }
