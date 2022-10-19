@@ -11,16 +11,18 @@
 
 using namespace std;
 
-int sum(int n1, int n2){
-  return n1+n2;
+int sum(int n1, int n2)
+{
+  return n1 + n2;
 }
-int main(){
+int main()
+{
   int n1, n2;
-  cout<<"Inserisci il primo numero: ";
-  cin>>n1;
-  cout<<"Inserisci il secondo numero: ";
-  cin>>n2;
-  cout<<"Il risultato e': "<<sum(n1,n2)<<endl;
+  cout << "Inserisci il primo numero: ";
+  cin >> n1;
+  cout << "Inserisci il secondo numero: ";
+  cin >> n2;
+  cout << "Il risultato e': " << sum(n1, n2) << endl;
 
   return EXIT_SUCCESS;
 }
