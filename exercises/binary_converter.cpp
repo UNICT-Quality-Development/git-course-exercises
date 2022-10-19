@@ -10,6 +10,9 @@
 #include <stdio.h>
 #include <limits.h>
 
+#define CI_SONO_PROBLEMI_MBARE 1
+#define APPOSTO_MBARE 0
+
 bool bits[MAX_BITS];
 
 int main()
@@ -21,7 +24,7 @@ int main()
   if (N <= 0)
   {
     printf("Please enter a positive number below %d\n", INT_MAX);
-    return 1;
+    return CI_SONO_PROBLEMI_MBARE;
   }
 
   int j = MAX_BITS - 1;
@@ -36,5 +39,5 @@ int main()
     printf("%d", bits[i]);
   printf("\n");
 
-  return 0;
+  return APPOSTO_MBARE;
 }
