@@ -1,8 +1,25 @@
 #include <iostream>
 using namespace std;
-int main() {
-    int num1=15, num2=20, sum;
-    sum = num1 + num2;
-    cout<<"Sum of "<<num1<<" and "<<num2<<" is "<<sum;
-    return 0;
+
+int sum(int a, int b)
+{
+	int s = a + b;
+	return s;
+
+}
+
+int main()
+{
+	int s = 0, num1 = 0, num2 = 0;
+
+	cout <<"\nInsert the first number: ";
+	cin >> num1;
+
+	cout <<"\nInsert the second number: ";
+	cin >> num2;
+
+	s = sum(num1,num2);
+
+	cout <<"\nSum is: " << s << end1;
+
 }
