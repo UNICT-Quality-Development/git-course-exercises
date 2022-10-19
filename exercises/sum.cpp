@@ -19,6 +19,6 @@ void main() {
 
   sum=0;
   sum=a+b;
-  cout<<'La somma dei due numeri è: <<somma';
+  cout<<'La somma dei due numeri è: ' << sum;
 
 }
