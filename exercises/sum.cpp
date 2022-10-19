@@ -7,6 +7,7 @@
   Sum: 3
 */
 #include <iostream>
+#define EXIT_SUCCESS 0
 
 using namespace std;
 
@@ -20,4 +21,6 @@ int main(){
   cout<<"Inserisci il secondo numero: ";
   cin>>n2;
   cout<<"Il risultato e': "<<sum(n1,n2)<<endl;
+
+  return EXIT_SUCCESS;
 }
