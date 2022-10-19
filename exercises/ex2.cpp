@@ -6,6 +6,9 @@
 
 #include <iostream>
 #include <string>
+
+#define EXIT_SUCCESS 0
+
 using namespace std;
 
 int main()
@@ -18,8 +21,8 @@ int main()
   cin >> week_day;
   
   if (week_day >= 1 && week_day <= 7) {
-    cout << week_days[week_day-1];
+    cout << week_days[week_day-1] << endl;
   } else cout << "Invalid input! Please enter week number between 1-7." << endl;
 
-  return 0;
+  return EXIT_SUCCESS;;
 }
