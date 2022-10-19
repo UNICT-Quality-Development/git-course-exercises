@@ -10,9 +10,10 @@
 #include <iostream>
 
 using namespace std;
+#define EXIT_SUCCESS 0
 
 template <typename T>
-T sum (T n1, T n2){
+T sum (T &n1, T &n2){
   return n1+n2;
 }
 
@@ -27,5 +28,5 @@ int main(){
 
   cout << "La somma fra i due numeri e': " << sum<double>(n1,n2);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
