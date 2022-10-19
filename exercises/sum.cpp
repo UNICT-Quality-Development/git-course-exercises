@@ -1,5 +1,5 @@
 #include <iostream>
-
+#define EXIT_SUCCESS 0
 using namespace std;
 
 int main(){
@@ -8,5 +8,6 @@ int main(){
 	cin>>a;
 	cout<<"Inserire secondo addendo\n";
 	cin>>b;
-	cout<<"La somma e': "<<(a+b)<<"\n";
+	cout<<"La somma e': "<<a+b<<"\n";
+	return EXIT_SUCCESS;
 }
