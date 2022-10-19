@@ -5,43 +5,43 @@ using namespace std;
 
 int main()
 {
-  int week;
+  int day;
 
   /* Input week number from user */
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
+  cout << "Scrivere giorno della settimana (lunedì=1, domenica=7):" << endl;
+  cin >> day;
 
-  if (week == 1)
+  if (day == 1)
   {
-    cout << "Monday" << endl;
+    cout << "Lunedì" << endl;
   }
-  else if (week == 2)
+  else if (day == 2)
   {
-    cout << "Tuesday" << endl;
+    cout << "Martedì" << endl;
   }
-  else if (week == 3)
+  else if day == 3)
   {
-    cout << "Wednesday" << endl;
+    cout << "Mercoledì" << endl;
   }
-  else if (week == 4)
+  else if (day == 4)
   {
-    cout << "Thursday" << endl;
+    cout << "Giovedì" << endl;
   }
-  else if (week == 5)
+  else if (day == 5)
   {
-    cout << "Friday" << endl;
+    cout << "Venerdì" << endl;
   }
-  else if (week == 6)
+  else if (day == 6)
   {
-    cout << "Saturday" << endl;
+    cout << "Sabato" << endl;
   }
-  else if (week == 7)
+  else if (day == 7)
   {
-    cout << "Sunday" << endl;
+    cout << "Domenica" << endl;
   }
   else
   {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    cout << "Qualcosa è andato storto. Per favore, inserisci un numero compreso tra 1-7." << endl;
   }
 
   return 0;
