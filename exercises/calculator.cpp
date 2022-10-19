@@ -12,6 +12,7 @@
 */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 
 using namespace std;
 
@@ -38,4 +39,5 @@ int main(){
   cout<<"La differenza tra i due numeri e': "<<difference(n1,n2)<<endl;
   cout<<"La moltiplicazione tra i due numeri e': "<<multiplication(n1,n2)<<endl;
   cout<<"La divisione intera tra i due numeri e': "<<division(n1,n2)<<endl;
+  return EXIT_SUCCESS;
 }
