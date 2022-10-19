@@ -7,7 +7,6 @@ int sum(int a, int b)
 	return s;
 
 }
-
 int main()
 {
 	int s = 0, num1 = 0, num2 = 0;
