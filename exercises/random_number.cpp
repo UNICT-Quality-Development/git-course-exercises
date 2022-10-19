@@ -1,6 +1,10 @@
-/*
-  Write a program that generates a random number.
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
 
-  Output:
-  The random number is: 4
-*/
+using namespace std;
+
+int main(){
+	srand(time(NULL));
+	cout<<"The number is: "<<rand()<<"\n";
+}
