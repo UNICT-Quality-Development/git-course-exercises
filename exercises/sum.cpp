@@ -10,6 +10,8 @@
 #include <iostream>
 using namespace std;
 
+#define EXIT_SUCCESS 0
+
 double sum(double a, double b){
   return a+b;
 }
@@ -24,5 +26,5 @@ int main(){
   cin>>y;
 
   cout<<"Sum: "<<sum(x, y)<<endl;
-  return 0;
+  return EXIT_SUCCESS;
 }
