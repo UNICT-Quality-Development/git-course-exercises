@@ -9,6 +9,8 @@
 #include<iostream>
 using namespace std;
 
+#define EXIT_SUCCESS 0
+
 int sumInt(int n1,int n2)
 {
    return n1+n2;
@@ -23,5 +25,7 @@ int main()
   cin>>n2;
 
   int sum=sumInt(n1,n2);
-  cout<<"Sum: "<<sum<<endl;
+  cout<<"Sum: "<< sum <<endl;
+  
+  return EXIT_SUCCESS;
 }
