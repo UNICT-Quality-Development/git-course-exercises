@@ -1,56 +1,37 @@
 /* Surprise me. */
 
-#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#include <sstream>
+using namespace std;
+
+#define EXIT_SUCCESS 0
+
+string getNumberOfDays(int m)
+{
+   int arrDays[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+   stringstream d;
+   d<<arrDays[m-1];
+   
+   if(m == 2)
+    d<<"/29 ";
+
+    d<<"days ";
+    return d.str();
+}
 
 int main()
 {
   int month;
 
   /* Input month number from user */
-  printf("Enter month number(1-12): ");
-  scanf("%d", &month);
+ do{
+    cout<<"Enter month number(1-12): ";
+    cin>>month;
+ }while (month < 1 || month > 12);
 
-  switch (month)
-  {
-  case 1:
-    printf("31 days");
-    break;
-  case 2:
-    printf("28/29 days");
-    break;
-  case 3:
-    printf("31 days");
-    break;
-  case 4:
-    printf("30 days");
-    break;
-  case 5:
-    printf("31 days");
-    break;
-  case 6:
-    printf("30 days");
-    break;
-  case 7:
-    printf("31 days");
-    break;
-  case 8:
-    printf("31 days");
-    break;
-  case 9:
-    printf("30 days");
-    break;
-  case 10:
-    printf("31 days");
-    break;
-  case 11:
-    printf("30 days");
-    break;
-  case 12:
-    printf("31 days");
-    break;
-  default:
-    printf("Invalid input! Please enter month number between 1-12");
-  }
 
-  return 0;
+  cout<<"The month has: "<<getNumberOfDays(month)<<endl;
+
+  return EXIT_SUCCESS;
 }
