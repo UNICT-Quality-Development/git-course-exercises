@@ -3,6 +3,9 @@
 #include <iostream>
 using namespace std;
 
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
+
 int main()
 {
   int week;
@@ -35,10 +38,11 @@ int main()
       cout << "Sunday";
       break;
     default:
-      cout << "Invalid input! Please enter week number between 1-7.";
+      cout << "Invalid input! Please enter week number between 1-7." << endl;
+      return EXIT_FAILURE;
   }
 
   cout << endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
