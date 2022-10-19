@@ -1,12 +1,15 @@
-/*
-  Write a program that given two numbers as input make the main operations.
+#include <iostream>
 
-  Output:
-  Insert first number: 4
-  Insert second number: 2
+using namespace std;
 
-  SUM: 6
-  Difference: 2
-  Multiplication: 8
-  Division: 2
-*/
+int main(){
+	double a, b;
+	cout<<"Insert first number:\n";
+	cin>>a;
+	cout<<"Insert second number:\n";
+	cin>>b;
+	cout<<"Sum: "<<a+b<<"\n";
+	cout<<"Difference: "<<a-b<<"\n";
+	cout<<"Multiplication: "<<a*b<<"\n";
+	cout<<"Division: "<<a/b<<"\n";
+}
