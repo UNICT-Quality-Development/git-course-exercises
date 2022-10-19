@@ -22,4 +22,5 @@ int main(){
 		cin>>b2;
 		cout<<"La somma di "<<a2<<"+"<<b2<<"="<<sum(a2,b2);
 	}
+	gg
 }
