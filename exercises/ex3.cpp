@@ -1,38 +1,31 @@
 /* Could you still use a switch case here? May you can use a map. */
 
 #include <iostream>
+#include <string.h>
+#include <utility>
+#include <map>
 using namespace std;
 
 int main()
 {
+  map <string, string> messages;
+
+  messages["BarackObama"] = "44th president of the United States";
+  messages["SandroPertini"] = "Former President of the Italian Republic";
+  messages["NelsonMandela"] = "Former President of South Africa";
+  messages["MahatmaGandhi"] = "Bapu";
+  messages["DonaldKnuth"] = "Creator of LaTeX";
+  messages["DennisRitchie"] = "Creator of C";
+  
+
   string textInput;
 
   cout << "Enter a famous name+surname, ex. BarackObama " << endl;
   cin >> textInput;
 
-  if (textInput == "BarackObama")
+  if (messages.find(textInput) != messages.end())
   {
-    cout << "44th president of the United States" << endl;
-  }
-  else if (textInput == "SandroPertini")
-  {
-    cout << "Former President of the Italian Republic" << endl;
-  }
-  else if (textInput == "NelsonMandela")
-  {
-    cout << "Former President of South Africa" << endl;
-  }
-  else if (textInput == "MahatmaGandhi")
-  {
-    cout << "Bapu" << endl;
-  }
-  else if (textInput == "DonaldKnuth")
-  {
-    cout << "Creator of LaTeX" << endl;
-  }
-  else if (textInput == "DennisRitchie")
-  {
-    cout << "Creator of C" << endl;
+      cout << messages[textInput] << endl;
   }
   else
   {
