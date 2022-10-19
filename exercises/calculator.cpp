@@ -13,7 +13,28 @@
 
 #include <iostream>
 
+#define EXIT_SUCCESS 0
+
 using namespace std;
+
+
+int sum(int x,int y){
+    return x + y; 
+}
+
+int difference(int x,int y){  
+    return x-y; 
+}
+
+int Multiplication(int x,int y){
+    return x*y;
+}
+
+int Division(int x,int y){ 
+    return x/y;
+}
+
+
 
 int main(int argc, char const *argv[])
 {
@@ -24,10 +45,10 @@ int main(int argc, char const *argv[])
   cin>>x; 
   cin>>y; 
   //print output
-  cout<<"sum "<<x+y<<endl;
-  cout<<"difference "<<x-y<<endl;
-  cout<<"Multiplication "<<x*y<<endl;
-  cout<<"Division "<<x/y<<endl;
+  cout<<"sum "<< sum(x,y) <<endl;
+  cout<<"difference "<< difference(x,y) <<endl;
+  cout<<"Multiplication "<< Multiplication(x,y) <<endl;
+  cout<<"Division "<< Division(x,y) <<endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
