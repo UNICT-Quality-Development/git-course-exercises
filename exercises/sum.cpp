@@ -1,8 +1,12 @@
-/*
-  Write a program that takes as input two numbers and print the sum.
+#include <iostream>
 
-  Output:
-  Insert the first number: 1
-  Insert the second number: 2
-  Sum: 3
-*/
+using namespace std;
+
+int main(){
+	int a, b;
+	cout<<"Inserire primo addendo\n";
+	cin>>a;
+	cout<<"Inserire secondo addendo\n";
+	cin>>b;
+	cout<<"La somma e': "<<(a+b)<<"\n";
+}
