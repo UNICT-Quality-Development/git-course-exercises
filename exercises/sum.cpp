@@ -11,9 +11,9 @@ using namespace std;
 
 #define EXIT_SUCCESS 0
 
-int sumInt(int n1,int n2)
+int sumInt(int* n1,int* n2)
 {
-   return n1+n2;
+   return *n1+*n2;
 }
 
 int main()
@@ -24,7 +24,7 @@ int main()
   cout<<"Insert the second number: ";
   cin>>n2;
 
-  int sum=sumInt(n1,n2);
+  int sum=sumInt(&n1,&n2);
   cout<<"Sum: "<< sum <<endl;
   
   return EXIT_SUCCESS;
