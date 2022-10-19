@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
   int number;
-  cout << "nsert numberI";
+  cout << "nsert number: ";
   cin >> number;
 
   // placeholder
@@ -25,9 +25,10 @@ int main() {
       break;
     }
 
-  string control_str = is_valid ? "" : "not";
-  
-  cout << "The number" << number << "is" << control_str << "present in the array.";
+  string control_str = is_valid ? "" : "not ";
+
+  cout << "The number " << number << " is " << control_str
+       << "present in the array.";
 
   return 0;
 }
