@@ -2,6 +2,7 @@
 
 #include <iostream>
 using namespace std;
+#define EXIT_SUCCESS 0
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
   {
     cout << "Martedì" << endl;
   }
-  else if day == 3)
+  else if (day == 3)
   {
     cout << "Mercoledì" << endl;
   }
@@ -44,5 +45,5 @@ int main()
     cout << "Qualcosa è andato storto. Per favore, inserisci un numero compreso tra 1-7." << endl;
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
