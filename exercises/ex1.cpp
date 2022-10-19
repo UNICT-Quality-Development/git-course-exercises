@@ -1,6 +1,6 @@
 /* Improve this program using a switch-case. */
 
-#include <iostream>
+#include <iostream>;
 using namespace std;
 #define EXIT_SUCCESS 0
 
