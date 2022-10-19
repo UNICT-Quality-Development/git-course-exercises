@@ -15,6 +15,8 @@
 
 using namespace std;
 
+#define EXIT_SUCCESS 0
+
 double sum(double x, double y) {
   return x + y;
 }
@@ -28,7 +30,7 @@ double mul(double x, double y) {
 }
 
 double div(double x, double y) {
-  return x / y;
+  return (x == 0 || y == 0) ? 0 : x / y;
 }
 
 int main() {
@@ -40,10 +42,10 @@ int main() {
   cout << "Insert the second number: ";
   cin >> y;
 
-  cout << "SUM: " << sum(x, y) << endl;
+  cout << "Sum: " << sum(x, y) << endl;
   cout << "Difference: " << sub(x, y) << endl;
   cout << "Multiplication: " << mul(x, y) << endl;
   cout << "Division: " << div(x, y) << endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
