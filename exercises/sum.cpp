@@ -24,4 +24,5 @@ int main()
 
   int sum=sumInt(n1,n2);
   cout<<"Sum: "<<sum<<endl;
+  return 0;
 }
