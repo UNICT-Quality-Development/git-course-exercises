@@ -31,10 +31,7 @@ int main()
     cout << N[i] << " ";
   }
 
-  if(check)
-    cout << "]\n Il numero inserito e' presente nell'array.";
-  else
-    cout << "]\n Il numero inserito non e' presente nell'array.";
+    cout << "]\n Il numero inserito" << (check ? " " : " non") <<  "e' presente nell'array.";
 
   return EXIT_SUCCESS;
 }
