@@ -33,8 +33,7 @@ int main()
   cout << "Insert number: ";
   cin >> number;
 
-  if(search(N, 10, number)==true) cout << "The number " << number << " is present in the array" << endl;
-  else cout << "The number " << number << " is not present in the array" << endl;
-
+  cout << "The number " << number << " is" << (search(N, 10, number) ? " " : " not ") << "present in the array" << endl;
+  
   return EXIT_SUCCESS;
 }
