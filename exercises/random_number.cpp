@@ -12,8 +12,7 @@ using namespace std;
 
 int main(){
 
-  double x = rand();
-
-  cout << "The random number is: " << x << endl;
+  cout << "The random number is: " << rand() << endl;
+  
   return EXIT_SUCCESS;
 }
