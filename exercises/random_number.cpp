@@ -11,6 +11,17 @@ using namespace std;
 
 #define EXIT_SUCCECS 0
 
+void input(int*max,int* min )
+{
+  do 
+  {
+    cout<<"Insert the higher number that can be generated: ";
+    cin>>*max;
+    cout<<"Insert the lowe number that can be generated: ";
+    cin>>*min;
+  }while (*max<=*min);
+}
+
 int generateRandom(int max,int min)
 {
   return (rand() % max - min + 1 ) + min;
@@ -18,16 +29,10 @@ int generateRandom(int max,int min)
 
 int main()
 {
-  int max,min,x;
-  do 
-  {
-    cout<<"Insert the higher number that can be generated: ";
-    cin>>max;
-    cout<<"Insert the lowe number that can be generated: ";
-    cin>>min;
-  }while (max<=min);
-
-  x=generateRandom(max,min);
+  int max,min;
+  
+  input(&max,&min);
+  auto x=generateRandom(max,min);
 
   cout<<"The random number is: "<<x<<endl;  
   
