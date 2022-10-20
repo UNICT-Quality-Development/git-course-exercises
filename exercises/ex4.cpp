@@ -31,7 +31,7 @@ int main()
  }while (month < 1 || month > 12);
 
 
-  cout<<"The month has: "<<getNumberOfDays(month)<<endl;
+  cout<<"The month has: "<< getNumberOfDays(month) << endl;
 
   return EXIT_SUCCESS;
 }
