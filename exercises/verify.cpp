@@ -9,12 +9,16 @@ The number 3 is [not] present in the array.
 #include <iostream>
 
 #define EXIT_SUCCESS 0
-#define EXIT_ERROR -1
 
 using namespace std;
 
-int main()
-{
+bool check_number (int* numbers, const int dim, const int number) {
+  for (int i=0; i<dim; i++)
+    if (numbers[i] == number) return true;
+  return false;
+}
+
+int main() {
 
   int dim = 10;
   int number;
@@ -23,15 +27,11 @@ int main()
   cin >> number;
 
   // placeholder
-  int N[dim] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+  int numbers[dim] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
 
-  for (int i=0; i<dim; i++) {
-    if (N[i] == number) {
-      cout << "The number " << number << " is present in the array" << endl;
-      return EXIT_SUCCESS;
-    }
-  }
+  if (check_number(numbers, dim, number))
+    cout << "The number " << number << " is present in the array" << endl;
+  else cout << "The number " << number << " is not present in the array" << endl;
 
-  cout << "The number " << number << " is not present in the array" << endl;
-  return EXIT_ERROR;
+  return EXIT_SUCCESS;
 }
