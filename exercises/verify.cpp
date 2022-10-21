@@ -33,7 +33,7 @@ int main()
   cout<<"Insert number: ";
   cin>>num;
 
-cout << "The number " << number << " is " << (checkNumber(N, num) ? "" : "not ") << "present in the array" << endl;
+cout << "The number " << num << " is " << (checkNumber(N, num) ? "" : "not ") << "present in the array" << endl;
 
   return EXIT_SUCCESS;
 }
