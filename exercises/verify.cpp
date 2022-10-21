@@ -33,10 +33,9 @@ int main()
   cout<<"Insert number: ";
   cin>>num;
 
-  if(checkNumber(N,num))
-    cout<<"The number "<< num <<" is present in the array \n";
-  else 
-    cout<<"The number "<< num <<" is not present in the array \n";
+ciò che cambia qui è solo il "not", potresti usare la condizione ternaria per rendere tutto più compatto:
+```C++
+cout << "The number " << number << " is " << checkNumber(numbers, dim, number) ? "" : "not " << "present in the array" << endl;
 
   return EXIT_SUCCESS;
 }
