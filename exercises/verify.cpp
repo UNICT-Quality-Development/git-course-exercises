@@ -13,8 +13,12 @@ The number 3 is [not] present in the array.
 using namespace std;
 
 bool check_number (int* numbers, const int dim, const int number) {
-  for (int i=0; i<dim; i++)
-    if (numbers[i] == number) return true;
+
+  for (int i=0; i<dim; i++) {
+    if (numbers[i] == number) {
+      return true;
+    }
+  }
   return false;
 }
 
@@ -29,9 +33,7 @@ int main() {
   // placeholder
   int numbers[dim] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
 
-  if (check_number(numbers, dim, number))
-    cout << "The number " << number << " is present in the array" << endl;
-  else cout << "The number " << number << " is not present in the array" << endl;
+  cout << "The number " << number << " is " << (check_number(numbers, dim, number) ? "" : "not ") << "present in the array" << endl;
 
   return EXIT_SUCCESS;
 }
