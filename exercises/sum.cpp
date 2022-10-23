@@ -10,8 +10,8 @@
 #include <iostream> 
 using namespace std; 
 
-int somma (int x, int y){
-	return x+y; 
+int somma (int *x, int *y){
+	return *x+*y; 
 }
 
 int Inserire(){
@@ -30,6 +30,8 @@ int main(){
 	a=Inserire(); 
 	b=Inserire(); 
 	
-	cout<<"la somma tra due numeri e'': " <<somma(a,b); 
+	cout<<"la somma tra due numeri e'': " <<somma(&a,&b); 
+	
+	return 0; 
 	
 }
