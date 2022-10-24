@@ -8,6 +8,7 @@
 */
 
 #include <iostream> 
+#define EXIT_SUCCESS 0
 using namespace std; 
 
 int somma (int *x, int *y){
@@ -32,6 +33,6 @@ int main(){
 	
 	cout<<"la somma tra due numeri e'': " <<somma(&a,&b); 
 	
-	return 0; 
+	return EXIT_SUCCESS; 
 	
 }
