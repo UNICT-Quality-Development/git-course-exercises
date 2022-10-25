@@ -1,12 +1,7 @@
-/*
- Improve this program replacing if/else if with an array.
-
- Hint:  arr[3] = "Thursday";
-*/
-
 #include <iostream>
 #include <string.h>
 using namespace std;
+#define EXIT_SUCCESS 0 
 
 int main()
 {
@@ -19,9 +14,8 @@ int main()
   if(week <1 || week>7){  
     cout<<"error "<<endl;
     return 0; 
-  } 
-  
+  }   
   cout<<a[week-1]<<endl;;
-  
-  return 0;
+
+  return EXIT_SUCCESS;
 }
