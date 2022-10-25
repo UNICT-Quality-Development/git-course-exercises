@@ -8,6 +8,7 @@ The number 3 is [not] present in the array.
 
 #include <iostream>
 using namespace std;
+#define EXIT_SUCCES 0 
 
 int main()
 {
@@ -17,19 +18,19 @@ int main()
   int x;
 
   cout<<"Enter the number to check "<<endl; 
+  cin>>x;
 
   for (int i = 0; i < 10; i++)
   {
-    if (x=N[i])
+    if (x==N[i])
     {
       cout<<"The number is on the list ";
       break;
     }
-    else if (i=10)
+    else if (i==10)
     {
       cout<<"The number is not on the list "<<endl; 
     }
   }
-
-  return 0;
+  return EXIT_SUCCES;
 }
