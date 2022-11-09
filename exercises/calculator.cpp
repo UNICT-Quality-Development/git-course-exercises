@@ -1,12 +1,11 @@
-/*
-  Write a program that given two numbers as input make the main operations.
+#include <iostream>
+#include <cmath>
+using namespace std;
 
-  Output:
-  Insert first number: 4
-  Insert second number: 2
-
-  SUM: 6
-  Difference: 2
-  Multiplication: 8
-  Division: 2
-*/
+int main() {
+    int x = 4;
+    int y = 2;
+    int numberTotal = (x+y);
+    printf("%d",numberTotal);
+    return numberTotal;
+}

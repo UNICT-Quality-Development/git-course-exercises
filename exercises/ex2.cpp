@@ -1,51 +1,39 @@
-/*
- Improve this program replacing if/else if with an array.
-
- Hint:  arr[3] = "Thursday";
-*/
-
 #include <iostream>
+#include <map>
 using namespace std;
 
-int main()
-{
-  int week;
+int main() {
 
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
+    int week[8] = {0,1,2,3,4,5,6,7};
+    cout << "Enter week number(1-7): " << endl;
 
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
-
-  return 0;
+    for (int i = 0; i < 7; ++i) {
+        cin >> week[i];
+        switch (week[i]) {
+            case 1:
+                cout << "Monday" << endl;
+                return 0;
+            case 2:
+                cout << "Tuesday" << endl;
+                return 0;
+            case 3:
+                cout << "Wednesday" << endl;
+                return 0;
+            case 4:
+                cout << "Thursday" << endl;
+                return 0;
+            case 5:
+                cout << "Friday" << endl;
+                return 0;
+            case 6:
+                cout << "Saturday" << endl;
+                return 0;
+            case 7:
+                cout << "Sunday" << endl;
+                return 0;
+            default:
+                cout << "Invalid input! Please enter week number between 1-7." << endl;
+        }
+    }
 }
+
