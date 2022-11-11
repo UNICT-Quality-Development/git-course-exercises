@@ -1,4 +1,5 @@
 #include <iostream>
+#define EXIT_SUCCESS 0
 using namespace std;
 
 double convert(int n) {
@@ -19,4 +20,6 @@ int main() {
 	cout << "Enter a number: " << endl;
 	cin >> x;
 	cout << "The binary equivalent of " << x << " is: " << convert(x) << endl;
+	return EXIT_SUCCESS;
 }
+	
