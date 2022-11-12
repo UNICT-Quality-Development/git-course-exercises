@@ -2,7 +2,6 @@
 Output:
 Insert first number: 4
 Insert second number: 2
-
 SUM: 6
 Difference: 2
 Multiplication: 8
