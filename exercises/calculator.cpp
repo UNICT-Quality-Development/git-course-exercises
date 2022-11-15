@@ -6,7 +6,6 @@ SUM: 6
 Difference: 2
 Multiplication: 8
 Division: 2 */
-
 #include <iostream>
 using namespace std;
 
@@ -28,31 +27,13 @@ return x / y;
 
 int main() {
 double x, y = 0;
-char op;
-cout << "Insert first number: " << endl;
+cout << "Insert first number: ";
 cin >> x;
-cout << "Insert second number: " << endl;
+cout << "Insert second number: ";
 cin >> y;
-cout << "Insert operator: " << endl;
-cin >> op;
-while (op != '+' && op != '-' && op != '*' && op != '/') {
-cout << "Invalid operator. Insert valid operator (+, -, *, /):" << endl;
-cin >> op;
-}
-cout << x << op << y << " = ";
-switch(op){
-case '+':
-cout << sum(x, y) << endl;
-break;
-case '-':
-cout << diff(x, y) << endl;
-break;
-case '*':
-cout << mul(x, y) << endl;
-break;
-case '/':
-cout << div(x, y) << endl;
-break;
-}
+cout << "Sum: " << sum(x, y) << endl
+<< "Difference: " << diff(x, y) << endl
+<< "Multiplication: " << mul(x, y) << endl
+<< "Division: " << div(x, y) << endl;
 return EXIT_SUCCESS;
 }
