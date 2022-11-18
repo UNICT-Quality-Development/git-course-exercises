@@ -64,11 +64,8 @@ int main() {
         << Blue[2] << " (O) \n\n";
 
     for (int i = 0; i < 3; i++) {
-        flag = false;
-        if (Red[i] > Blue[i])
-            flag = true;
         cout << Red[i] << " vs " << Blue[i] << " ==> ";
-        if (flag)
+        if (Red[i] > Blue[i])
             cout << "Red Wins! \n";
         else
             cout << "Blue Wins! \n";
