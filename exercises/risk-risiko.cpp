@@ -52,7 +52,6 @@ int main() {
     srand(time(0));
     int Red[3] = { rand() % 7,rand() % 7 ,rand() % 7 };
     int Blue[3] = { rand() % 7,rand() % 7 ,rand() % 7 };
-    bool flag;
     selectionsort(Red, 3);
     selectionsort(Blue, 3);
     cout << "Red dices: \n" << Red[0] << " (N) \n"
