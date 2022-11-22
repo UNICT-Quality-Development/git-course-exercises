@@ -37,8 +37,8 @@ void swap(int& a, int& b) {
 }
 
 void selectionsort(int array[], int n) {
-    int indexMax;
-    for (int i = 0; i < n; i++) {
+    int indexMax = 0;
+    for (int i = 1; i < n; i++) {
         indexMax = i;
         for (int j = i + 1; j < n; j++) {
             if (array[j] > array[indexMax])
@@ -48,12 +48,18 @@ void selectionsort(int array[], int n) {
     }
 }
 
+int* rollDices(int n){
+    int* dices = new int dices[n];
+    return dices;
+}
+
 int main() {
     srand(time(0));
-    int Red[3] = { rand() % 7,rand() % 7 ,rand() % 7 };
-    int Blue[3] = { rand() % 7,rand() % 7 ,rand() % 7 };
-    selectionsort(Red, 3);
-    selectionsort(Blue, 3);
+    int const RISIKO_DICES = 3;   //increasing value, increases the number of troops per Player
+    int Red[RISIKO_DICES] = {};
+    int Blue[RISIKO_DICES] = {};
+    selectionsort(Red, RISIKO_DICES);
+    selectionsort(Blue, RISIKO_DICES);
     cout << "Red dices: \n" << Red[0] << " (N) \n"
         << Red[1] << " (M) \n"
         << Red[2] << " (O) \n\n";
