@@ -6,10 +6,3 @@
   Insert the second number: 2
   Sum: 3
 */
-#include <iostream>
-using namespace std;
-
-int main() {
-  int x;
-  cout << x << endl;
-}
