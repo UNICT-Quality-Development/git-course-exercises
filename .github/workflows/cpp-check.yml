@@ -1,7 +1,11 @@
 name: cpp-check
 on:
   push:
+    branches:
+      - "main"
   pull_request:
+    branches:
+      - "main"
 
 jobs:
   cpp-check:
