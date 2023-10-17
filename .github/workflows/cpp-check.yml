@@ -1,10 +1,5 @@
 name: cpp-check
 on:
-  push:
-    branches:
-      - "main"
-    paths:
-      - "!README.md"
   pull_request:
     paths:
       - "!README.md"
@@ -23,7 +18,7 @@ jobs:
           sudo apt install -y cppcheck
       - name: cpp check
         run: |
-          cppcheck --force --inline-suppr --suppressions-list=./.suppress.cppcheck --output-file=report.txt \
+          cppcheck --force --inline-suppr --output-file=report.txt \
             exercises/
 
             if [ -s report.txt ]; then  # if file is not empty
