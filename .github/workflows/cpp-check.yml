@@ -25,10 +25,8 @@ jobs:
           sudo apt install -y cppcheck
       - name: cpp check
         run: |
-          cppcheck --force --inline-suppr --output-file=report.txt \
-            exercises/
-
-            if [ -s report.txt ]; then  # if file is not empty
-              cat report.txt
-              exit 1 # let github action fails
-            fi
+          cppcheck --force --inline-suppr --output-file=report.txt exercises/
+          if [ -s report.txt ]; then  # if file is not empty
+            cat report.txt
+            exit 1 # let github action fails
+          fi
