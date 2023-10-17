@@ -1,0 +1,26 @@
+name: cpp-check
+
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  cpp-check:
+    strategy:
+      fail-fast: false
+    runs-on: [ubuntu-22.04]
+    name: cpp check
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          sudo apt update -y
+          sudo apt install -y cppcheck
+      - name: cpp check
+        run: |
+          cppcheck --force --inline-suppr --output-file=report.txt exercises/
+          if [ -s report.txt ]; then  # if file is not empty
+            cat report.txt
+            exit 1 # let github action fails
+          fi
