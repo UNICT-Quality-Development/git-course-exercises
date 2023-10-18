@@ -19,20 +19,27 @@ using namespace std;
    return n;
  }
 
+  string binary_conversion(int n)
+  {
+    string converted = "";
+    while (n>0) { 
+      if (n%2==0) 
+      converted='0'+converted; 
+    else 
+      converted='1'+converted; 
+    n/=2; 
+    } 
+    return converted;
+  }
+
 int main(){ 
- int n; 
- string binary_num= ""; 
+  int n = 0; 
+  string binary_num= ""; 
 
   n = take_parameter();
+  binary_num= binary_conversion(n);
 
- while (n>0) { 
-  if (n%2==0) 
-   binary_num='0'+binary_num; 
-  else 
-   binary_num='1'+binary_num; 
-  n/=2; 
- } 
- cout<<"Insert first number: "<< n <<endl;  
- cout<<"The binary number is: "<< binary_num << endl;  
- return 0;
+  cout<<"Insert first number: "<< n <<endl;  
+  cout<<"The binary number is: "<< binary_num << endl;  
+  return 0;
 }
