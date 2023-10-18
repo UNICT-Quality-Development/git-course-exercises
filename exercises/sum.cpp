@@ -8,6 +8,7 @@
 */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 int main(void) {
 
 	int a, b;
@@ -20,7 +21,7 @@ int main(void) {
 	cout << "Sum: " << a + b;
 
 
-	return 0;
+	return EXIT_SUCCESS;
 
 
 }
