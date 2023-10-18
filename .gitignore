@@ -1,3 +1,5 @@
 .vscode/
 report.txt
 
+## Ignore binary code generate by compile.sh
+*.o
