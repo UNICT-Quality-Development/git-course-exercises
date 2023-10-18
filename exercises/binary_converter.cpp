@@ -26,4 +26,5 @@ int main(){
  } 
  cout<<"Insert first number: "<< n <<endl;  
  cout<<"The binary number is: "<< binary_num << endl;  
+ return 0;
 }
