@@ -10,3 +10,26 @@
   Multiplication: 8
   Division: 2
 */
+
+#include <iostream>
+
+using namespace std;
+
+int main(void) {
+    double a, b;
+
+    cout << "Insert first number: ";
+    cin >> a;
+
+    cout << "Insert second number: ";
+    cin >> b;
+
+    cout << endl;
+
+    cout << "Sum: " << (a + b) << endl;
+    cout << "Difference: " << (a - b) << endl;
+    cout << "Multiplication: " << (a * b) << endl;
+    cout << "Division: " << (a / b) << endl;
+
+    return 0;
+}
