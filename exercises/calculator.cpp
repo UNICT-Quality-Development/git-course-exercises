@@ -22,10 +22,10 @@ int main() {
   cout << "Insert second number: ";
   cin >> y;
 
-  cout << "Sum: " << x + y;
-  cout << "Difference: " << x - y;
-  cout << "Multiplication: " << x * y;
-  cout << "Division: " << x / y;
+  cout << "Sum: " << x + y << endl;
+  cout << "Difference: " << x - y << endl;
+  cout << "Multiplication: " << x * y << endl;
+  cout << "Division: " << x / y << endl;
 
   return 0;
 }
