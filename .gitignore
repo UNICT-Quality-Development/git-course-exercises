@@ -1,3 +1,5 @@
 .vscode/
 report.txt
 
+# Binaries
+/bin/
