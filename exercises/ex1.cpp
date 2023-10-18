@@ -1,6 +1,7 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
