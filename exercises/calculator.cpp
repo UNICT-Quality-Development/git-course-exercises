@@ -10,3 +10,15 @@
   Multiplication: 8
   Division: 2
 */
+#include <stdio.h>
+int main(void){
+  printf("Ciao, inserisci i numeri da sommare:\n");
+  double num1 = 0, num2 = 0;
+  if (scanf("%lf %lf", &num1, &num2) == 2);
+  printf("La somma vale: %g\n", num1 + num2);
+  printf("La sottrazione vale: %g\n", num1 - num2);
+  printf("La moltiplicazione vale: %g\n", num1 * num2);
+  printf("La divisione vale: %g\n", num1 / num2);}
+  {else}
+  printf ("Errore, nessun numero inserito!")
+  
