@@ -31,7 +31,11 @@ int main(){
                 printf("La moltiplicazione vale: %g\n", num1 * num2);
             break;
             case 4:
-                printf("La divisione vale %g\n", num1 / num2);
+                if (num2 > 0){
+                  printf("La divisione vale %g\n", num1 / num2);
+                }else{
+                  printf("Errore! il divisore è minore di 0 dunque non è possibile effettuare la divisione");
+                }
             break;
             default:
                 printf("Errore! Opzione non valida\n");
