@@ -1,47 +1,47 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main()
 {
   int week;
+  string day = "";
 
   /* Input week number from user */
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
 
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
+  switch (week) {
+    case 1:
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case 6:
+      day = "Saturday";
+      break;
+    case 7:
+      day = "Sunday";
+      break;
+    default:
+      cout << "Invalid input! Please enter week number between 1-7." << endl;
   }
-  else if (week == 2)
+
+  if (day != "")
   {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    cout << day << endl;
   }
 
   return 0;
