@@ -11,12 +11,20 @@
  
 using namespace std; 
  
+ int take_parameter()
+ {
+   int n = 0;
+   cout<<"Inserisci un numero: "; 
+   cin>>n;
+   return n;
+ }
+
 int main(){ 
  int n; 
  string binary_num= ""; 
-  
- cout<<"Inserisci un numero: "; 
- cin>>n; 
+
+  n = take_parameter();
+
  while (n>0) { 
   if (n%2==0) 
    binary_num='0'+binary_num; 
