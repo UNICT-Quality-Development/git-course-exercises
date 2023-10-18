@@ -7,7 +7,7 @@
 */
 #include <iostream>
 void printNumberBinary(unsigned long long int n)
-{ 
+{
   //Checks if we are in the base case
   if(n<=1)
   {
