@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
   int week;
+  string day = "";
 
   /* Input week number from user */
   cout << "Enter week number(1-7): " << endl;
@@ -13,28 +14,33 @@ int main()
 
   switch (week) {
     case 1:
-      cout << "Monday" << endl;
+      day = "Monday";
       break;
     case 2:
-      cout << "Tuesday" << endl;
+      day = "Tuesday";
       break;
     case 3:
-      cout << "Wednesday" << endl;
+      day = "Wednesday";
       break;
     case 4:
-      cout << "Thursday" << endl;
+      day = "Thursday";
       break;
     case 5:
-      cout << "Friday" << endl;
+      day = "Friday";
       break;
     case 6:
-      cout << "Saturday" << endl;
+      day = "Saturday";
       break;
     case 7:
-      cout << "Sunday" << endl;
+      day = "Sunday";
       break;
     default:
       cout << "Invalid input! Please enter week number between 1-7." << endl;
+  }
+
+  if (day !== "")
+  {
+    cout << day << endl;
   }
 
   return 0;
