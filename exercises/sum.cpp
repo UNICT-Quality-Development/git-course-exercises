@@ -23,5 +23,5 @@ int main(){
   cin >> b;  
   cout << "= " << sum(a, b) << endl;
 
-  return EXIT_SUCCESS; 
+  return EXIT_SUCCESS;
 }
