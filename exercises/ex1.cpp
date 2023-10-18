@@ -39,7 +39,7 @@ int main()
       cout << "Invalid input! Please enter week number between 1-7." << endl;
   }
 
-  if (day !== "")
+  if (day != "")
   {
     cout << day << endl;
   }
