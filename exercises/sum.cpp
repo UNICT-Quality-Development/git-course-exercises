@@ -10,11 +10,13 @@
 #include <iostream>
 using namespace std;
 int main(){
-	int a, b, sum;
+	int a, b;
 	cout << "insert the first number:";
 	cin >> a;
 	cout << "insert the second number:";
 	cin >> b;
-	sum = a+b;
-	cout << "Sum:" << sum;
+	a = a+b;
+	cout << "Sum:" << a;
+	cout << "\n";
+	return 0;
 }
