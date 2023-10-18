@@ -14,10 +14,10 @@ using namespace std;
 int sum(int num1, int num2){ return num1 + num2; }
 
 int main(){
-  int x, y;
-  cout << "Insert the first number: ";
-  cin >> x;
-  cout << "Insert the second number: ";
-  cin >> y;
-  cout << "Sum: " << sum(x, y);
+    int x, y;
+    cout << "Insert the first number: ";
+    cin >> x;
+    cout << "Insert the second number: ";
+    cin >> y;
+    cout << "Sum: " << sum(x, y);
 }
