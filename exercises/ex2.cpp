@@ -1,9 +1,3 @@
-/*
- Improve this program replacing if/else if with an array.
-
- Hint:  arr[3] = "Thursday";
-*/
-
 #include <iostream>
 using namespace std;
 
