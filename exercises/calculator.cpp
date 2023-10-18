@@ -47,4 +47,5 @@ int main(){
  float div=divisione(n1,n2);
  
  stampa(n1,n2,sum,dif,mul,div);
+ return 0;
 }
