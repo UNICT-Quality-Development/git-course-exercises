@@ -6,7 +6,10 @@ Insert number 3
 The number 3 is [not] present in the array.
 */
 
+
+#define EXIT_SUCCESS 0
 #include <iostream>
+
 using namespace std;
 
 bool isPresent(int N[], int size, int n) {
@@ -21,5 +24,5 @@ int main()
   // placeholder
   int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
   isPresent(N, 10, 3) ? cout << "The number 3 is present in the array." << endl : cout << "The number 3 is not present in the array." << endl;
-  return 0;
+  return EXIT_SUCCESS;
 }
