@@ -15,12 +15,12 @@ int sum(int x, int y){
 }
 
 int main(){
-  int x, y;
-
   cout << "Insert the first number: ";
+  int x;
   cin >> x;
 
   cout << "Insert the second number: ";
+  int y;
   cin >> y;
 
   cout << "Sum: " << sum(x, y) << endl;
