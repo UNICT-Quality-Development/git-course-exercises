@@ -35,42 +35,9 @@ int main()
     cout << "Sunday" << endl;
     break;
   default:
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    cout << "Invalid input! Please enter week number between 1-7.";
     break;
   }
-  /*if (week == 1)
-  {
-    
-  }
-  else if (week == 2)
-  {
-    
-  }
-  else if (week == 3)
-  {
-    
-  }
-  else if (week == 4)
-  {
-    
-  }
-  else if (week == 5)
-  {
-    
-  }
-  else if (week == 6)
-  {
-    
-  }
-  else if (week == 7)
-  {
-    
-  }
-  else
-  {
-    
-  }
-*/
 
   return 0;
 }
