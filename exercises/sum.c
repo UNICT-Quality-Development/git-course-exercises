@@ -10,10 +10,11 @@
 
 int main(){
   //dec
-  int a,b;
+  int a=0,b=0;
   printf("insert one number\n");
   scanf("%d",a);
   printf("insert one other number\n");
-  scanf("%d",a);
+  scanf("%d",b);
   printf("Sum:%d",a+b);
+  return 0;
 }
