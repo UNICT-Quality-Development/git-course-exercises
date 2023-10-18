@@ -14,23 +14,15 @@
 #include <iostream>
 using namespace std;
 int main(){
-	int a, b, result;
+	int a, b;
 	cout << "insert first number:";
 	cin >> a;
 	cout << "insert second number:";
 	cin >> b;
-	result=a+b;
-	cout << "SUM: " << result;
-	cout << "\n";
-        result=a-b;
-        cout << "Difference: " << result;
-        cout << "\n";
-        result=a*b;
-        cout << "Multiplication: " << result;
-        cout << "\n";
-        result=a/b;
-        cout << "Division: " << result;
-        cout << "\n";
+	cout << "SUM: " << (a+b) << endl;
+        cout << "Difference: " << (a-b) << endl;
+        cout << "Multiplication: " << (a*b) << endl;
+        cout << "Division: " << (a/b) << endl;
 	return 0;
 }
 
