@@ -17,4 +17,5 @@ int sum(int a, int b) {
 
 int main(int argc, char const *argv[]) {
   cout << sum(1, 2) << endl;
+  return 0;
 }
