@@ -24,4 +24,6 @@ int main(){
   cin >> y;
 
   cout << "Sum: " << sum(x, y) << endl;
+  
+  return 0;
 }
