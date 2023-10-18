@@ -8,8 +8,14 @@ int main()
   int week;
 
   /* Input week number from user */
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
+  while(true){
+    cout << "Enter week number(1-7): " << endl;
+    cin >> week;
+    if(week < 1 || week > 7)
+      cerr << "Wrong week number, please insert a valid one (1-7)." << endl;
+    else
+      break;
+  }
 
   switch(week){
     case 1:
