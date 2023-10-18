@@ -11,7 +11,9 @@ The number 3 is [not] present in the array.
 using namespace std;
 
 bool isPresent(int* arr, int dim, int num){
-  for (int i = 0; i < dim; i++) if (arr[i] == num) return true;
+  for (int i = 0; i < dim; i++)
+    if (arr[i] == num) return true;
+
   return false;
 }
 
@@ -25,7 +27,9 @@ int main()
   cout << "Insert number ";
   cin >> input_number;
 
-  cout << "The number " << input_number << " is" << ((isPresent(N, arr_length, input_number)) ? " " : " not ") << "present in the array." << endl;
+  cout << "The number " << input_number << " is" <<
+  ((isPresent(N, arr_length, input_number)) ? " " : " not ") <<
+  "present in the array." << endl;
 
   return EXIT_SUCCESS;
 }
