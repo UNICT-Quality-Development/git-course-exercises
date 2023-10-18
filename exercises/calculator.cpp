@@ -16,18 +16,17 @@
 
 using namespace std;
 
-void calculatur(int a, int b)
+void calculator(int a, int b)
 {
-    int sum, difference, multiplication, division;
-    sum = a + b;
+    int sum = a + b;
     cout << "SUM: " << sum << endl;
-    difference = a - b;
+    int difference = a - b;
     cout << "Difference: " << difference << endl;
-    multiplication = a * b;
+    int multiplication = a * b;
     cout << "Multiplication: " << multiplication << endl;
     try
     {
-        division = a / b;
+        int division = a / b;
         cout << "Division: " << division << endl;
     }
     catch (const std::exception &e)
@@ -43,6 +42,6 @@ int main(int argc, char *argv[])
     cin >> a;
     cout << "Insert second number: ";
     cin >> b;
-    calculatur(a, b);
+    calculator(a, b);
     return EXIT_SUCCESS;
 }
