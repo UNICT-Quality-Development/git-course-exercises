@@ -7,6 +7,7 @@
   Sum: 3
 */
 #include <iostream>
+
 using namespace std;
 
 int sum(int, int);
@@ -15,7 +16,8 @@ int main() {
 	int x=1, y=2;
 	
 	cout << x << " + " << y << " = " << sum(x,y) << endl;
-	return 0; 
+	
+	return EXIT_SUCCESS; 
 }
 
 int sum(int a, int b) {
