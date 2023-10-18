@@ -6,3 +6,8 @@
   Insert the second number: 2
   Sum: 3
 */
+#include <stdio.h>
+
+int main(){
+  printf("Ciao come stai?");
+}
