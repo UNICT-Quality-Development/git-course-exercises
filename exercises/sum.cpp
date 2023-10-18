@@ -6,16 +6,3 @@
   Insert the second number: 2
   Sum: 3
 */
-
-#include <iostream>
-
-using namespace std;
-
-int sum(int a, int b) {
-  return a + b;
-}
-
-int main(int argc, char const *argv[]) {
-  cout << sum(1, 2) << endl;
-  return 0;
-}

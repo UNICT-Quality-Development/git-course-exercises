@@ -27,3 +27,34 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+#define EXIT_SUCCESS 0
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Risiko
+{
+private:
+    vector<int> blue;
+    vector<int> red;
+
+public:
+    Risiko()
+    {
+        this->blue = {0, 0, 0};
+        this->red = {0, 0, 0};
+    }
+
+    ~Risiko()
+    {
+        this->blue.clear();
+        this->red.clear();
+    }
+};
+
+int main(int argc, char *argv[])
+{
+    return EXIT_SUCCESS;
+}
