@@ -20,4 +20,5 @@ int main(){
     cout << "Insert the second number: ";
     cin >> y;
     cout << "Sum: " << sum(x, y);
+    return 0;
 }
