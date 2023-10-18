@@ -11,6 +11,8 @@
   Division: 2
 */
 
+#define EXIT_SUCCES 0
+
 #include<iostream>
 using namespace std;
 
@@ -28,5 +30,5 @@ int main(){
   cout << "Multiplication: " << x * y << endl;
   cout << "Division: " << x / y << endl;
   
-  return 0;
+  return EXIT_SUCCES;
 }
