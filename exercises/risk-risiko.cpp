@@ -30,7 +30,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define DIM 3
+const int 3;
 
 int* ordina(int* vett){
 
@@ -38,14 +38,14 @@ int aux[DIM];
 int cont=0, j;
 
 
-for(int i=0;i<DIM;i++){
-aux[i]=0;
-for(j=0+cont;j<DIM;j++){
-if (vett[j]>aux[i]) aux[i]=vett[j];
-}
+	for(int i=0;i<DIM;i++){
+		aux[i]=0;
+		for(j=0+cont;j<DIM;j++){
+			if (vett[j]>aux[i]) aux[i]=vett[j];
+	}
 cont++;
 
-}
+	}
 
 return aux;
 }
@@ -55,22 +55,22 @@ int main(int argc, char*argv[]){
 int RED[DIM], BLUE[DIM];
 
 for(int i=0;i<DIM;i++){
-RED[i]=rand%6+1;
+	RED[i]=rand%6+1;
 
-BLUE[i]=rand%6+1;
-}
+	BLUE[i]=rand%6+1;
+	}
 
-RED=ordina(RED);
-BLUE=ordina(BLUE);
+	RED=ordina(RED);
+	BLUE=ordina(BLUE);
 
-printf("Red dices:\n%d(N)\n%d(M)\n%d(O)", RED[0], RED[1], RED[2]);
-printf("\n");
-printf("Blue dices:\n%d(N)\n%d(M)\n%d(O)", BLUE[0], BLUE[1], BLUE[2]);
+	printf("Red dices:\n%d(N)\n%d(M)\n%d(O)", RED[0], RED[1], RED[2]);
+	printf("\n");
+	printf("Blue dices:\n%d(N)\n%d(M)\n%d(O)", BLUE[0], BLUE[1], BLUE[2]);
 
 for(int i=0;i<DIM;i++){
 
-if(RED[i]>BLUE[i]) printf("%d vs %d => red win\n", RED[i], BLUE[i]);
-else printf("R:%d vs B:%d => red win\n", RED[i], BLUE[i]);
-}
+	if(RED[i]>BLUE[i]) printf("%d vs %d => red win\n", RED[i], BLUE[i]);
+	else printf("R:%d vs B:%d => red win\n", RED[i], BLUE[i]);
+	}	
 
 }
