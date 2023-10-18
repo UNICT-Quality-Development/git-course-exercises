@@ -7,6 +7,8 @@
   Sum: 3
 */
 
+#define EXIT_SUCCESS 0
+
 #include <iostream>
 
 using namespace std;
@@ -17,5 +19,5 @@ int sum(int a, int b) {
 
 int main(int argc, char const *argv[]) {
   cout << sum(1, 2) << endl;
-  return 0;
+  return EXIT_SUCCESS;
 }
