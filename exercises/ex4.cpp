@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
 
 int main()
 {
@@ -10,12 +11,15 @@ int main()
   /* Input month number from user */
   printf("Enter month number(1-12): ");
   scanf("%d", &month);
-  if (month > 12 || month < 1) printf("Invalid input! Please enter month number between 1-12");
-  else {
+
+  if (month > 12 || month < 1){
+    printf("Invalid input! Please enter month number between 1-12");
+    return EXIT_FAILURE;
+  }
+
   char buff[5];
   (month == 2) ? sprintf(buff, "%d/%d", monthDays[month-1], monthDays[month-1] + 1) : sprintf(buff, "%d", monthDays[month - 1]);
   printf("%s days", buff);
-  }
 
   return EXIT_SUCCESS;
 }
