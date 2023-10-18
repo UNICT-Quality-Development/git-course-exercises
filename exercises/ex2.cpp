@@ -5,6 +5,8 @@
 */
 
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 int main()
@@ -14,37 +16,14 @@ int main()
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
 
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
+  string WeekDays[8] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Invalid input! Please enter week number between 1-7."};
+
+  if( week >= 1 && week <=7) {
+    cout << WeekDays[ week -1 ];
   }
-  else if (week == 2)
+  else 
   {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
+    cout << WeekDays[7] << endl;
   }
 
   return 0;
