@@ -10,3 +10,23 @@
   Multiplication: 8
   Division: 2
 */
+
+#include<iostream>
+using namespace std;
+
+int main(){
+  double x, y;
+
+  cout << "Insert first number: ";
+  cin >> x;
+
+  cout << "Insert second number: ";
+  cin >> y;
+
+  cout << "SUM: " << x + y << endl;
+  cout << "Difference: " << x - y << endl;
+  cout << "Multiplication: " << x * y << endl;
+  cout << "Division: " << x / y << endl;
+  
+  return 0;
+}
