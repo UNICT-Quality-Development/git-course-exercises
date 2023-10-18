@@ -24,6 +24,6 @@ int main(){
   
   cout<<"Sum: "<<a+b;
 
-  return 1;
+  return 0;
 }
 
