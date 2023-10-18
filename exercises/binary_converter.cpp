@@ -5,3 +5,8 @@
   Insert first number: 8
   The binary number is: 1000
 */
+
+int main()
+{
+
+}

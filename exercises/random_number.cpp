@@ -4,3 +4,8 @@
   Output:
   The random number is: 4
 */
+
+int main()
+{
+
+}

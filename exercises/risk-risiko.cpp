@@ -27,3 +27,8 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+int main()
+{
+
+}

@@ -6,3 +6,8 @@
   Insert the second number: 2
   Sum: 3
 */
+
+int main()
+{
+
+}
