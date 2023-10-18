@@ -15,5 +15,6 @@ int main(){
   double a,b;
   cout<<"Inserisci i due valori che vuoi sommare"<<endl;
   cin>>a>>b;
-  cout<<"La somma di "<<a<<" e "<<b<<" e\' uguale a "<<a+b;  
+  cout<<"La somma di "<<a<<" e "<<b<<" e\' uguale a "<<a+b;
+  return 0;
 }
