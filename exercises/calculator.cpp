@@ -14,7 +14,7 @@
 #include <iostream>
 using namespace std;
 
-float operations(float a, float b){
+void operations(float a, float b){
 
   int op;
   float result;
