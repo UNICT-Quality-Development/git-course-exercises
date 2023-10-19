@@ -27,9 +27,9 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
-#include <iotream>
+#include <iostream>
 #include <algorithm>
-#include <cstdlib>d
+#include <cstdlib>
 #include <ctime>
 
 using namespace std;
@@ -66,12 +66,12 @@ void compare()
     for(int i=0;i<dim;i++){
            if(attack_dice[i]<=defend_dice[i])
            {
-            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Blue   
+            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Blue   " <<endl;
             cout<<endl;
            }
            else
            {
-            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Red
+            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Red "<<endl;
             cout<<endl;
 
            }
