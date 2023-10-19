@@ -4,6 +4,8 @@
  Hint:  arr[3] = "Thursday";
 */
 
+#define EXIT_SUCCESS 0
+
 #include <iostream>
 using namespace std;
 
@@ -22,5 +24,5 @@ int main()
     cout << "Invalid input! Please enter week number between 1-7." << endl;
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
