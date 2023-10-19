@@ -27,3 +27,86 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+#include <iotream>
+#include <algorithm>
+#include <cstdlib>d
+#include <ctime>
+
+using namespace std;
+
+
+
+void compare()
+{
+    int dim=3;
+    int attack_dice[dim];
+    int defend_dice[dim];
+    srand(static_cast<unsigned int>(time(nullptr)));
+
+    cout<<"Dadi di attacco:"<<endl;
+
+    for(int i=0;i<dim;i++)
+   {
+        attack_dice[i] = rand() % 6+1; // Genera numeri casuali tra 1 e 6.
+        cout <<attack_dice[i]<< endl;
+        
+   }
+
+    cout<<"Dadi di difesa:"<<endl;
+
+    for(int i=0;i<dim;i++)
+    {
+        defend_dice[i]=rand()%6+1;
+        cout<< defend_dice[i]<<endl;
+    }
+
+    sort(attack_dice, attack_dice + dim, greater<int>());
+    sort(defend_dice, defend_dice + dim, greater<int>());
+    cout<<endl;
+    for(int i=0;i<dim;i++){
+           if(attack_dice[i]<=defend_dice[i])
+           {
+            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Blue   
+            cout<<endl;
+           }
+           else
+           {
+            cout<<attack_dice[i]<<"vs"<<defend_dice[i]<<"   Win Red
+            cout<<endl;
+
+           }
+
+    }
+
+}
+
+void gioca_ancora()
+{
+    bool gioca_ancora=true;
+    int x;
+
+    while(gioca_ancora==true)
+    {
+    cout<<"Vuoi giocare ancora? (se si premi 1 se no premi 0)"<<endl;
+    cin>>x;
+     if(x==1)
+     {
+        compare();
+     }
+     else if(x==0)
+     {
+        gioca_ancora=false;
+        cout<<"Esci!"<<endl;
+
+     }
+    }
+    
+}
+
+int main() 
+{
+ compare();
+ gioca_ancora();
+
+    return 0;
+}
