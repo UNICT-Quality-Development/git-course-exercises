@@ -13,31 +13,13 @@
 
 #include <iostream>
 using namespace std;
+#define EXIT_SUCCESS 0
 
-void operations(float a, float b){
 
-  int op;
+float switchOp(int x, int a, int b){
   float result;
 
-  while(true){
-
-    cout << endl << "Select the operation: " << endl << "1) SUM" << endl << "2)Difference" << endl << "3)Multiplication" << endl << "4)Division" << endl;
-    cin >> op;
-
-    if(op <1 || op >4){
-      cerr << "Wrong choice, please select a valid operation number [1-4]" << endl;
-    }
-
-    else if(op == 4 && b == 0){
-      cerr << "Can't divide a number for 0, please select another operation" << endl;
-    }
-
-    else{
-      break;
-    }
-  }
-
-  switch(op){
+  switch(x){
     case 1:{
       cout << endl << "SUM = ";
       result = a + b;
@@ -62,6 +44,33 @@ void operations(float a, float b){
       break;
     }
   }
+}
+
+void operations(float a, float b){
+
+  int op;
+  float result;
+
+  while(true){
+
+    cout << endl << "Select the operation: " << endl << "1) SUM" << endl << "2)Difference" << endl << "3)Multiplication" << endl << "4)Division" << endl;
+    cin >> op;
+
+    if(op <1 || op >4){
+      cerr << "Wrong choice, please select a valid operation number [1-4]" << endl;
+    }
+
+    else if(op == 4 && b == 0){
+      cerr << "Can't divide a number for 0, please select another operation" << endl;
+    }
+
+    else{
+      break;
+    }
+  }
+
+  int result = switchOp(op, a, b);
+  
   cout << result << endl << endl;
 }
 
@@ -75,5 +84,5 @@ int main(){
 
   operations(a, b);
 
-  return 0;
+  return EXIT_SUCCESS;
 }
