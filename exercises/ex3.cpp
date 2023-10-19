@@ -3,10 +3,21 @@
 #include <map>
 using namespace std;
 
+void printFamous(string);
 int main()
 {
-  map<string, string> famous;
+
   string textInput;
+  cout << "Enter a famous name+surname, ex. BarackObama " << endl;
+  cin >> textInput;
+  printFamous(textInput);
+  return 0;
+}
+
+void printFamous(string textInput)
+{
+  map<string, string> famous;
+
   famous["BarackObama"] = "44th president of the United States";
   famous["SandroPertini"] = "Former President of the Italian Republic";
   famous["NelsonMandela"] = "Former President of South Africa";
@@ -14,22 +25,13 @@ int main()
   famous["DonaldKnuth"] = "Creator of LaTeX";
   famous["DennisRitchie"] = "Creator of C";
 
-  cout << "Enter a famous name+surname, ex. BarackObama " << endl;
-  cin >> textInput;
-  bool flag = true;
   for (auto i = famous.begin(); i != famous.end(); ++i)
   {
     if (i->first == textInput)
     {
       cout << i->first << " Description: " << i->second << endl;
-      flag = false;
-      break;
+      return;
     }
   }
-  if (flag != false)
-  {
-    cout << "Invalid input! Please enter a good name!" << endl;
-  }
-
-  return 0;
+  cout << "Invalid input! Please enter a good name!" << endl;
 }
