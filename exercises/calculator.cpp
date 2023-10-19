@@ -14,7 +14,58 @@
 #include <iostream>
 using namespace std;
 
-float operations(){
+float operations(float a, float b){
+
+  int op;
+  float result;
+
+  while(true){
+
+    cout << endl << "Select the operation: " << endl << "1) SUM" << endl << "2)Difference" << endl << "3)Multiplication" << endl << "4)Division" << endl;
+    cin >> op;
+
+    if(op <1 || op >4){
+      cerr << "Wrong choice, please select a valid operation number [1-4]" << endl;
+    }
+
+    else if(op == 4 && b == 0){
+      cerr << "Can't divide a number for 0, please select another operation" << endl;
+    }
+
+    else{
+      break;
+    }
+  }
+
+  switch(op){
+    case 1:{
+      cout << endl << "SUM = ";
+      result = a + b;
+      break;
+    }
+
+    case 2:{
+      cout << endl << "Difference = ";
+      result = a - b;
+      break;
+    }
+
+    case 3:{
+      cout << endl << "Multiplication = ";
+      result = a * b;
+      break;
+    }
+
+    case 4:{
+      cout << endl << "Division = ";
+      result = a / b;
+      break;
+    }
+  }
+  cout << result << endl << endl;
+}
+
+int main(){
 
   float a,b;
   cout << "Insert the first number: ";
@@ -22,42 +73,7 @@ float operations(){
   cout << endl << "Insert second number: ";
   cin >> b;
 
-  int op;
-  float result;
-  while(true){
-    cout << endl << "Select the operation: " << endl << "1) SUM" << endl << "2)Difference" << endl << "3)Multiplication" << endl << "4)Division" << endl;
-    cin >> op;
-    if(op <1 || op >4)
-      cerr << "Wrong choice, please select a valid operation number [1-4]" << endl;
-    else if(op == 4 && b == 0)
-      cerr << "Can't divide a number for 0, please select another operation" << endl;
-    else
-      break;
-  }
+  operations(a, b);
 
-  switch(op){
-    case 1:
-      cout << endl << "SUM = ";
-      result = a + b;
-      break;
-    case 2:
-      cout << endl << "Difference = ";
-      result = a - b;
-      break;
-    case 3:
-      cout << endl << "Multiplication = ";
-      result = a * b;
-      break;
-    case 4:
-      cout << endl << "Division = ";
-      result = a / b;
-      break;
-  }
-  return result;
-}
-
-int main(){
-
-  cout << operations() << endl << endl;
-
+  return 0;
 }
