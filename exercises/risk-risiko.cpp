@@ -66,68 +66,49 @@
 
 using namespace std;
 
-class Risiko
+void attack()
 {
-private:
-    vector<int> blue;
-    vector<int> red;
-    int attacker_points;
+    vector<int> blue = {0, 0, 0};
+    vector<int> red = {0, 0, 0};
+    int attacker_points = 0;
 
-public:
-    Risiko()
+    for (int i = 0; i < 3; i++)
     {
-        this->blue = {0, 0, 0};
-        this->red = {0, 0, 0};
-        attacker_points = 0;
+        blue[i] = rand() % 6 + 1;
+        red[i] = rand() % 6 + 1;
     }
-
-    ~Risiko()
+    sort(blue.begin(), blue.end(), greater<int>());
+    sort(red.begin(), red.end(), greater<int>());
+    cout << "Red dices:" << endl;
+    cout << red[0] << " (N)" << endl;
+    cout << red[1] << " (M)" << endl;
+    cout << red[2] << " (O)" << endl;
+    cout << endl;
+    cout << "Blue dices:" << endl;
+    cout << blue[0] << " (N)" << endl;
+    cout << blue[1] << " (M)" << endl;
+    cout << blue[2] << " (O)" << endl;
+    cout << endl;
+    for (int i = 0; i < 3; i++)
     {
-        this->blue.clear();
-        this->red.clear();
-    }
-
-    void Attack()
-    {
-        for (int i = 0; i < 3; i++)
+        if (blue[i] < red[i])
         {
-            this->blue[i] = rand() % 6 + 1;
-            this->red[i] = rand() % 6 + 1;
-        }
-        sort(this->blue.begin(), this->blue.end(), greater<int>());
-        sort(this->red.begin(), this->red.end(), greater<int>());
-        cout << "Red dices:" << endl;
-        cout << this->red[0] << " (N)" << endl;
-        cout << this->red[1] << " (M)" << endl;
-        cout << this->red[2] << " (O)" << endl;
-        cout << endl;
-        cout << "Blue dices:" << endl;
-        cout << this->blue[0] << " (N)" << endl;
-        cout << this->blue[1] << " (M)" << endl;
-        cout << this->blue[2] << " (O)" << endl;
-        cout << endl;
-        for (int i = 0; i < 3; i++)
-        {
-            if (this->blue[i] < this->red[i])
-            {
-                this->attacker_points++;
-            }
-        }
-        if (attacker_points >= 2)
-        {
-            cout << "Red wins!" << endl;
-        }
-        else
-        {
-            cout << "Blue wins!" << endl;
+            attacker_points++;
         }
     }
-};
+    if (attacker_points >= 2)
+    {
+        cout << "Red wins!" << endl;
+    }
+    else
+    {
+        cout << "Blue wins!" << endl;
+    }
+}
 
 int main(int argc, char *argv[])
 {
     srand(time(NULL));
-    Risiko *game = new Risiko();
-    game->Attack();
+    attack();
     return EXIT_SUCCESS;
 }
