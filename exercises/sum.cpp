@@ -10,22 +10,16 @@
 #include <iostream>
 using namespace std;
 
-
-int sum(int num1, int num2){ return num1 + num2; }
-
-
-
+int sum(int a, int b){
+  return a+b;
+}
 int main(){
-
-  int a;
-  int b;
+  int a,b;
   cout<<"Insert the first number: ";
-  cin>> a;
+  cin>>a;
   cout<<"Insert the second number: ";
-  cin>> b;
-  
+  cin>>b;
   cout<<"Sum: "<<sum(a,b);
-
   return 0;
 }
 
