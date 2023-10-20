@@ -17,7 +17,6 @@ using namespace std;
 
 
 float switchOp(int x, int a, int b){
-  
   float result;
 
   switch(x){
