@@ -21,7 +21,7 @@ int main()
   sum=num1+num2;
 
   cout<<"Ecco la somma dei numeri inseriti: "<<sum<<endl;
-
+ 
 
   return 0;
 
