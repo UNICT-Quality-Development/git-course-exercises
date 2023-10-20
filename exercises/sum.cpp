@@ -11,18 +11,20 @@
 using namespace std;
 
 
-int a, b;
+int sum(int num1, int num2){ return num1 + num2; }
 
 
 
 int main(){
 
+  int a;
+  int b;
   cout<<"Insert the first number: ";
-  cin>>a;
+  cin>> a;
   cout<<"Insert the second number: ";
-  cin>>b;
+  cin>> b;
   
-  cout<<"Sum: "<<a+b;
+  cout<<"Sum: "<<sum(a,b);
 
   return 0;
 }
