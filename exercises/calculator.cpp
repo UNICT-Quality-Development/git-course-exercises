@@ -17,6 +17,7 @@ using namespace std;
 
 
 float switchOp(int x, int a, int b){
+  
   float result;
 
   switch(x){
@@ -44,12 +45,12 @@ float switchOp(int x, int a, int b){
       break;
     }
   }
+  return result;
 }
 
 void operations(float a, float b){
 
   int op;
-  float result;
 
   while(true){
 
@@ -67,11 +68,8 @@ void operations(float a, float b){
     else{
       break;
     }
-  }
-
-  int result = switchOp(op, a, b);
-  
-  cout << result << endl << endl;
+  }  
+  cout << switchOp(op, a, b) << endl << endl;
 }
 
 int main(){
