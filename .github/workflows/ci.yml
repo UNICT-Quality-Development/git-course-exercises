@@ -12,4 +12,4 @@ jobs:
       - name: install g++
         run: sudo apt install -y g++
       - name: check build
-        run: source ./compile.sh
+        run: source ./compile.sh .
