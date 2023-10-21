@@ -7,29 +7,17 @@
   Sum: 3
 */
 
+#include <iostream>
 
-
-#include <iostream> 
 using namespace std; 
-  
-
-int somma(int A, int B) 
-{ 
- 
-    return A + B; 
-} 
-  
-
 int main() 
 { 
-   
-    int primo;
-    int secondo; 
-     cout << "Inserisci primo: \n";
-      cin >> primo;
-      cout << "Inserisci secondo: \n";
-      cin >> secondo;
-  
-    cout << "Somma = " << somma(primo, secondo); 
-    return 0; 
+  int primo;
+  int secondo; 
+  cout << "Insert the first number: ";
+  cin >> primo;
+  cout << "Insert the second number: ";
+  cin >> secondo;
+  cout << "Sum: " << primo + secondo; 
+  return 0; 
 }
