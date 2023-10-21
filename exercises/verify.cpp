@@ -23,6 +23,6 @@ int main()
 {
   // placeholder
   int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
-  isPresent(N, 10, 3) ? cout << "The number 3 is present in the array." << endl : cout << "The number 3 is not present in the array." << endl;
+  cout << "The number 3 is" << (isPresent(N, 10, 3) ? "" : " not")  << " present in the array." << endl;
   return EXIT_SUCCESS;
 }
