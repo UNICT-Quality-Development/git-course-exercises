@@ -96,14 +96,7 @@ void attack()
             attacker_points++;
         }
     }
-    if (attacker_points >= 2)
-    {
-        cout << "Red wins!" << endl;
-    }
-    else
-    {
-        cout << "Blue wins!" << endl;
-    }
+    cout << (attacker_points >= 2 ? "Red" : "Blue") << " wins!" << endl;
 }
 
 int main(int argc, char *argv[])
