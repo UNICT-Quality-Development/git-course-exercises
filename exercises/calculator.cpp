@@ -11,16 +11,16 @@
   Division: 2
 */
 #include <iostream>
-
-using namespace std;
 int main() {
+  using std::cout;
+  using std::cin;
   int first;
   int second;
-  cout << "Insert the first number: ";
+  cout << "Insert first number: ";
   cin >> first;
-  cout << "Insert the second number: ";
+  cout << "Insert second number: ";
   cin >> second;
-  cout << "SUM: " << first + second << "\n";
+  cout << "Sum: " << first + second << "\n";
   cout << "Difference: " << first - second << "\n";
   cout << "Multiplication: " << first * second << "\n";
   cout << "Division: " << first / second;
