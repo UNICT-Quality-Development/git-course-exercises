@@ -10,20 +10,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main(){
+
 	char s[80];
 	int a, b, SUM;
-	fget(s, sizeof(s), stdin);
+	
+	printf("Insert two numers that will be summed\n" );
+	
+	fgets(s, sizeof(s), stdin);
 	a = atoi(s);
-
-	fget(s, sizeof(s), stdin);
+	
+	fgets(s, sizeof(s), stdin);
 	b = atoi(s);
-
+	
 	SUM = a + b;
+	
 
-	printf("la somma è %i"\n, SUM);
+	printf("Insert the first number: %i \n" ,a );
+	printf("Insert the second number: %i \n" ,b );
+	printf("sum: %i \n" ,SUM );
 
-	RETURN 0;
+
+	return 0;
 }
 
