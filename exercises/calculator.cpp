@@ -16,35 +16,34 @@ using namespace std;
 #define EXIT_SUCCESS 0
 
 
-float switchOp(int x, int a, int b){
-  float result;
+float switchOp(int x, float a, float b){
 
   switch(x){
     case 1:{
       cout << endl << "SUM = ";
-      result = a + b;
-      break;
+      return a + b;
     }
 
     case 2:{
       cout << endl << "Difference = ";
-      result = a - b;
-      break;
+      return a - b;
     }
 
     case 3:{
       cout << endl << "Multiplication = ";
-      result = a * b;
-      break;
+      return a - b;
     }
 
     case 4:{
       cout << endl << "Division = ";
-      result = a / b;
-      break;
+      return a / b;
+    }
+
+    default:{
+      cerr << "Invalid operand.";
+      return 0;
     }
   }
-  return result;
 }
 
 void operations(float a, float b){
@@ -73,13 +72,25 @@ void operations(float a, float b){
 
 int main(){
 
-  float a,b;
-  cout << "Insert the first number: ";
-  cin >> a;
-  cout << endl << "Insert second number: ";
-  cin >> b;
+  char response;
 
-  operations(a, b);
+  while(true){
+    float a,b;
+    cout << "Insert the first number: ";
+    cin >> a;
+    cout << endl << "Insert second number: ";
+    cin >> b;
 
+    operations(a, b);
+    
+    do{
+      cout << "Do you want to make another operation? (Y/N): ";
+      cin >> response;
+    }while(toupper(response)!= 'Y' && toupper(response) != 'N');
+
+    if(toupper(response) == 'N'){
+      break;
+    }
+  } 
   return EXIT_SUCCESS;
 }
