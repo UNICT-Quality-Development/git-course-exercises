@@ -66,7 +66,7 @@ void operations(float a, float b){
     else{
       break;
     }
-  }  
+  }
   cout << switchOp(op, a, b) << endl << endl;
 }
 
@@ -82,7 +82,7 @@ int main(){
     cin >> b;
 
     operations(a, b);
-    
+
     do{
       cout << "Do you want to make another operation? (Y/N): ";
       cin >> response;
@@ -91,6 +91,6 @@ int main(){
     if(toupper(response) == 'N'){
       break;
     }
-  } 
+  }
   return EXIT_SUCCESS;
 }
