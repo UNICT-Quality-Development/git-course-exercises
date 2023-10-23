@@ -10,8 +10,8 @@ The number 3 is [not] present in the array.
 using namespace std;
 
 bool verify(int *N, int n, int val) {
-  for( int i = 0; i < n; i++) {
-    if ( N[i] == val ) {
+  for( int i = 0; i < n; i++ ) {
+    if( N[i] == val ) {
       return true;
     }
   }
@@ -25,7 +25,7 @@ int main()
   int val;
   cout << "Insert number : " ;
   cin >> val;
-  
+
   if( verify(N, 10, val) ) {
     cout << "The number " << val << " is present in the array" << endl;
   }
@@ -33,6 +33,6 @@ int main()
   {
     cout << "The number " << val << " is not present in the array" << endl;
   }
-  
+
   return 0;
 }
