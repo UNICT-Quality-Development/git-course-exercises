@@ -17,10 +17,10 @@ int sum(int a, int b){
 int main(){
   int a, b;
   cout << "Inserire 2 numeri da sommare" << endl;
-  cout << "primo numero:" << endl;  
-  cin >> a; 
+  cout << "primo numero:" << endl;
+  cin >> a;
   cout << "secondo numero:" << endl;
-  cin >> b;  
+  cin >> b;
   cout << "= " << sum(a, b) << endl;
 
   return EXIT_SUCCESS;
