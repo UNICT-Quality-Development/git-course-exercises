@@ -5,26 +5,22 @@
 */
 
 #include <iostream>
-#include <string>
+#include <algorithm>
 
 using namespace std;
 
 int main()
 {
-  int week;
+  unsigned int week;
 
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
 
-  string WeekDays[8] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Invalid input! Please enter week number between 1-7."};
+  string WeekDays[8] = {"Monday", "Tuesday", "Wednesday", "Thursday",
+                        "Friday", "Saturday", "Sunday", "Invalid input! Please enter week number between 1-7."};
 
-  if( week >= 1 && week <=7) {
-    cout << WeekDays[ week -1 ];
-  }
-  else 
-  {
-    cout << WeekDays[7] << endl;
-  }
+  unsigned int choice = min(week - 1, 7u);
+  cout << WeekDays[choice] << endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
