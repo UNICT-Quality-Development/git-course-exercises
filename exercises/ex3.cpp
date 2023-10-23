@@ -27,5 +27,5 @@ int main()
   }
   cout << presidents[textInput] << endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
