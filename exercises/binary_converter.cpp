@@ -5,26 +5,29 @@
   Insert first number: 8
   The binary number is: 1000
 */
+#include <iostream>
+using namespace std;
 
-#include <iostream> 
-using namespace std; 
-  
-int main() 
-{ 
-  int first;
-  int binary[16]; 
+// here we convert decimal to binary
+void FromDecToBin(int number) {
+  // array to fill  with binary number
+  int binary[16];
+  int i = 0;
+  while (number > 0) {
+    // now fill the binary array with the rest
+    binary[i] = number % 2;
+    number = number / 2;
+    i++;
+  }
+  // at the end we print the binary array
+  for (int j = i - 1; j >= 0; j--)
+    cout << binary[j];
+}
 
-  cout << "Insert the first number: ";
-  cin >> first;
-  int i = 0; 
-  while (first > 0) {
-    binary[i] = first % 2; 
-    first = first / 2; 
-    i++; 
-  } 
-  
-  cout <<"The binary number is: "; 
-  for (int j = i - 1; j >= 0; j--) 
-    cout << binary[j]; 
-  return 0; 
-} 
+int main() {
+  int decimal;
+  cout << "Insert a decimal number: ";
+  cin >> decimal;
+  FromDecToBin(decimal);
+  return 0;
+}
