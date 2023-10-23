@@ -11,18 +11,26 @@
   Division: 2
 */
 #include <iostream>
-int main() {
-  using std::cout;
-  using std::cin;
+
+using namespace std;
+
+void FourOps(int x, int y)
+{
+  cout << "Sum: " << x + y << "\n";
+  cout << "Difference: " << x - y << "\n";
+  cout << "Multiplication: " << x * y << "\n";
+  cout << "Division: " << x / y;
+  return;
+  }
+
+int main()
+{
   int first;
   int second;
   cout << "Insert first number: ";
   cin >> first;
   cout << "Insert second number: ";
   cin >> second;
-  cout << "Sum: " << first + second << "\n";
-  cout << "Difference: " << first - second << "\n";
-  cout << "Multiplication: " << first * second << "\n";
-  cout << "Division: " << first / second;
+  FourOps(first, second);
   return 0;
 }
