@@ -38,29 +38,30 @@ class attacco {
   public:
   attacco() : N(0),M(0),O(0) {}
   void roll();
-  void print();
   private:
   int O;
   int M;
   int N;
+  void print();
 };
 
 class difesa {
   public:
-  difesa() : N(0),M(0),N(0) {}
+  difesa() : N(0),M(0),O(0) {}
   void roll();
-  void print();
   private:
   int O;
   int M;
   int N;
+  void print();
 };
 
 int main() {
   srand(time(NULL));
   attacco red;
   difesa blue;
-  
+  red.roll();
+  blue.roll();
 }
 
 void difesa::roll() {
@@ -103,4 +104,10 @@ void attacco::roll() {
   O = a[0];
 }
 
+void attacco::print() {
+  cout<<"Red dices:\n"<<N" (N)\n"<<M" (M)\n"<<O" (O)"<<endl;
+}
 
+void difesa::print() {
+  cout<<"Blue dices:\n"<<N-1<<" (N)\n"<<M-1" (M)\n"<<O-1" (O)"<<endl;
+}
