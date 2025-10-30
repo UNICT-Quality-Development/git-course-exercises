@@ -19,9 +19,7 @@ int a,b;
 cout << "Inserire 2 interi differenziati da uno spazio" << endl;
 cin >> a >> b;
 
-int AddUp = sum(a,b);
-
-cout << "Il risultato di questa addizzione e' " << AddUp << endl;
+cout << "Il risultato di questa addizzione e' " << sum(a,b) << endl;
 
 return 0;
 
