@@ -21,6 +21,6 @@ void sum_two_numbers(){
 }
 
 int main(){
-	sum_two_numbers();
-	return 0;
+    sum_two_numbers();
+    return 0;
 }
