@@ -8,6 +8,7 @@
 */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 
 using namespace std;
 
@@ -18,4 +19,6 @@ int main (int argc, char** argv){
   cout << "Insert the second number: ";
   cin >> num2;
   cout << "Sum: " << num1 + num2 << endl; 
+
+  return EXIT_SUCCESS;
 }
