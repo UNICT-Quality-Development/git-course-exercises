@@ -10,6 +10,11 @@
 #include <iostream>
 using namespace std;
 
+double somma(double num1, double num2)
+{
+  return num1 + num2;
+}
+
 int main()
 {
   double num1 = 0, num2 = 0;
@@ -20,9 +25,7 @@ int main()
   cout << "Insert the second number: ";
   cin >> num2;
 
-  double sum = num1 + num2;
-
-  cout << "Sum: " << sum << endl;
+  cout << "Sum: " << somma(num1, num2) << endl;
 
   return 0;
 }
