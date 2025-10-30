@@ -21,9 +21,9 @@ int main()
 
   for (int i = 0; i < 10; i++)
   {
-    if (N[i] == i)
+    if (N[i] == number)
     {
-      cout << "The number " << number << "is present in the array.";
+      cout << "The number " << number << " is present in the array.";
       return 1;
     }
   }
