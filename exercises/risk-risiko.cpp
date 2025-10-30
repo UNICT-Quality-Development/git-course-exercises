@@ -27,3 +27,36 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+class attacco {
+  public:
+  attacco() N(0),M(0),O(0) {}
+  void roll();
+  private:
+  int N,M,O;
+};
+
+class difesa {
+
+};
+
+int main() {
+  srand(time(NULL));
+}
+
+void attacco::roll() {
+  int a[3];
+  for (int i = 0; i<3;i++) {
+    a[i] = rand()%6;
+  }
+
+  if (a[0] > a[1]) {
+    
+  }
+}
