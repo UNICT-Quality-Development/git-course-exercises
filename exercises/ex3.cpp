@@ -1,43 +1,32 @@
-/* Could you still use a switch case here? May you can use a map. */
-
 #include <iostream>
+#include <map>
+#include <string>
 using namespace std;
 
 int main()
 {
-  string textInput;
+    string textInput;
 
-  cout << "Enter a famous name+surname, ex. BarackObama " << endl;
-  cin >> textInput;
+    cout << "Inserisci un nome famoso (nome+cognome) ";
+    cin >> textInput;
 
-  if (textInput == "BarackObama")
-  {
-    cout << "44th president of the United States" << endl;
-  }
-  else if (textInput == "SandroPertini")
-  {
-    cout << "Former President of the Italian Republic" << endl;
-  }
-  else if (textInput == "NelsonMandela")
-  {
-    cout << "Former President of South Africa" << endl;
-  }
-  else if (textInput == "MahatmaGandhi")
-  {
-    cout << "Bapu" << endl;
-  }
-  else if (textInput == "DonaldKnuth")
-  {
-    cout << "Creator of LaTeX" << endl;
-  }
-  else if (textInput == "DennisRitchie")
-  {
-    cout << "Creator of C" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter a good name!" << endl;
-  }
+    map<string, string> famousPeople = {
+        {"BarackObama", "44th president of the United States"},
+        {"SandroPertini", "Former President of the Italian Republic"},
+        {"NelsonMandela", "Former President of South Africa"},
+        {"MahatmaGandhi", "Bapu"},
+        {"DonaldKnuth", "Creator of LaTeX"},
+        {"DennisRitchie", "Creator of C"}
+    };
 
-  return 0;
+    if (famousPeople.find(textInput) != famousPeople.end())
+    {
+        cout << famousPeople[textInput] << endl;
+    }
+    else
+    {
+        cout << "Nome non valido! inserisci un nome valido" << endl;
+    }
+
+    return 0;
 }
