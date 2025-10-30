@@ -45,13 +45,20 @@ class attacco {
 };
 
 class difesa {
-
+  public:
+  difesa() : N(0),M(0),N(0) {}
+  void roll();
+  private:
+  int O;
+  int M;
+  int N;
 };
 
 int main() {
   srand(time(NULL));
-  attacco p;
-  p.roll();
+  attacco a;
+  difesa d;
+  
 }
 
 void attacco::roll() {
@@ -72,5 +79,4 @@ void attacco::roll() {
   N = a[2];
   M = a[1];
   O = a[0];
-  cout<<N<<M<<O;
 }
