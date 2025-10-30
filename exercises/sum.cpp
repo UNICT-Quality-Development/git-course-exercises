@@ -9,12 +9,11 @@
 #include <iostream>
 using namespace std;
 int main(){
-	int n1,n2,somma;
-	cout<<"Insert the first number:";
-	cin>>n1;
-        cout<<"Insert the second number:";
-        cin>>n2;
-	somma=n1+n2;
-	cout<<"Sum:"<<somma<<endl;
-	
+ int n1,n2,somma;
+ cout<<"Insert the first number:";
+ cin>>n1;
+ cout<<"Insert the second number:";
+ cin>>n2;
+ somma=n1+n2;
+ cout<<"Sum:"<<somma<<endl;	
 }
