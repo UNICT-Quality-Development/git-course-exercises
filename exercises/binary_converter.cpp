@@ -28,10 +28,10 @@ void decToBinary(int n) {
 
 int main() {
     int num;
-    printf("Insert first number: ");
+    printf("Insert first number: \n");
     scanf("%d", &num);
 
-    printf("The binary number is: ");
+    printf("The binary number is: \n");
     decToBinary(num);
     printf("\n");
 
