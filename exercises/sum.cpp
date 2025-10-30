@@ -11,6 +11,10 @@
 
 using namespace std;
 
+int sum(int a, int b) {
+  return a + b;
+}
+
 int main(){
   cout << "Insert the first number: ";
   int n1;
@@ -18,6 +22,6 @@ int main(){
   cout << "Insert the second number: ";
   int n2;
   cin >> n2;
-  cout << "Sum: " << n1 + n2 << endl;
+  cout << "Sum: " << sum(n1, n2) << endl;
   return 0;
 }
