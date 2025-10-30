@@ -33,7 +33,6 @@ double division(double a, double b) {
 }
 int main()
 {
-  
   string expression;
   double num1, num2;
   char op;
@@ -66,6 +65,5 @@ int main()
           cout << "Invalid operator!" << endl;
           break;
   }
- 
   return 0;
 }
