@@ -1,56 +1,36 @@
-/* Surprise me. */
+#include <map>
+#include <string>
+#include <iostream>   // luvamu stu C code e usiamo funzioni safe-r della scanf
 
-#include <stdio.h>
 
 int main()
 {
-  int month;
-
   /* Input month number from user */
-  printf("Enter month number(1-12): ");
-  scanf("%d", &month);
+  std::cout << "Enter month number(1-12): ";
+  int month{};
+  std::cin >> month;
 
-  switch (month)
-  {
-  case 1:
-    printf("31 days");
-    break;
-  case 2:
-    printf("28/29 days");
-    break;
-  case 3:
-    printf("31 days");
-    break;
-  case 4:
-    printf("30 days");
-    break;
-  case 5:
-    printf("31 days");
-    break;
-  case 6:
-    printf("30 days");
-    break;
-  case 7:
-    printf("31 days");
-    break;
-  case 8:
-    printf("31 days");
-    break;
-  case 9:
-    printf("30 days");
-    break;
-  case 10:
-    printf("31 days");
-    break;
-  case 11:
-    printf("30 days");
-    break;
-  case 12:
-    printf("31 days");
-    break;
-  default:
-    printf("Invalid input! Please enter month number between 1-12");
+  std::map<int, std::string const> month_id_to_ndays {
+    {1, "31"},    // January
+    {2, "28/29"}, // Febuary
+    {3, "31"}, // March
+    {4, "30"},    // April
+    {5, "31"},    // May
+    {6, "30"},    // June
+    {7, "31"},    // July
+    {8, "31"},    // August
+    {9, "30"},    // September
+    {10, "31"},   // October
+    {11, "30"},   // November
+    {12, "31"},   // December
+  };
+
+  auto it = month_id_to_ndays.find(month);
+  if (it != month_id_to_ndays.end()) {
+    std::cout << it->second << '\n';
+  }
+  else {
+    std::cout << "Invalid input! Please enter month number between 1-12";
   }
 
-  return 0;
 }
