@@ -11,8 +11,20 @@ using namespace std;
 
 int main()
 {
-  // placeholder
+  int n;
   int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
 
+  cout << "Insert number ";
+  cin >> n;
+
+  for(int i=0; i < sizeof(N)/sizeof(int); i++){
+    if(N[i] == n){
+      cout << "The number " << n << " is present in the array." << endl;
+      return 0;
+    }
+  }
+
+  cout << "The number " << n << " is not present in the array." << endl;
   return 0;
+  
 }
