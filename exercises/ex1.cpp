@@ -1,48 +1,64 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
-using namespace std;
 
 int main()
 {
   int week;
 
   /* Input week number from user */
-  cout << "Enter week number(1-7): " << endl;
-  cin >> week;
+  std::cout << "Enter week number(1-7): " << std::endl;
+  std::cin >> week;
 
-  if (week == 1)
+  switch (week)
   {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
+    case 1:
+    {
+      std::cout << "Monday" << std::endl;
+      break;
+    }
 
-  return 0;
+    case 2:
+    {
+      std::cout << "Tuesday" << std::endl;
+      break;
+    }
+
+    case 3:
+    {
+      std::cout << "Wednesday" << std::endl;
+      break;
+    }
+
+    case 4:
+    {
+      std::cout << "Thursday" << std::endl;
+      break;
+    }
+
+    case 5:
+    {
+      std::cout << "Friday" << std::endl;
+      break;
+    }
+
+    case 6:
+    {
+      std::cout << "Saturday" << std::endl;
+      break;
+    }
+
+    case 7:
+    {
+      std::cout << "Sunday" << std::endl;
+      break;
+    }
+    
+    default:
+    {
+      std::cout << "Invalid input! Please enter week number between 1-7." << std::endl;
+      break;
+    }
+  }
+  
 }
