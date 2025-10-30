@@ -20,8 +20,5 @@ int main() {
     int sum = num1 + num2;
     cout << "Sum: " << sum << endl;
 
-    int x;
-    cout << x << endl;
-
     return 0;
 }
