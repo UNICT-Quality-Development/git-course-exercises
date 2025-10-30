@@ -18,4 +18,5 @@ int main() {
     cout<<a<<" "<<b<<endl;
 
     cout<<"a+b = "<<a+b;
+    return 0;
 }
