@@ -9,6 +9,18 @@ The number 3 is [not] present in the array.
 #include <iostream>
 using namespace std;
 
+void output(bool found, int number)
+{
+  if (found)
+  {
+    cout << "Il numero " << number << " è presente nell'array." << endl;
+  }
+  else
+  {
+    cout << "Il numero " << number << " non è presente nell'array." << endl;
+  }
+}
+
 int main()
 {
   int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
@@ -24,13 +36,6 @@ int main()
       break;
     }
   }
-  if (found)
-  {
-    cout << "Il numero " << number << " è presente nell'array." << endl;
-  }
-  else
-  {
-    cout << "Il numero " << number << " non è presente nell'array." << endl;
-  }
+  output(found, number);
   return 0;
 }
