@@ -1,43 +1,31 @@
 /* Could you still use a switch case here? May you can use a map. */
 
 #include <iostream>
-using namespace std;
+#include <map>
+#include <string>
 
 int main()
 {
-  string textInput;
+  std::map<std::string const, std::string const> people_descr
+  {
+    {"BarackObama", "44th president of the United States"},
+    {"SandroPertini", "Former President of the Italian Republic"},
+    {"NelsonMandela", "Former President of South Africa"},
+    {"MahatmaGandhi", "Bapu"},
+    {"DonaldKnuth", "Creator of LaTeX"},
+    {"DennisRitchie", "Creator of C"},
+  };
 
-  cout << "Enter a famous name+surname, ex. BarackObama " << endl;
-  cin >> textInput;
+  std::cout << "Enter a famous name+surname, ex. BarackObama \n";
+  std::string textInput{};
+  std::cin >> textInput;
 
-  if (textInput == "BarackObama")
-  {
-    cout << "44th president of the United States" << endl;
-  }
-  else if (textInput == "SandroPertini")
-  {
-    cout << "Former President of the Italian Republic" << endl;
-  }
-  else if (textInput == "NelsonMandela")
-  {
-    cout << "Former President of South Africa" << endl;
-  }
-  else if (textInput == "MahatmaGandhi")
-  {
-    cout << "Bapu" << endl;
-  }
-  else if (textInput == "DonaldKnuth")
-  {
-    cout << "Creator of LaTeX" << endl;
-  }
-  else if (textInput == "DennisRitchie")
-  {
-    cout << "Creator of C" << endl;
+  auto it = people_descr.find(textInput);
+  if (it != people_descr.end()) {
+    std::cout << it->second << '\n';
   }
   else
   {
-    cout << "Invalid input! Please enter a good name!" << endl;
+    std::cout << "Invalid input! Please enter a good name!\n";
   }
-
-  return 0;
 }
