@@ -6,7 +6,6 @@
   Insert the second number: 2
   Sum: 3
 */
-<<<<<<< HEAD
 
 #include <stdio.h>
 
