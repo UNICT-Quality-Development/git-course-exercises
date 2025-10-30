@@ -18,4 +18,5 @@ using namespace std;
   cin >> x2;
   cout << endl;
   cout << "Sum: " << x1+x2 << endl;
- }
+}
+
