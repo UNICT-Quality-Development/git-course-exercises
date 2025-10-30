@@ -9,6 +9,19 @@
 
 using namespace std;
 
+string converter(int num){
+    int temp = num;
+    while (temp > 0)
+  {
+    cout << temp % 2;
+    temp = temp / 2;
+  }
+  string s = to_string(temp);
+  string last = last.append(s);
+
+  return last;
+}
+
 int main()
 {
 
@@ -16,13 +29,9 @@ int main()
   cout << "Insert number: ";
   cin >> num;
 
-  int temp = num;
-
-  while (temp > 0)
-  {
-    cout << temp % 2;
-    temp = temp / 2;
-  }
-
+  string binary = converter(num);
+  
   cout << endl;
+
+  return 0;
 }
