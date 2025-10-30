@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-int main () {
+int Sum (){
   int input, sum=0;
   cout << "Insert the first number: " << endl;
   cin >> input;
@@ -17,5 +17,9 @@ int main () {
   cout << "Insert the second number: " << endl;
   cin >> input;
   sum += input;
-  cout << "Sum: " << sum << endl;
+  return sum;
+}
+
+int main () {
+  cout << "Sum: " << Sum() << endl;
 }
