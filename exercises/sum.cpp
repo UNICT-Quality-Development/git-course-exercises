@@ -8,9 +8,14 @@
 */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 
 using namespace std;
 
+double calcolaSomma(double x, double y){
+	double somma = x + y;
+	return somma;
+}
 
 int main(){
 
@@ -19,8 +24,8 @@ int main(){
 	cout << "Inserisci due numeri: " << endl;
 	cin >> x;
 	cin >> y;
-	double somma = x + y;
+	double somma = calcolaSomma(x,y);
 	cout << "La somma dei due numeri è: " << somma << endl;
 
-	return 0;
+	return EXIT_SUCCESS;
 }
