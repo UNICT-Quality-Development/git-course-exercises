@@ -16,19 +16,23 @@ int main()
 
   return 0;
 
-
   cout << "Insert number: ";
   int num;
   cin >> num;
   bool found = false;
-  for (int i = 0; i < 10; i++) {
-    if (N[i] == num) {
-      found = true; 
-}
+  for (int i = 0; i < 10; i++)
+  {
+    if (N[i] == num)
+    {
+      found = true;
+    }
   }
-  if (found) {
+  if (found)
+  {
     cout << "The number " << num << " is present in the array." << endl;
-  } else {
+  }
+  else
+  {
     cout << "The number " << num << " is not present in the array." << endl;
   }
   return 0;
