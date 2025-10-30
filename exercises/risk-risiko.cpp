@@ -36,10 +36,12 @@ using namespace std;
 
 class attacco {
   public:
-  attacco() N(0),M(0),O(0) {}
+  attacco() : N(0),M(0),O(0) {}
   void roll();
   private:
-  int N,M,O;
+  int O;
+  int M;
+  int N;
 };
 
 class difesa {
@@ -48,15 +50,27 @@ class difesa {
 
 int main() {
   srand(time(NULL));
+  attacco p;
+  p.roll();
 }
 
 void attacco::roll() {
   int a[3];
   for (int i = 0; i<3;i++) {
-    a[i] = rand()%6;
+    a[i] = rand()%6 +1;
   }
 
-  if (a[0] > a[1]) {
-    
+  for (int i = i; i<3; i++) {
+    int key = a[i];
+      int j = i-1;
+      while (j >= 0 & key<a[j]) {
+        a[i] = a[j];
+        a[j] = key;
+      }
   }
+  
+  N = a[2];
+  M = a[1];
+  O = a[0];
+  cout<<N<<M<<O;
 }
