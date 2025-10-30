@@ -21,10 +21,10 @@ int main()
     };
 
     // Cerchiamo se l’input esiste nella mappa
-    if (famousPeople.find(textInput) != famousPeople.end())
-    {
-        cout << famousPeople[textInput] << endl;
-    }
+      const auto it = famousPeople.find(textInput);
+  if (it != famousPeople.end()) {
+    cout << it->second << endl;
+  }
     else
     {
         cout << "Invalid input! Please enter a good name!" << endl;
