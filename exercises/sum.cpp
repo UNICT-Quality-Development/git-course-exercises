@@ -8,6 +8,11 @@
 */
 #include <iostream>
 using namespace std;
+
+double sum(double a, double b) {
+  return a + b;
+}
+
 int main() {
   double num1, num2;
 
@@ -17,8 +22,7 @@ int main() {
   cout << "Insert the second number: ";
   cin >> num2;
 
-  cout << "\nSum: " << (num1 + num2) << endl;
-
+  cout << "Sum: " << sum(num1, num2) << endl;
 
   return 0;
 }
