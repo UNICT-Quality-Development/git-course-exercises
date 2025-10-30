@@ -6,6 +6,7 @@
   Insert the second number: 2
   Sum: 3
 */
+#define EXIT_SUCCESS 0
 #include <iostream>
 using namespace std;
 
@@ -25,4 +26,6 @@ int main()
   cout << endl;
 
   cout << "La somma tra " << num1 << " e " << num2 << " ammonta a " << sum(num1, num2) << endl;
+
+  return EXIT_SUCCESS;
 }
