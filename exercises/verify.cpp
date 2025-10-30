@@ -29,6 +29,5 @@ int main()
   }
 
   cout << "The number " << number << " is not present in the array." << endl;
-  return 1;
   return 0;
 }
