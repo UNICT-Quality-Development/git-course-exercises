@@ -6,10 +6,16 @@
   Insert the second number: 2
   Sum: 3
 */
+
 #include <iostream>
-int main (int argc,char *argv[]){
+using namespace std;
+int main (){
+	int x,y;
+	cout<<"Inserisci il primo numero"<<endl;
+	cin>>x;
+	cout<<"inserisci il secondo numero"<<endl;
+	cin>>y;
 
-
-return 0;
+	cout<<"La somma è: "<<x+y<<endl;
 
 }
