@@ -38,6 +38,7 @@ class attacco {
   public:
   attacco() : N(0),M(0),O(0) {}
   void roll();
+  void print();
   private:
   int O;
   int M;
@@ -48,6 +49,7 @@ class difesa {
   public:
   difesa() : N(0),M(0),N(0) {}
   void roll();
+  void print();
   private:
   int O;
   int M;
@@ -56,9 +58,29 @@ class difesa {
 
 int main() {
   srand(time(NULL));
-  attacco a;
-  difesa d;
+  attacco red;
+  difesa blue;
   
+}
+
+void difesa::roll() {
+  int a[3];
+  for (int i = 0; i<3;i++) {
+    a[i] = rand()%6 +2;
+  }
+
+  for (int i = i; i<3; i++) {
+    int key = a[i];
+      int j = i-1;
+      while (j >= 0 & key<a[j]) {
+        a[i] = a[j];
+        a[j] = key;
+      }
+  }
+  
+  N = a[2];
+  M = a[1];
+  O = a[0];
 }
 
 void attacco::roll() {
@@ -80,3 +102,5 @@ void attacco::roll() {
   M = a[1];
   O = a[0];
 }
+
+
