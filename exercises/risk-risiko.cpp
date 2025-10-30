@@ -70,18 +70,20 @@ void difesa::roll() {
     a[i] = rand()%6 +2;
   }
 
-  for (int i = i; i<3; i++) {
+  for (int i = 1; i<3; i++) {
     int key = a[i];
       int j = i-1;
       while (j >= 0 & key<a[j]) {
         a[i] = a[j];
         a[j] = key;
+        j--;
       }
   }
   
   N = a[2];
   M = a[1];
   O = a[0];
+  print();
 }
 
 void attacco::roll() {
@@ -90,24 +92,26 @@ void attacco::roll() {
     a[i] = rand()%6 +1;
   }
 
-  for (int i = i; i<3; i++) {
+  for (int i = 1; i<3; i++) {
     int key = a[i];
       int j = i-1;
       while (j >= 0 & key<a[j]) {
         a[i] = a[j];
         a[j] = key;
+        j--;
       }
   }
   
   N = a[2];
   M = a[1];
   O = a[0];
+  print();
 }
 
 void attacco::print() {
-  cout<<"Red dices:\n"<<N" (N)\n"<<M" (M)\n"<<O" (O)"<<endl;
+  cout<<"Red dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)"<<endl;
 }
 
 void difesa::print() {
-  cout<<"Blue dices:\n"<<N-1<<" (N)\n"<<M-1" (M)\n"<<O-1" (O)"<<endl;
+  cout<<"Blue dices:\n"<<N-1<<" (N)\n"<<M-1<<" (M)\n"<<O-1<<" (O)"<<endl;
 }
