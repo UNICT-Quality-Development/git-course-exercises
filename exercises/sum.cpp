@@ -9,8 +9,12 @@
 
 #include <iostream>
 
-using namespace syd;
+using namespace std;
 
 int main() {
-  
+    int a,b;
+    cout<<"Inserisci 2 numeri"<<endl;
+    cin>>a>>b;
+
+    cout<<"a+b = "<<(a+b);
 }
