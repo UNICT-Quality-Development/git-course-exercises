@@ -11,4 +11,5 @@ int main(){
     cout << "Inserisci il secondo numero : "<< endl;
     cin >> y;
     cout << x+y;
+    return 0;
 }
