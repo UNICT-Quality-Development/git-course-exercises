@@ -5,7 +5,7 @@ Output example:
 Insert number 3
 The number 3 is [not] present in the array.
 */
-
+#define EXIT_SUCCESS 0
 #include <iostream>
 using namespace std;
 
@@ -35,5 +35,6 @@ int main()
   {
     cout << "The number " << num << " is NOT present";
   }
-  return 0;
+
+  return EXIT_SUCCESS;
 }
