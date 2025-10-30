@@ -49,3 +49,40 @@ void Lunedi(){
 
   cout << "Oggi è lunedi, il tuo numero random è: " << x << endl;
 }
+
+void Martedi(){
+  int x = rand() % 10;
+
+  cout << "Oggi è martedi, il tuo numero rando è: " << x << endl;
+}
+
+void Mercoledi(){
+  int x = rand() % 10;
+
+  cout << "Oggi è mercoledi, il tuo numero random è: " << x << endl;
+}
+
+void Giovedi(){
+  int x = rand() % 10;
+
+  cout << "Oggi è giovedi, il tuo numero random è: " << x << endl;
+}
+
+void Venerdi(){
+  int x = rand() % 10;
+
+  cout << "Oggi è venerdi, il tuo numero random è: " << x << endl;
+}
+
+void Sabato(){
+  int x = rand() % 10;
+
+  cout << "Oggi è sabato, il tuo numero random è: " << x << endl;
+}
+
+void Domenica(){
+  int x = rand() % 10;
+
+  cout << "Oggi è domenica, il tuo numero random è: " << x << endl;
+}
+
