@@ -6,6 +6,7 @@
   Insert the second number: 2
   Sum: 3
 */
+<<<<<<< HEAD
 
 #include <stdio.h>
 
@@ -19,3 +20,5 @@ int main(){
   somma = a + b;
   printf("la somma e': %d", somma);
 }
+=======
+>>>>>>> 5861bc4a11e573be4b292f7fdb7d07379dfe4946
