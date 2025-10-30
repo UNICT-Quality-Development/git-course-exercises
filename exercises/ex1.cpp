@@ -1,6 +1,7 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
+#include <random>
 using namespace std;
 
 int main()
@@ -15,6 +16,7 @@ int main()
   {
     case 1:
       cout << "Monday" << endl;
+      Lunedi();
       break;
     case 2:
       cout << "Tuesday" << endl;
@@ -38,39 +40,12 @@ int main()
       cout << "Invalid input! Please enter week number between 1-7." << endl;
   }
 
-  /*
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
-  */
+
   return 0;
+}
+
+void Lunedi(){
+  int x = rand() % 10;
+
+  cout << "Oggi è lunedi, il tuo numero random è: " << x << endl;
 }
