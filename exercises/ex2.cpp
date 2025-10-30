@@ -14,7 +14,11 @@ int main()
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
 
-  if (week == 1)
+  string days[7] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
+
+  cout << days[week - 1] << endl;
+
+  /*if (week == 1)
   {
     cout << "Monday" << endl;
   }
@@ -45,7 +49,7 @@ int main()
   else
   {
     cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
+  }*/
 
   return 0;
 }
