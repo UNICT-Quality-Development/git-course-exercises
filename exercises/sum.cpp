@@ -17,6 +17,6 @@ int main() {
     cin>>a>>b;
     cout<<a<<" "<<b<<endl;
 
-    cout<<"a+b = "<<a+b;
+    cout<<"Sum = "<<a+b;
     return 0;
 }
