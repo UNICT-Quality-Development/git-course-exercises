@@ -14,7 +14,7 @@ int main()
   string arr[7]={"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"};
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
-  if(week<1){
+  if(week<1||week>7){
     cout << "Error: Insert number between 1-7" <<endl;
     return -1;
   }
