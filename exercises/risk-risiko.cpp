@@ -45,8 +45,13 @@ class giocatore {
   int N;
 };
 
+class attacco;
+class difesa;
+void battaglia(attacco a,difesa d);
+
 class attacco : public giocatore {
   public:
+  friend void battaglia(attacco a, difesa d);
   attacco() : giocatore() {}
   private:
   void print();
@@ -54,6 +59,7 @@ class attacco : public giocatore {
 
 class difesa : public giocatore {
   public:
+  friend void battaglia(attacco a, difesa d);
   difesa() : giocatore() {}
   private:
   void print();
@@ -65,6 +71,25 @@ int main() {
   difesa blue;
   red.roll();
   blue.roll();
+  battaglia(red,blue);
+}
+
+void battaglia(attacco a,difesa d) {
+  cout<<"  R    B"<<endl;
+  cout<<"N "<<a.N<<" vs "<<d.N<<" => ";
+  if (d.N>=a.N) cout<<"blue win";
+  else cout<<"red win";
+  cout<<endl;
+
+  cout<<"M "<<a.M<<" vs "<<d.M<<" => ";
+  if (d.M>=a.M) cout<<"blue win";
+  else cout<<"red win";
+  cout<<endl;
+
+  cout<<"O "<<a.O<<" vs "<<d.O<<" => ";
+  if (d.O>=a.O) cout<<"blue win";
+  else cout<<"red win";
+  cout<<endl;
 }
 
 void giocatore::roll() {
