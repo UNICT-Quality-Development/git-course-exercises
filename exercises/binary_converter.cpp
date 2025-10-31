@@ -4,10 +4,10 @@
 using namespace std;
 
 string binary_converter(int n){
+  if(!n) return "0"; // if input is zero return "0"
   string binary = "";
   while (n>0) {
-    if(n%2) binary.append(1, '1');
-    else binary.append(1, '0');
+    binary.append(1, n % 2 ? '1' : '0');
     n=n/2;
   }
   reverse(binary.begin(), binary.end());
@@ -19,5 +19,4 @@ int main () {
   cout << "Insert first number: " << endl;
   cin >> number;
   cout << "The binary number is: " << binary_converter(number) <<endl;
-
 }
