@@ -34,25 +34,28 @@
 
 using namespace std;
 
-class attacco {
+class giocatore {
   public:
-  attacco() : N(0),M(0),O(0) {}
+  giocatore() : N(0),M(0),O(0) {}
   void roll();
-  private:
+  protected:
+  virtual void print() {};
   int O;
   int M;
   int N;
+};
+
+class attacco : public giocatore {
+  public:
+  attacco() : giocatore() {}
+  private:
   void print();
 };
 
-class difesa {
+class difesa : public giocatore {
   public:
-  difesa() : N(0),M(0),O(0) {}
-  void roll();
+  difesa() : giocatore() {}
   private:
-  int O;
-  int M;
-  int N;
   void print();
 };
 
@@ -64,29 +67,7 @@ int main() {
   blue.roll();
 }
 
-void difesa::roll() {
-  int a[3];
-  for (int i = 0; i<3;i++) {
-    a[i] = rand()%6 +2;
-  }
-
-  for (int i = 1; i<3; i++) {
-    int key = a[i];
-      int j = i-1;
-      while (j >= 0 & key<a[j]) {
-        a[i] = a[j];
-        a[j] = key;
-        j--;
-      }
-  }
-  
-  N = a[2];
-  M = a[1];
-  O = a[0];
-  print();
-}
-
-void attacco::roll() {
+void giocatore::roll() {
   int a[3];
   for (int i = 0; i<3;i++) {
     a[i] = rand()%6 +1;
@@ -113,5 +94,5 @@ void attacco::print() {
 }
 
 void difesa::print() {
-  cout<<"Blue dices:\n"<<N-1<<" (N)\n"<<M-1<<" (M)\n"<<O-1<<" (O)"<<endl;
+  cout<<"Blue dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)"<<endl;
 }
