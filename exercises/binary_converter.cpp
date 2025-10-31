@@ -1,7 +1,22 @@
-/*
-  Write a program that given a number as input convert it in binary.
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
 
-  Output:
-  Insert first number: 8
-  The binary number is: 1000
-*/
+string binary_converter(int n){
+  if(!n) return "0"; // if input is zero return "0"
+  string binary = "";
+  while (n>0) {
+    binary.append(1, n % 2 ? '1' : '0');
+    n=n/2;
+  }
+  reverse(binary.begin(), binary.end());
+  return binary;
+}
+
+int main () {
+  int number;
+  cout << "Insert first number: " << endl;
+  cin >> number;
+  cout << "The binary number is: " << binary_converter(number) <<endl;
+}
