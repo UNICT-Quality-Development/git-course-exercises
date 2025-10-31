@@ -115,9 +115,9 @@ void giocatore::roll() {
 }
 
 void attacco::print() {
-  cout<<"Red dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)"<<endl;
+  cout<<"Red dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)\n"<<endl;
 }
 
 void difesa::print() {
-  cout<<"Blue dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)"<<endl;
+  cout<<"Blue dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)\n"<<endl;
 }
