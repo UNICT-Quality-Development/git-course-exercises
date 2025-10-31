@@ -9,17 +9,16 @@
 #include <iostream>
 using namespace std;
 
-int Sum (){
+int Sum (int a, int b){
+  return a+b;
+}
+
+int main () {
   int input, sum=0;
   cout << "Insert the first number: " << endl;
   cin >> input;
   sum += input;
   cout << "Insert the second number: " << endl;
   cin >> input;
-  sum += input;
-  return sum;
-}
-
-int main () {
-  cout << "Sum: " << Sum() << endl;
+  cout << "Sum: " << Sum(sum, input) << endl;
 }
