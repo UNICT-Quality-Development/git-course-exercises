@@ -15,17 +15,9 @@
 
 using namespace std;
 
-int main(){
-  float num1;
-  float num2;
+void calculator(float num1, float num2){
 
-  cout<<"Insert the first number: "<<endl;
-  cin>>num1;
-
-  cout<<"Insert the second number: "<<endl;
-  cin>>num2;
-
-  float sum,diff,mult,div;
+ float sum,diff,mult,div;
 
   sum = num1 + num2;
   diff = num1 - num2;
@@ -36,7 +28,20 @@ int main(){
   cout<<"Difference: "<<diff<<endl;
   cout<<"Multiplication: "<<mult<<endl;
   cout<<"Division: "<<div<<endl;
+}
 
+int main(){
+  float num1;
+  float num2;
+
+  cout<<"Insert the first number: "<<endl;
+  cin>>num1;
+
+  cout<<"Insert the second number: "<<endl;
+  cin>>num2;
+
+  calculator(num1,num2);
+  
   return 0;
 
 }
