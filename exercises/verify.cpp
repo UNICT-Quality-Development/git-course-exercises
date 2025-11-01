@@ -18,10 +18,10 @@ int main()
   cout<<"Inserisci il valore da verificare"<<endl;
   cin>>x;
   for (int i=0;i<10;i++){
-  	if (N[i]==x){
-		cout<<"il numero: "<<x<<" è presente nell'array"<<endl;
-		return 0;
-	}
+       if (N[i]==x){
+           cout<<"il numero: "<<x<<" è presente nell'array"<<endl;
+                return 0;
+           }
   }
   cout<<"il numero: "<<x<<" non è nell'array"<<endl;
   return 0;
