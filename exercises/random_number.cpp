@@ -21,13 +21,13 @@ int generateRandomN (int min, int max) {
 
 int main(){
 
-  int min, max, r;
+  int min, max;
 
   cout << "Insert min value: " << endl;
   cin >> min;
   cout << "Insert max value: " << endl;
   cin >> max;
-  r = generateRandomN (min, max);
+  int r = generateRandomN (min, max);
 
   cout << "The random number is: "<< r <<endl;
 
