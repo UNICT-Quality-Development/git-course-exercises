@@ -34,7 +34,7 @@
 
 using namespace std;
 
-class giocatore {
+class player {
   public:
   giocatore() : N(0),M(0),O(0) {}
   void roll();
@@ -45,11 +45,11 @@ class giocatore {
   int N;
 };
 
-class attacco;
-class difesa;
-void battaglia(attacco a,difesa d);
+class attack;
+class defense;
+void battaglia(attack a,defense d);
 
-class attacco : public giocatore {
+class attack : public player {
   public:
   friend void battaglia(attacco a, difesa d);
   attacco() : giocatore() {}
@@ -57,9 +57,9 @@ class attacco : public giocatore {
   void print();
 };
 
-class difesa : public giocatore {
+class defense : public player {
   public:
-  friend void battaglia(attacco a, difesa d);
+  friend void battle(attack a, defense d);
   difesa() : giocatore() {}
   private:
   void print();
@@ -67,33 +67,33 @@ class difesa : public giocatore {
 
 int main() {
   srand(time(NULL));
-  attacco red;
-  difesa blue;
+  attack red;
+  defense blue;
   red.roll();
   blue.roll();
-  battaglia(red,blue);
+  battle(red,blue);
   return 0;
 }
 
-void battaglia(attacco a,difesa d) {
+void battle(attack a,defense d) {
   cout<<"  R    B"<<endl;
-  cout<<"N "<<a.N<<" vs "<<d.N<<" => ";
-  if (d.N>=a.N) cout<<"blue win";
-  else cout<<"red win";
+  cout<< "N " <<a.N<< " vs " <<d.N<< " => ";
+  if (d.N>=a.N) cout<< "blue win";
+  else cout<< "red win";
   cout<<endl;
 
-  cout<<"M "<<a.M<<" vs "<<d.M<<" => ";
-  if (d.M>=a.M) cout<<"blue win";
-  else cout<<"red win";
+  cout<< "M "<<a.M<< " vs " <<d.M<< " => ";
+  if (d.M>=a.M) cout<< "blue win";
+  else cout<< "red win";
   cout<<endl;
 
-  cout<<"O "<<a.O<<" vs "<<d.O<<" => ";
-  if (d.O>=a.O) cout<<"blue win";
-  else cout<<"red win";
+  cout<< "O "<<a.O<< " vs " <<d.O<< " => ";
+  if (d.O>=a.O) cout<< "blue win";
+  else cout<< "red win";
   cout<<endl;
 }
 
-void giocatore::roll() {
+void player::roll() {
   int a[3];
   for (int i = 0; i<3;i++) {
     a[i] = rand()%6 +1;
@@ -114,10 +114,10 @@ void giocatore::roll() {
   print();
 }
 
-void attacco::print() {
-  cout<<"Red dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)\n"<<endl;
+void attack::print() {
+  cout<< "Red dices:\n" <<N<< " (N)\n" <<M<< " (M)\n" <<O<< " (O)\n" <<endl;
 }
 
-void difesa::print() {
-  cout<<"Blue dices:\n"<<N<<" (N)\n"<<M<<" (M)\n"<<O<<" (O)\n"<<endl;
+void defense::print() {
+  cout<< "Blue dices:\n" <<N<< " (N)\n" <<M<< " (M)\n" <<O<< " (O)\n" <<endl;
 }
