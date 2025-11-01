@@ -36,9 +36,9 @@ using namespace std;
 
 void checkWinner(int a,int d);
 
-class player {
+class Player {
   public:
-  player() : N(0),M(0),O(0) {}
+  Player() : N(0),M(0),O(0) {}
   void roll();
   protected:
   virtual void print() {};
@@ -48,37 +48,37 @@ class player {
   int N;
 };
 
-class attack;
-class defense;
-void battle(attack a,defense d);
+class Attack;
+class Defense;
+void battle(Attack a,Defense d);
 
-class attack : public player {
+class Attack : public Player {
   public:
-  friend void battle(attack a, defense d);
-  attack() : player() {}
+  friend void battle(Attack a, Defense d);
+  Attack() : Player() {}
   private:
   void print();
 };
 
-class defense : public player {
+class Defense : public Player {
   public:
-  friend void battle(attack a, defense d);
-  defense() : player() {}
+  friend void battle(Attack a, Defense d);
+  Defense() : Player() {}
   private:
   void print();
 };
 
 int main() {
   srand(time(NULL));
-  attack red;
-  defense blue;
+  Attack red;
+  Defense blue;
   red.roll();
   blue.roll();
   battle(red,blue);
   return 0;
 }
 
-void battle(attack a,defense d) {
+void battle(Attack a,Defense d) {
   cout  <<"  R    B"<<endl;
   cout  << "N " << a.N << " vs " << d.N << " => ";
   checkWinner(a.N,d.N);
@@ -93,7 +93,7 @@ void battle(attack a,defense d) {
   cout  <<endl;
 }
 
-void player::roll() {
+void Player::roll() {
   int a[3];
   for (int i = 0; i<3;i++) {
     a[i] = rand()%6 +1;
@@ -118,10 +118,10 @@ void checkWinner(int a,int d) {
   cout  << ((d >= a) ? "blue" : "red") << " win" << endl;
 }
 
-void attack::print() {
+void Attack::print() {
   cout  << "Red dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
 }
 
-void defense::print() {
+void Defense::print() {
   cout  << "Blue dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
 }
