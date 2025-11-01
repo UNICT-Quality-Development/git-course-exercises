@@ -6,11 +6,3 @@
   Insert the second number: 2
   Sum: 3
 */
-
-#include <iostream>
-
-using namespace syd;
-
-int main() {
-  
-}
