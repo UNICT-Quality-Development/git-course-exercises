@@ -11,13 +11,28 @@
 
 using namespace std;
 
-int main(){
+int generateRandomN (int min, int max) {
 
   srand(time(NULL));
-  int x = rand() % 20000;
-  cout << "The random number is: "<< x <<endl;
+  int x = rand() % (max - min + 1) + min;
+  return x;
+
+}
+
+int main(){
+
+  int min, max, r;
+
+  cout << "Insert min value: " << endl;
+  cin >> min;
+  cout << "Insert max value: " << endl;
+  cin >> max;
+  r = generateRandomN (min, max);
+
+  cout << "The random number is: "<< r <<endl;
 
   return EXIT_SUCCESS;
+
 }
 
 
