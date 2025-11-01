@@ -107,7 +107,6 @@ void giocatore::roll() {
         j--;
       }
   }
-  
   N = a[2];
   M = a[1];
   O = a[0];
