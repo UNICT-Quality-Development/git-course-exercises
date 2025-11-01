@@ -72,6 +72,7 @@ int main() {
   red.roll();
   blue.roll();
   battaglia(red,blue);
+  return 0;
 }
 
 void battaglia(attacco a,difesa d) {
