@@ -32,24 +32,22 @@
 #include <random>
 using namespace std;
 
-void sort(int *arr,int x){
-	bool check=true;
-	while (check){
-		check=false;
-		for(int i =0;i<x;i++){
-			if(arr[i]<arr[i+1]){
-				int temp=arr[i];
-				arr[i]=arr[i+1];
-				arr[i+1]=temp;
-				check=true;
-			}
-			
-		}
-		
-	}
+void sort(int *arr,int size){
+    bool check=true;
+    while (check){
+        check=false;
+        for(int i =0;i<size-1;i++){
+            if(arr[i]<arr[i+1]){
+                int temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+                check=true;
+            }
+            
+        }
+        
+    }
 }
-
-
 
 int main(){
     random_device rd;
@@ -59,29 +57,20 @@ int main(){
     int arr_B[3];
     int arr_R[3];
     for(int i = 0;i<3;i++){
-	arr_R[i]=distrib(gen);
+    arr_R[i]=distrib(gen);
+    arr_B[i]=distrib(gen);
     }
 
-    for (int j=0;j<3;j++){
-	arr_B[j]=distrib(gen);
-    }
-	
     sort(arr_B,3);
     sort(arr_R,3);
 
-	for (int i =0;i<3;i++){
-		if(arr_R[i]>arr_B[i]){
-			cout<<arr_R[i]<<"vs"<<arr_B[i]<<"=> red win"<<endl;
-		}
-		else{
-		cout<<arr_R[i]<<"vs"<<arr_B[i]<<"=> blue win"<<endl;
-		}
-		
-	}
-
-
-
-
-
-
+    for (int i =0;i<3;i++){
+        if(arr_R[i]>arr_B[i]){
+            cout<<arr_R[i]<<"vs"<<arr_B[i]<<"=> red win"<<endl;
+        }
+        else{
+        cout<<arr_R[i]<<"vs"<<arr_B[i]<<"=> blue win"<<endl;
+        }
+        
+    }
 }
