@@ -16,7 +16,6 @@ int main()
 
   string days[] = {"","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"};
 
-
   if (week >= 1 && week <= 7)
   {
     cout << days[week]<<endl;
