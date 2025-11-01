@@ -34,12 +34,15 @@
 
 using namespace std;
 
+void checkWinner(int a,int d);
+
 class player {
   public:
-  giocatore() : N(0),M(0),O(0) {}
+  player() : N(0),M(0),O(0) {}
   void roll();
   protected:
   virtual void print() {};
+  friend void checkWinner(int a,int d);
   int O;
   int M;
   int N;
@@ -47,12 +50,12 @@ class player {
 
 class attack;
 class defense;
-void battaglia(attack a,defense d);
+void battle(attack a,defense d);
 
 class attack : public player {
   public:
-  friend void battaglia(attacco a, difesa d);
-  attacco() : giocatore() {}
+  friend void battle(attack a, defense d);
+  attack() : player() {}
   private:
   void print();
 };
@@ -60,7 +63,7 @@ class attack : public player {
 class defense : public player {
   public:
   friend void battle(attack a, defense d);
-  difesa() : giocatore() {}
+  defense() : player() {}
   private:
   void print();
 };
@@ -76,21 +79,18 @@ int main() {
 }
 
 void battle(attack a,defense d) {
-  cout<<"  R    B"<<endl;
-  cout<< "N " <<a.N<< " vs " <<d.N<< " => ";
-  if (d.N>=a.N) cout<< "blue win";
-  else cout<< "red win";
-  cout<<endl;
+  cout  <<"  R    B"<<endl;
+  cout  << "N " << a.N << " vs " << d.N << " => ";
+  checkWinner(a.N,d.N);
+  cout  << endl;
 
-  cout<< "M "<<a.M<< " vs " <<d.M<< " => ";
-  if (d.M>=a.M) cout<< "blue win";
-  else cout<< "red win";
-  cout<<endl;
+  cout  << "M "<< a.M << " vs " << d.M << " => ";
+  checkWinner(a.M,d.M);
+  cout  <<endl;
 
-  cout<< "O "<<a.O<< " vs " <<d.O<< " => ";
-  if (d.O>=a.O) cout<< "blue win";
-  else cout<< "red win";
-  cout<<endl;
+  cout  << "O "<<a.O<< " vs " <<d.O<< " => ";
+  checkWinner(a.O,d.O);
+  cout  <<endl;
 }
 
 void player::roll() {
@@ -99,14 +99,14 @@ void player::roll() {
     a[i] = rand()%6 +1;
   }
 
-  for (int i = 1; i<3; i++) {
+  for (int i = 1; i < 3; i++) {
     int key = a[i];
-      int j = i-1;
-      while (j >= 0 & key<a[j]) {
-        a[i] = a[j];
-        a[j] = key;
+    int j = i-1;
+      while (j >= 0 && key < a[j]) {
+        a[j + 1] = a[j];
         j--;
       }
+      a[j + 1] = key;
   }
   N = a[2];
   M = a[1];
@@ -114,10 +114,14 @@ void player::roll() {
   print();
 }
 
+void checkWinner(int a,int d) {
+  cout  << ((d >= a) ? "blue" : "red") << " win" << endl;
+}
+
 void attack::print() {
-  cout<< "Red dices:\n" <<N<< " (N)\n" <<M<< " (M)\n" <<O<< " (O)\n" <<endl;
+  cout  << "Red dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
 }
 
 void defense::print() {
-  cout<< "Blue dices:\n" <<N<< " (N)\n" <<M<< " (M)\n" <<O<< " (O)\n" <<endl;
+  cout  << "Blue dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
 }
