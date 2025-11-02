@@ -29,7 +29,7 @@ void calculator(int x,int y){
 }
 
 int main(){
-    int x,y;
+    int x=0,y=0;
     calculator(x,y);
     return 0;
 }
