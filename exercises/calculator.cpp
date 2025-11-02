@@ -16,16 +16,20 @@
 
 using namespace std;
 
-int main(){
-    int x,y;
+void calculator(int x,int y){
     cout<<"inserisci il primo valore"<<endl;
     cin>>x;
-    cout<<"inserisci il seocndo valore"<<endl;
+    cout<<"inserisci il secondo valore"<<endl;
     cin>>y;
 
     cout<<"Somma: "<<x+y<<endl;
     cout<<"Differenza: "<<x-y<<endl;
     cout<<"Divisione: "<<x/y<<endl;
     cout<<"Prodotto: "<<x*y<<endl;
+}
 
+int main(){
+    int x,y;
+    calculator(x,y);
+    return 0;
 }
