@@ -10,12 +10,10 @@
 using namespace std;
 
 string convertToBinary(int x){ 
-  while (x > 0){
-    string num = to_string(x % 2);
-    x /= 2; 
-    return convertToBinary(x) + num;
-  }
-  return "\n";
+  if (x == 0) return "";
+  string num = to_string(x % 2);
+  x /= 2;
+  return convertToBinary(x) + num;
 }
 
 int main(){
@@ -24,6 +22,5 @@ int main(){
   string binary = convertToBinary(x);
 
   cout << "Il numero: " << x << " in binario è " << binary << endl;
-  
-  return 0;
+  return EXIT_SUCCESS;
 }
