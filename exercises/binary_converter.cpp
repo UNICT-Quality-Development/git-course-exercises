@@ -9,12 +9,11 @@
 #include <iostream>
 using namespace std;
 
-string convertToBinary(string x){
-  int x_int = stoi(x); 
-  while (x_int > 0){
-    string num = to_string(x_int % 2);
-    x_int /= 2; 
-    return convertToBinary(to_string(x_int)) + num;
+string convertToBinary(int x){ 
+  while (x > 0){
+    string num = to_string(x % 2);
+    x /= 2; 
+    return convertToBinary(x) + num;
   }
   return "\n";
 }
@@ -22,7 +21,9 @@ string convertToBinary(string x){
 int main(){
   int x = 16;
 
-  string binary = convertToBinary(to_string(x));
+  string binary = convertToBinary(x);
 
   cout << "Il numero: " << x << " in binario è " << binary << endl;
+  
+  return 0;
 }
