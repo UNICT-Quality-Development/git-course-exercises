@@ -1,4 +1,3 @@
-/* Improve this program using a switch-case. */
 
 #include <iostream>
 using namespace std;
