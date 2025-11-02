@@ -1,4 +1,3 @@
-
 /*
   Write a program that given two numbers as input make the main operations.
 
