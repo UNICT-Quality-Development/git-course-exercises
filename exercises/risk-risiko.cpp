@@ -60,7 +60,6 @@ int main() {
     cout << "  " << blue[0] << " (N)\n";
     cout << "  " << blue[1] << " (M)\n";
     cout << "  " << blue[2] << " (O)\n\n";
-
     // Confronto tra i dadi
     cout << "   R    B\n";
     const string labels[3] = {"N", "M", "O"};
@@ -76,7 +75,6 @@ int main() {
             ++blueWins;
         }
     }
-
     // Risultato finale
     cout << "\nResult: Red wins " << redWins << " | Blue wins " << blueWins << endl;
 
