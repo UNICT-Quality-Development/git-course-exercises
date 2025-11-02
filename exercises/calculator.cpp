@@ -48,4 +48,6 @@ int main(){
   cout << valUno << " - " << valDue << " = " << resultD << endl;
   cout << valUno << " * " << valDue << " = " << resultP << endl;
   cout << valUno << " / " << valDue << " = " << resultR << endl;
+
+  return EXIT_SUCCESS;
 }
