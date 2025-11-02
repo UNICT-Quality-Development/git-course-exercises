@@ -49,6 +49,6 @@ int main() {
     cout << "Multiplication: " << multiplication << endl;
     cout << "Division: " << division << endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
 
