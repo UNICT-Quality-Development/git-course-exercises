@@ -1,6 +1,7 @@
 /* Improve this program using a switch-case. */
 
 #include <iostream>
+#define EXIT_SUCCESS 0
 using namespace std;
 
 int main()
@@ -39,5 +40,5 @@ int main()
       break;
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
