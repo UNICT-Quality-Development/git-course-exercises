@@ -49,5 +49,5 @@ int main(){
   cout << valUno << " * " << valDue << " = " << resultP << endl;
   cout << valUno << " / " << valDue << " = " << resultR << endl;
 
-  return EXIT_SUCCESS;
+  return 0;
 }
