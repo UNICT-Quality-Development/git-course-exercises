@@ -3,6 +3,21 @@
 #include <iostream>
 using namespace std;
 
+enum months{
+  January=1,
+  February,
+  March,
+  April,
+  May,
+  June,
+  July,
+  August,
+  September,
+  October,
+  November,
+  December
+};
+
 int main()
 {
   int month;
@@ -13,22 +28,22 @@ int main()
 
   switch (month)
   {
-  case 1:
-  case 3:
-  case 5:
-  case 7:
-  case 8:
-  case 10:
-  case 12:
+  case January:
+  case March:
+  case May:
+  case July:
+  case August:
+  case October:
+  case December:
     printf("31 days");
     break;
-  case 2:
+  case February:
     printf("28/29 days");
     break;
-  case 4:
-  case 6:
-  case 9:
-  case 11:
+  case April:
+  case June:
+  case September:
+  case November:
     printf("30 days");
     break;
 
