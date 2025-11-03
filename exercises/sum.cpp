@@ -24,4 +24,5 @@ int main(){
   int number[2];
   getNumInput(number);
   printSum<int>(number[0],number[1]);
+  return 0;
 }
