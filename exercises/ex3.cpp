@@ -4,6 +4,10 @@
 #include <unordered_map>
 using namespace std;
 
+#define EXIT_FAILURE 1
+#define EXIT_SUCCESS 0
+
+
 unordered_map<string,string> initialize_peopleMap(){
   unordered_map<string,string> peopleMap = {
     {"BarackObama","44th president of the United States"},
@@ -24,12 +28,12 @@ int main()
   cout << "Enter a famous name+surname, ex. BarackObama " << endl;
   cin >> textInput;
 
-  if(peopleMap.count(textInput) > 0){
-    cout<<peopleMap[textInput]<<endl;
+  if(peopleMap.count(textInput) > 0){ //checks if there is a name like textInput in the peopleMap
+    cout << peopleMap[textInput] << endl;
   } else {
     cout << "Invalid input! Please enter a good name!" << endl;
-    return 1;
+    return EXIT_FAILURE;
   }
 
-  return 0;
+  return EXIT_SUCCESS;
 }
