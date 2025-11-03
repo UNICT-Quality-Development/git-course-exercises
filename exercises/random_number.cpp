@@ -5,9 +5,11 @@
   The random number is: 4
 */
 #include <iostream>
+#include <time.h>
 using namespace std;
 
 int main(){
+  srand(time(NULL));
   int num = rand();
   cout << "The random number is: " << num << endl;
 }
