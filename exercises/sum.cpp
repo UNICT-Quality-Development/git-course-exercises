@@ -14,6 +14,7 @@ int main(){
   cout << "Insert the first number: " << endl;
   cin >> num1;
   cout << "Insert the second number: " << endl;
+  cin >> num2;
 
   cout << "Sum: " << num1 + num2 << endl;
 }
