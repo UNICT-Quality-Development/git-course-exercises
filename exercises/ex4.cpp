@@ -35,16 +35,16 @@ int main()
   case August:
   case October:
   case December:
-    printf("31 days");
+    cout << "31 days" << endl;
     break;
   case February:
-    printf("28/29 days");
+    cout << "28/29 days" << endl;
     break;
   case April:
   case June:
   case September:
   case November:
-    printf("30 days");
+    cout << "30 days" << endl;
     break;
 
   default:
