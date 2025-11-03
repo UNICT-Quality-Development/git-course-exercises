@@ -1,14 +1,15 @@
 /* Surprise me. */
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
 int main()
 {
   int month;
 
   /* Input month number from user */
-  printf("Enter month number(1-12): ");
-  scanf("%d", &month);
+  cout << "Enter month number(1-12): " << endl;
+  cin >> month;
 
   switch (month)
   {
