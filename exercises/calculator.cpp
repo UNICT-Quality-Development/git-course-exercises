@@ -29,8 +29,7 @@ void calculator(int x,int y)
     cout<<"inserisci il primo valore"<<endl;
     cin>>x;
     cout<<"inserisci il secondo valore"<<endl;
-    cin>>y;
-    
+    cin>>y; 
     check(y);
 
     cout<<"Somma: "<<x+y<<endl;
