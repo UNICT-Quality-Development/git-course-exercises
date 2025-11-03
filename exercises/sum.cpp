@@ -9,6 +9,9 @@
 #include <iostream>
 using namespace std;
 
+void getNumInput(int* num);
+template <typename T> void printSum(const T& n1, const T& n2);
+
 void getNumInput(int* num){
   cout << "Insert the first number: " << endl;
   cin >> num[0];
@@ -23,6 +26,6 @@ template <typename T> void printSum(const T& n1, const T& n2){
 int main(){
   int number[2];
   getNumInput(number);
-  printSum<int>(number[0],number[1]);
+  printSum<int>( number[0] , number[1] );
   return 0;
 }
