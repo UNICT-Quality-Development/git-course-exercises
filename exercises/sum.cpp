@@ -9,12 +9,16 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-  int num1,num2;
+void getNumInput(int* num){
   cout << "Insert the first number: " << endl;
-  cin >> num1;
+  cin >> num[0];
   cout << "Insert the second number: " << endl;
-  cin >> num2;
+  cin >> num[1];
+}
 
-  cout << "Sum: " << num1 + num2 << endl;
+int main(){
+  int number[2];
+  getNumInput(number);
+
+  cout << "Sum: " << number[0] + number[1] << endl;
 }
