@@ -16,9 +16,12 @@ void getNumInput(int* num){
   cin >> num[1];
 }
 
+template <typename T> void printSum(const T& n1, const T& n2){
+  cout << "Sum: " << n1 + n2 << endl;
+}
+
 int main(){
   int number[2];
   getNumInput(number);
-
-  cout << "Sum: " << number[0] + number[1] << endl;
+  printSum<int>(number[0],number[1]);
 }
