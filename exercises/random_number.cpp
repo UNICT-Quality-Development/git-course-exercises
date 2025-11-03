@@ -12,4 +12,5 @@ int main(){
   srand(time(NULL));
   int num = rand();
   cout << "The random number is: " << num << endl;
+  return 0;
 }
