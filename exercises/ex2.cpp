@@ -19,10 +19,10 @@ int main()
     return 1;
   }
 
-  string weeks[] ={"Monday","Tuesday","Wednesday",
-    "Thursday","Friday","Saturday","Sunday"};
+  string weeks[] = { "Monday" , "Tuesday" , "Wednesday" ,
+    "Thursday" , "Friday" , "Saturday" , "Sunday" };
 
-  cout<<weeks[week-1]<<endl;
+  cout << weeks[week-1] << endl;
 
   return 0;
 }
