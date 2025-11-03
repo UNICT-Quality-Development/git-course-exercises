@@ -5,7 +5,7 @@
   The random number is: 4
 */
 #include <iostream>
-#include <time.h>
+#include <ctime>
 using namespace std;
 
 int main(){
