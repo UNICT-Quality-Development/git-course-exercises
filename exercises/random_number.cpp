@@ -8,9 +8,13 @@
 #include <ctime>
 using namespace std;
 
-int main(){
+const int randGen(){
   srand(time(NULL));
-  int num = rand();
+  return rand();
+} 
+
+int main(){
+  int num = randGen();
   cout << "The random number is: " << num << endl;
   return 0;
 }
