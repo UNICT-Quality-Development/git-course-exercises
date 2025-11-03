@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-string convertToBinary(int x){ 
+string convertToBinary(int x){
   if (x == 0) return "";
   string num = to_string(x % 2);
   x /= 2;
