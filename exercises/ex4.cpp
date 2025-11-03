@@ -20,7 +20,7 @@ enum months{
   December
 };
 
-void printMonth(int& month){
+void printMonth(const int& month){
   switch (month){
     case January:
     case March:
