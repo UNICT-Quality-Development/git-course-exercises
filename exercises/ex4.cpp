@@ -3,6 +3,8 @@
 #include <iostream>
 using namespace std;
 
+void printMonth(int& month);
+
 enum months{
   January=1,
   February,
@@ -18,6 +20,32 @@ enum months{
   December
 };
 
+void printMonth(int& month){
+  switch (month){
+    case January:
+    case March:
+    case May:
+    case July:
+    case August:
+    case October:
+    case December:
+      cout << "31 days" << endl;
+      break;
+    case February:
+      cout << "28/29 days" << endl;
+      break;
+    case April:
+    case June:
+    case September:
+    case November:
+      cout << "30 days" << endl;
+      break;
+    default:
+      cout << "Invalid input! Please enter month number between 1-12" << endl;
+      break;
+  }
+}
+
 int main()
 {
   int month;
@@ -26,30 +54,7 @@ int main()
   cout << "Enter month number(1-12): " << endl;
   cin >> month;
 
-  switch (month)
-  {
-  case January:
-  case March:
-  case May:
-  case July:
-  case August:
-  case October:
-  case December:
-    cout << "31 days" << endl;
-    break;
-  case February:
-    cout << "28/29 days" << endl;
-    break;
-  case April:
-  case June:
-  case September:
-  case November:
-    cout << "30 days" << endl;
-    break;
-
-  default:
-    cout << "Invalid input! Please enter month number between 1-12" << endl;
-  }
+  printMonth(month);
 
   return 0;
 }
