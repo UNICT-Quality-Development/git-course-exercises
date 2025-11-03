@@ -48,7 +48,7 @@ int main()
     break;
 
   default:
-    printf("Invalid input! Please enter month number between 1-12");
+    cout << "Invalid input! Please enter month number between 1-12" << endl;
   }
 
   return 0;
