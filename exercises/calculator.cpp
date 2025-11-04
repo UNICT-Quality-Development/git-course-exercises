@@ -56,7 +56,7 @@ int insertNumber(std::string position){
 bool checkStringIsNumber(std::string in){
   if(in.empty()) return false;
   if(in.size() > MAX_DIGIT) return false;
-  for(int i = 0; i < in.size(); i++) 
+  for(int i = 0; i < in.size(); i++)
     if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) return false;
 
   return true;
