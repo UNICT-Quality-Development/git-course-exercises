@@ -10,7 +10,6 @@ int main()
   /* Input week number from user */
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
-  
   switch (week){
     case 1:
       cout << "Monday" << endl;
@@ -33,7 +32,6 @@ int main()
     case 7:
       cout << "Sunday" << endl;
       break;
-    
     default:
       cout << "Invalid input! Please enter week number between 1-7." << endl;
       break;
