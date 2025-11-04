@@ -14,7 +14,9 @@ void printOutput(bool present);
 
 bool isPresent(int* Arr, const size_t& size, const int& n){
   for(size_t i = 0; i < size ; i++){
-    if(Arr[i] == n){ return true; } // FOUND!!
+    if(Arr[i] == n){ 
+      return true;// FOUND!!
+      } 
     }
   return false;
 }
