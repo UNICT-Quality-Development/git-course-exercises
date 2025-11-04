@@ -24,7 +24,6 @@ const std::string NORMAL_COLOR = "\033[0m";
 int main(){
   bool is_neg = false;
   int number = insertNumber();
-  
   if(number < 0) {
     number *= -1;
     is_neg = true;
@@ -48,9 +47,8 @@ int insertNumber(){
 bool checkStringIsNumber(std::string in){
   if(in.empty()) return false;
   if(in.size() > MAX_DIGIT) return false;
-  for(int i = 0; i < in.size(); i++) 
+  for(int i = 0; i < in.size(); i++)
     if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) return false;
-
   return true;
 }
 
