@@ -11,7 +11,7 @@ using namespace std;
 const int randGen(){
   srand(time(NULL));
   return rand();
-} 
+}
 
 int main(){
   int num = randGen();
