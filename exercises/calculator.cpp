@@ -13,7 +13,8 @@
 #include <iostream>
 using namespace std;
 
-void Calculate(const int&, const int&);
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
 
 void Calculate(const int& n1, const int& n2){
   cout << "SUM: " << n1 + n2 << endl;
@@ -30,5 +31,5 @@ int main(){
   cin >> num2;
 
   Calculate( num1 , num2 );
-  return 0;
+  return EXIT_SUCCESS;
 }
