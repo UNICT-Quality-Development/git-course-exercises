@@ -9,6 +9,9 @@
 #include <iostream>
 using namespace std;
 
+#define EXIT_SUCCESS 1
+#define EXIT_FAILURE 0
+
 void getNumInput(int* num);
 template <typename T> void printSum(const T& n1, const T& n2);
 
@@ -27,5 +30,5 @@ int main(){
   int number[2];
   getNumInput(number);
   printSum<int>( number[0] , number[1] );
-  return 0;
+  return EXIT_SUCCESS;
 }
