@@ -14,7 +14,7 @@ void printBinary(int num){
   size_t i;
   for(i = 0; unsigned_num > 0; i++){
     arr[i] = unsigned_num % 2; //Saving the module inside of arr[i]
-    unsigned_num /= 2; 
+    unsigned_num /= 2;
   }
 
   while (i > 0){ // 'i' contains the number of bits needed for the conversion
