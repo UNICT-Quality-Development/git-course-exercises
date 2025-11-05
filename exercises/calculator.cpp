@@ -14,16 +14,18 @@
 #include <iostream>
 #include <string>
 
-const std::string ERROR_COLOR = "\033[31m";
-const std::string NORMAL_COLOR = "\033[0m";
+using namespace std;
+
+const string ERROR_COLOR = "\033[31m";
+const string NORMAL_COLOR = "\033[0m";
 
 const int ZERO = 48;
 const int NINE = 57;
 const int MAX_DIGIT = 10;
 const int MINUS = 45;
 
-int insertNumber(std::string position);
-bool checkStringIsNumber(std::string in);
+int insertNumber(string position);
+bool checkStringIsNumber(string in);
 
 float doSum(float n1, float n2);
 float doSub(float n1, float n2);
@@ -37,27 +39,32 @@ int main(){
   float num2 = insertNumber("second");
 
   doOperation(num1, num2);
+  return EXIT_SUCCESS;
 }
 
 
 
-int insertNumber(std::string position){
-  std::string insert;
+int insertNumber(string position){
+  string insert;
   bool isCorrect = true;
   do {
-    if(!isCorrect) std::cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
-    std::cout << "Insert "<< position <<" number: ";
-    getline(std::cin, insert);
-  } while(!(isCorrect = checkStringIsNumber(insert)));
+    if(!isCorrect) cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
+    cout << "Insert "<< position <<" number: ";
+    getline(cin, insert);
 
-  return std::stoi(insert);
+    isCorrect = checkStringIsNumber(insert);
+  } while(!(isCorrect));
+
+  return stoi(insert);
 }
 
-bool checkStringIsNumber(std::string in){
+bool checkStringIsNumber(string in){
   if(in.empty()) return false;
   if(in.size() > MAX_DIGIT) return false;
+
   for(int i = 0; i < in.size(); i++)
-    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) return false;
+    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) 
+      return false;
 
   return true;
 }
@@ -76,8 +83,8 @@ float doDiv(float n1, float n2) {
 }
 
 void doOperation(float n1, float n2) {
-  std::cout << "SUM: " << doSum(n1, n2) << std::endl;
-  std::cout << "Difference: " << doSub(n1, n2) << std::endl;
-  std::cout << "Moltiplication: " << doMolt(n1, n2) << std::endl;
-  std::cout << "Division: " << doDiv(n1, n2) << std::endl;
+  cout << "SUM: " << doSum(n1, n2) << endl;
+  cout << "Difference: " << doSub(n1, n2) << endl;
+  cout << "Moltiplication: " << doMolt(n1, n2) << endl;
+  cout << "Division: " << doDiv(n1, n2) << endl;
 }
