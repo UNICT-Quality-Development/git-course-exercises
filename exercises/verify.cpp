@@ -46,7 +46,7 @@ int binarySearch(T item, vector<int>&collection) {
     center = (start + end) / 2;
     if(collection[center] == item) return center;
     if(item > collection[center]) start = center+1;
-    else end = center-1;  
+    else end = center-1;
   } while(start <= end);
   return -1;
 }
