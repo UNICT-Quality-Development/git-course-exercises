@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void BinR(unsigned long int num){
+void BinR(long int num){
     if(!num){
         return;
     }
@@ -26,7 +26,7 @@ void BinR(unsigned long int num){
 }
 
 int main(){
-    unsigned long int num;
+    long int num;
 
     cout << "Insert first number: ";
     cin >> num;
@@ -34,6 +34,11 @@ int main(){
     if(cin.fail()){
         cerr << "Error: The given value is not a number" << endl;
         exit(1);
+    }
+
+    if(num < 0){
+        num *= -1;
+        cout<< "Warning: The given value is a negative number. Switching to "<< num << endl;
     }
 
     cout<< "The binary number is: ";
