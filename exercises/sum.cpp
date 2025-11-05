@@ -8,55 +8,75 @@
 */
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-const int ZERO = 48;
-const int NINE = 57;
-const int MAX_DIGIT = 10;
-const int MINUS = 45;
+// --- Costant ---
+const int ASCII_ZERO = 48;
+const int ASCII_NINE = 57;
+const int MAX_DIGITS = 10;
+const int ASCII_MINUS = 45;
 
-const string ERROR_COLOR = "\033[31m";
-const string NORMAL_COLOR = "\033[0m";
+const string COLOR_ERROR = "\033[31m";
+const string COLOR_RESET = "\033[0m";
 
+// --- Prototype ---
 template <typename T>
 T sumNumber(T n1, T n2);
-double insertNumber(const string& msg);
-bool checkStringIsNumber(string in);
 
+double promptNumber(const string& msg);
+bool isValidNumber(const string& in);
 
+// --- Main ---
 int main() {
-  auto n1 = insertNumber("Insert first number:");
-  auto n2 = insertNumber("Insert second number:");
-  auto ris = sumNumber(n1, n2);
-  cout << "Sum: " << ris;
+  double n1 = promptNumber("Insert first number:");
+  double n2 = promptNumber("Insert second number:");
+
+  double ris = sumNumber(n1, n2);
+  cout << "Sum: " << ris << endl;
+
+  return EXIT_SUCCESS;
 }
 
+// --- Template Function ---
 template <typename T>
 T sumNumber(T n1, T n2) {
   return n1 + n2;
 }
 
-double insertNumber(const string& msg){
+// --- User Validate Input ---
+double promptNumber(const string& msg){
   string insert;
-  bool isCorrect = true;
+  bool valid = true;
+
   do {
-    if(!isCorrect) cout << ERROR_COLOR << "[Insert a valid input] " << NORMAL_COLOR;
+    if(!valid)
+      cout << COLOR_ERROR << "[Insert a valid input] " << COLOR_RESET;
+
     cout << msg;
     getline(cin, insert);
-  } while(!(isCorrect = checkStringIsNumber(insert)));
+
+    valid = isValidNumber(insert);
+  } while(!valid);
 
   return stod(insert);
 }
 
-bool checkStringIsNumber(string in){
-  if(in.empty()) return false;
-  if(in.size() > MAX_DIGIT) return false;
-  for (size_t i = 0; i < in.size(); ++i){
-    if ((in[i] < ZERO || in[i] > NINE)){
-      if (i == 0 && in[i] == MINUS) continue;
+// --- Validate Numeric String
+bool isValidNumber(const string& in){
+  if(in.empty())
+    return false;
+  if(in.size() > MAX_DIGITS)
+    return false;
+
+  for (int i = 0; i < in.size(); ++i){
+    if ((in[i] < ASCII_ZERO || in[i] > ASCII_NINE)){
+      if (i == 0 && in[i] == ASCII_MINUS)
+        continue;
       return false;
     }
   }
+
   return true;
 }
