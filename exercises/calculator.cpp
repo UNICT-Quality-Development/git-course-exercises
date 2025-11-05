@@ -16,13 +16,13 @@
 
 using namespace std;
 
-const string ERROR_COLOR = "\033[31m";
-const string NORMAL_COLOR = "\033[0m";
+const string COLOR_ERROR = "\033[31m";
+const string COLOR_RESET = "\033[0m";
 
-const int ZERO = 48;
-const int NINE = 57;
-const int MAX_DIGIT = 10;
-const int MINUS = 45;
+const int ASCII_ZERO = 48;
+const int ASCII_NINE = 57;
+const int ASCII_MINUS = 45;
+const int MAX_DIGITS = 10;
 
 int insertNumber(string position);
 bool checkStringIsNumber(string in);
@@ -48,7 +48,7 @@ int insertNumber(string position){
   string insert;
   bool isCorrect = true;
   do {
-    if(!isCorrect) cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
+    if(!isCorrect) cout << COLOR_ERROR+("[Insert a valid input] ")+COLOR_RESET;
     cout << "Insert "<< position <<" number: ";
     getline(cin, insert);
 
@@ -59,12 +59,15 @@ int insertNumber(string position){
 }
 
 bool checkStringIsNumber(string in){
-  if(in.empty()) return false;
-  if(in.size() > MAX_DIGIT) return false;
+  if(in.empty())
+    return false;
+  if(in.size() > MAX_DIGITS)
+    return false;
 
   for(int i = 0; i < in.size(); i++)
-    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) 
-      return false;
+    if((in.at(i) < ASCII_ZERO || in.at(i) > ASCII_NINE))
+      if(in.at(i) != ASCII_MINUS)
+        return false;
 
   return true;
 }
