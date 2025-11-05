@@ -37,6 +37,7 @@
 using namespace std;
 
 const int NUM_DICES_FOR_USER = 3;
+const int NUM_TOTAL_DICE = NUM_DICES_FOR_USER * 2;
 const short int RED_WIN = 1;
 const short int BLUE_WIN = -1;
 const unsigned short int FACES_DICES = 6;
@@ -52,19 +53,23 @@ int main() {
   srand(seed);
 
   unsigned int * dices = generateDicesNumber();
-  
+
   sort(dices, dices+NUM_DICES_FOR_USER);
   sort(dices+NUM_DICES_FOR_USER, dices+(NUM_DICES_FOR_USER*2));
-  
+
   showDices(dices);
   compareValue(dices);
 
   free(dices);
+  return EXIT_SUCCESS;
 }
 
 unsigned int * generateDicesNumber(){
-  unsigned int * dices = new unsigned int;
-  for(int i = 0; i < NUM_DICES_FOR_USER*2; i++) dices[i] = rand() % FACES_DICES + 1; 
+  unsigned int* dices = new unsigned int[NUM_TOTAL_DICE];
+
+  for(int i = 0; i < NUM_TOTAL_DICE; i++)
+    dices[i] = rand() % FACES_DICES + 1;
+
   return dices;
 }
 
@@ -73,16 +78,22 @@ void compareValue(unsigned int * dices) {
 
   for(int i = NUM_DICES_FOR_USER-1; i >= 0; i--) {
     cout << endl << "N " << dices[i] << " vs " << dices[i+NUM_DICES_FOR_USER];
-    if(dices[i] > dices[i+NUM_DICES_FOR_USER]) cout << " => RED WIN";
-    else cout << " => BLUE WIN";
+
+    if(dices[i] > dices[i+NUM_DICES_FOR_USER])
+      cout << " => RED WIN";
+    else
+      cout << " => BLUE WIN";
   }
   cout << endl;
 }
 
 void showDices(unsigned int * dices){
   cout << "\nBlue dices: " << endl;
-  for(int i = NUM_DICES_FOR_USER*2-1; i >= 0; i--) {
-    if(i == 2) cout << "\n\nRed dices: " << endl;
+
+  for(int i = NUM_TOTAL_DICE-1; i >= 0; i--) {
+    if(i == 2)
+      cout << "\n\nRed dices: " << endl;
+
     cout << dices[i] << endl;
   }
 }
