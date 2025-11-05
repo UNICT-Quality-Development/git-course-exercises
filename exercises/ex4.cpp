@@ -43,10 +43,10 @@ int insertNumber(){
 
   do {
     if(!isCorrect) cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
-    
+ 
     cout << "Insert Mounth: ";
     getline(cin, insert);
-    
+
     isCorrect = checkStringIsNumber(insert);
   } while(!isCorrect);
 
@@ -54,14 +54,14 @@ int insertNumber(){
 }
 
 bool checkStringIsNumber(string in){
-  if(in.empty()) 
+  if(in.empty())
     return false;
 
   for(int i = 0; i < in.size(); i++)
-    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS) 
+    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS)
       return false;
-  
+
   if(stoi(in) > MAX_NUMBER) return false;
-  
+
   return true;
 }
