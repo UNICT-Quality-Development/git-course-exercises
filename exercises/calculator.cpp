@@ -34,8 +34,7 @@ int main(){
         exit(1);
     }
 
-    
-    cout<< endl<<
+    cout<<endl<<
     "SUM: "<< num1 + num2<< endl<<
     "Difference: " << num1 - num2<< endl<<
     "Multiplication: "<< num1 * num2 << endl;
