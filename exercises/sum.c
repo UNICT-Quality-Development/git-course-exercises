@@ -8,17 +8,30 @@
 */
 
 #include <stdio.h>
-int x;
-int y;
-int sum;
+#include <stdlib.h>
 
-int main()
-{
-printf("Inserisci il primo numero da sommare: ");
-scanf("%d", &x);
+int read(const char *prompt) {
+    int num;
+    printf("%s", prompt);
+    scanf("%d", &num);
+    return num;
+}
 
-printf("Inserisci il secondo numero da sommare: ");
-scanf("%d", &y);
+int sum(int a, int b) {
+    return a + b;
+}
 
-printf("La somma di %d e %d è %d.\n", x,y, x+y);
+void print_result(int num1, int num2, int result) {
+    printf("Sum: %d\n", result);
+}
+
+int main() {
+    int x;
+    int y;
+
+    x = read("Insert the first number: ");
+    y = read("Insert the second number: ");
+    print_result(x, y, sum(x,y));
+
+    return EXIT_SUCCESS;
 }
