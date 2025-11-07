@@ -43,7 +43,7 @@ int insertNumber(){
 
   do {
     if(!isCorrect) cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
- 
+
     cout << "Insert Mounth: ";
     getline(cin, insert);
 
