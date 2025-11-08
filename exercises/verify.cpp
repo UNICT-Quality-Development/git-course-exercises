@@ -5,14 +5,34 @@ Output example:
 Insert number 3
 The number 3 is [not] present in the array.
 */
-
 #include <iostream>
+
+#define EXIT_SUCCESS 0
+#define DIM 10
+
 using namespace std;
 
-int main()
-{
-  // placeholder
-  int N[10] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+bool findNumber (int N[], int x) {
 
-  return 0;
+  for (int i = 0; i < DIM; i++) {
+    if(x == N[i])
+      return true;
+  }
+  return false;
+
+}
+
+int main(){
+
+  int x;
+  int N[DIM] = {3, 4, 5, 1, 2, 3, 4, 9, 13, 0};
+
+  cout << "Insert a number: " << endl;
+  cin >> x;
+
+  string cond = findNumber(N, x) ? "" : "not ";
+  cout << "The number " << x << " is " << cond << "present in the array" << endl;
+
+  return EXIT_SUCCESS;
+
 }
