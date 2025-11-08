@@ -51,3 +51,11 @@ If you want to work on another `file.cpp`, go to step 2️⃣.
 ---
 
 Use git wisely.
+
+### Clean code
+
+Check [this article](https://testdriven.io/blog/clean-code-python/) to understand how to write "clean code" in python.
+
+### Contributing
+
+Feel free to improve this README with any other detail, if you do it, I'll be grateful.
