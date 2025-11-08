@@ -1,8 +1,18 @@
-/*
-  Write a program that takes as input two numbers and print the sum.
+#include <iostream>
+using namespace std;
 
-  Output:
-  Insert the first number: 1
-  Insert the second number: 2
-  Sum: 3
-*/
+int main() {
+    double numero1, numero2, somma;
+
+    cout << "Insert the first number: ";
+    cin >> numero1;
+
+    cout << "Insert the second number: ";
+    cin >> numero2;
+
+    somma = numero1 + numero2;
+
+    cout << "La somma dei due numeri è: " << somma << endl;
+
+    return 0;
+}
