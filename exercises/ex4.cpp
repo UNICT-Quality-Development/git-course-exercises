@@ -1,56 +1,62 @@
 /* Surprise me. */
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+enum Months{
+  January=1,
+  February,
+  March,
+  April,
+  May,
+  June,
+  July,
+  August,
+  September,
+  October,
+  November,
+  December
+};
+
+void printDays(int &month){
+  switch (month)
+  {
+    case January:
+    case March:
+    case May:
+    case July:
+    case August:
+    case October:
+    case December:
+      cout << "31 days" << endl;
+      break;
+
+    case April:
+    case June:
+    case September:
+    case November:
+      cout << "30 days" << endl;
+      break;
+
+    case February:
+      cout << "28-29 days" << endl;
+      break;
+
+    default:
+      cout << "Invalid Input: Must be in (1,12)" << endl;
+      break;
+  }
+}
 
 int main()
 {
   int month;
 
   /* Input month number from user */
-  printf("Enter month number(1-12): ");
-  scanf("%d", &month);
+  cout << "Enter month number (1-12)" << endl;
+  cin >> month;
 
-  switch (month)
-  {
-  case 1:
-    printf("31 days");
-    break;
-  case 2:
-    printf("28/29 days");
-    break;
-  case 3:
-    printf("31 days");
-    break;
-  case 4:
-    printf("30 days");
-    break;
-  case 5:
-    printf("31 days");
-    break;
-  case 6:
-    printf("30 days");
-    break;
-  case 7:
-    printf("31 days");
-    break;
-  case 8:
-    printf("31 days");
-    break;
-  case 9:
-    printf("30 days");
-    break;
-  case 10:
-    printf("31 days");
-    break;
-  case 11:
-    printf("30 days");
-    break;
-  case 12:
-    printf("31 days");
-    break;
-  default:
-    printf("Invalid input! Please enter month number between 1-12");
-  }
+  printDays(month);
 
   return 0;
 }
