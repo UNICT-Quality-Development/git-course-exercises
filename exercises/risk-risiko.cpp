@@ -27,3 +27,101 @@
   M 3 vs 3 => blue win
   O 2 vs 1 => red win
 */
+
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+void checkWinner(int a,int d);
+
+class Player {
+  public:
+  Player() : N(0),M(0),O(0) {}
+  void roll();
+  protected:
+  virtual void print() {};
+  friend void checkWinner(int a,int d);
+  int O;
+  int M;
+  int N;
+};
+
+class Attack;
+class Defense;
+void battle(Attack a,Defense d);
+
+class Attack : public Player {
+  public:
+  friend void battle(Attack a, Defense d);
+  Attack() : Player() {}
+  private:
+  void print();
+};
+
+class Defense : public Player {
+  public:
+  friend void battle(Attack a, Defense d);
+  Defense() : Player() {}
+  private:
+  void print();
+};
+
+int main() {
+  srand(time(NULL));
+  Attack red;
+  Defense blue;
+  red.roll();
+  blue.roll();
+  battle(red,blue);
+  return 0;
+}
+
+void battle(Attack a,Defense d) {
+  cout  <<"  R    B"<<endl;
+  cout  << "N " << a.N << " vs " << d.N << " => ";
+  checkWinner(a.N,d.N);
+  cout  << endl;
+
+  cout  << "M "<< a.M << " vs " << d.M << " => ";
+  checkWinner(a.M,d.M);
+  cout  <<endl;
+
+  cout  << "O "<<a.O<< " vs " <<d.O<< " => ";
+  checkWinner(a.O,d.O);
+  cout  <<endl;
+}
+
+void Player::roll() {
+  int a[3];
+  for (int i = 0; i<3;i++) {
+    a[i] = rand()%6 +1;
+  }
+
+  for (int i = 1; i < 3; i++) {
+    int key = a[i];
+    int j = i-1;
+    while (j >= 0 && key < a[j]) {
+      a[j + 1] = a[j];
+      j--;
+    }
+    a[j + 1] = key;
+  }
+  N = a[2];
+  M = a[1];
+  O = a[0];
+  print();
+}
+
+void checkWinner(int a,int d) {
+  cout  << ((d >= a) ? "blue" : "red") << " win" << endl;
+}
+
+void Attack::print() {
+  cout  << "Red dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
+}
+
+void Defense::print() {
+  cout  << "Blue dices:\n" << N << " (N)\n" << M << " (M)\n" << O << " (O)\n" <<endl;
+}
