@@ -3,12 +3,12 @@
 ### 1️⃣ How to start
 
 Fork this repository and clone your fork into your machine using:
-```
+```bash
 git clone git@github.com:USERNAME/git-course-exercises.git
 ```
 
 enter to your project directory using:
-```
+```bash
 cd git-course-exercises
 ```
 
@@ -17,7 +17,7 @@ cd git-course-exercises
 ### 2️⃣ How to make a branch
 
 To create a new `branch` from the main repository and work on a specific exercise (ex. `file.cpp`) you can use the following commands:
-```
+```bash
 git checkout main
 
 git checkout -b new-branch-name
@@ -28,7 +28,7 @@ git checkout -b new-branch-name
 ### 3️⃣ How to make a commit
 
 From this step you can edit your `file.cpp` and make some commits using:
-```
+```bash
 git add exercises/file.cpp
 
 git commit -m 'feat: description'
@@ -40,7 +40,7 @@ Use the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) w
 ### 4️⃣ How to make a PR
 
 Push the commits into GitHub using:
-```
+```bash
 git push -u origin new-branch-name
 ```
 
