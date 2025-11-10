@@ -14,32 +14,32 @@ int main()
 
     switch (week) {
 
-      case 1: 
-        cout << "Monday" << endl;
+      case 1:
+        cout << "Monday";
         break;
       case 2:
-        cout << "Tuesday" << endl;
+        cout << "Tuesday";
         break;
-      case 3: 
-        cout << "Tuesday" << endl;
+      case 3:
+        cout << "Tuesday";
         break;
       case 4:
-        cout << "Thursday" << endl;
+        cout << "Thursday";
         break;
-      case 5: 
-        cout << "Friday" << endl;
+      case 5:
+        cout << "Friday";
         break;
       case 6:
-        cout << "Saturday" << endl;
+        cout << "Saturday";
         break;
-      case 7: 
-        cout << "Sunday" << endl;
+      case 7:
+        cout << "Sunday";
         break;
       default:
-        cout << "----------------------------\nInvalid input, please retry!" << endl;
+        cout << "----------------------------\nInvalid input, please retry!";
 
     }
-
+    cout << endl;
   } while(week > 7 || week < 1);
 
   return 0;
