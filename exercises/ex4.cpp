@@ -1,56 +1,67 @@
 /* Surprise me. */
 
-#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <map>
 
-int main()
-{
-  int month;
+using namespace std;
 
-  /* Input month number from user */
-  printf("Enter month number(1-12): ");
-  scanf("%d", &month);
+const int ZERO = 48;
+const int NINE = 57;
+const int MAX_NUMBER = 10;
+const int MINUS = 45;
 
-  switch (month)
-  {
-  case 1:
-    printf("31 days");
-    break;
-  case 2:
-    printf("28/29 days");
-    break;
-  case 3:
-    printf("31 days");
-    break;
-  case 4:
-    printf("30 days");
-    break;
-  case 5:
-    printf("31 days");
-    break;
-  case 6:
-    printf("30 days");
-    break;
-  case 7:
-    printf("31 days");
-    break;
-  case 8:
-    printf("31 days");
-    break;
-  case 9:
-    printf("30 days");
-    break;
-  case 10:
-    printf("31 days");
-    break;
-  case 11:
-    printf("30 days");
-    break;
-  case 12:
-    printf("31 days");
-    break;
-  default:
-    printf("Invalid input! Please enter month number between 1-12");
-  }
+const string ERROR_COLOR = "\033[31m";
+const string NORMAL_COLOR = "\033[0m";
 
+int insertNumber();
+bool checkStringIsNumber(string in);
+
+int main(){
+  int month = insertNumber();
+  map<int, string> calendary = {
+    {1, "31"},
+    {2, "28/29"},
+    {3, "31"},
+    {4, "30"},
+    {5, "31"},
+    {6, "30"},
+    {7, "31"},
+    {8, "31"},
+    {9, "30"},
+    {10, "31"},
+    {11, "30"},
+    {12, "31"},
+  };
+  cout << calendary[month] << " days";
   return 0;
+}
+
+int insertNumber(){
+  string insert;
+  bool isCorrect = true;
+
+  do {
+    if(!isCorrect) cout << ERROR_COLOR+("[Insert a valid input] ")+NORMAL_COLOR;
+
+    cout << "Insert Mounth: ";
+    getline(cin, insert);
+
+    isCorrect = checkStringIsNumber(insert);
+  } while(!isCorrect);
+
+  return stoi(insert);
+}
+
+bool checkStringIsNumber(string in){
+  if(in.empty())
+    return false;
+
+  for(int i = 0; i < in.size(); i++)
+    if((in.at(i) < ZERO || in.at(i) > NINE) && in.at(i) != MINUS)
+      return false;
+
+  if(stoi(in) > MAX_NUMBER) return false;
+
+  return true;
 }
