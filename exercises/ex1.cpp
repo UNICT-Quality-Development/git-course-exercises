@@ -1,48 +1,46 @@
-/* Improve this program using a switch-case. */
+/* Improve this program using a switch-case.git  */
 
 #include <iostream>
 using namespace std;
 
-int main()
-{
-  int week;
+void printWeekDay(const unsigned short& week){
+    switch (week) {
+  case 1:
+    cout << "Monday";
+    break;
+  case 2:
+    cout << "Tuesday";
+    break;
+  case 3:
+    cout << "Wednesday";
+    break;
+  case 4:
+    cout << "Thursday";
+    break;
+  case 5:
+    cout << "Friday";
+    break;
+  case 6:
+    cout << "Saturday";
+    break;
+  case 7:
+    cout << "Sunday";
+    break;
+  default:
+    cout << "Invalid input! Please enter week number between 1-7.";
+    break;
+  }
+  cout << endl;
+}
+
+int main(){
+  unsigned short week;
 
   /* Input week number from user */
   cout << "Enter week number(1-7): " << endl;
   cin >> week;
 
-  if (week == 1)
-  {
-    cout << "Monday" << endl;
-  }
-  else if (week == 2)
-  {
-    cout << "Tuesday" << endl;
-  }
-  else if (week == 3)
-  {
-    cout << "Wednesday" << endl;
-  }
-  else if (week == 4)
-  {
-    cout << "Thursday" << endl;
-  }
-  else if (week == 5)
-  {
-    cout << "Friday" << endl;
-  }
-  else if (week == 6)
-  {
-    cout << "Saturday" << endl;
-  }
-  else if (week == 7)
-  {
-    cout << "Sunday" << endl;
-  }
-  else
-  {
-    cout << "Invalid input! Please enter week number between 1-7." << endl;
-  }
+  printWeekDay(week);
 
   return 0;
 }
