@@ -1,5 +1,8 @@
 # git-course-exercises
 
+Ciao ragazzi :D sono qui grazie ad un commit
+
+
 ### 1️⃣ How to start
 
 Fork this repository and clone your fork into your machine using:
