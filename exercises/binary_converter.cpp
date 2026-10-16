@@ -9,16 +9,9 @@
 #include <iostream>
 using namespace std;
 
-void dec_to_bin(int n) {
- if(n == 0) return;
-
- dec_to_bin(n/2);
- if(n == 1 || n % 2 != 0) {
-  cout << "1";
- }
- else {
-  cout << "0";
- }
+void decToBin(int n) {
+ if(n > 1)  decToBin(n/2);
+ cout << n % 2;
 }
 
 int main() {
@@ -27,5 +20,7 @@ int main() {
  cin >> n;
 
  cout << "The binary number is: ";
- dec_to_bin(n/2); cout << endl;
+ decToBin(n);
+ cout << endl;
+ return EXIT_SUCCESS;
 }
