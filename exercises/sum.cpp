@@ -7,7 +7,7 @@
   Sum: 3
 */
 #include <iostream>
-using namespace std;  
+using namespace std;
 
 int main() {
 int num1, num2, sum;
