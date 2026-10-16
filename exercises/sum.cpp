@@ -11,18 +11,27 @@
 
 using namespace std;
 
+void lettura(int numero){
+  cin >> numero;
+}
+
+template <typename T> T sum(T x, T y){
+  return x + y;
+}
+
+
+
 int main()
 {
-  int first_number;
-  int second_number;
+  int firstNumber, secondNumber;
 
   cout << "Insert the first number: ";
-  cin >> first_number;
+  lettura(firstNumber);
 
   cout << "Insert the second number: ";
-  cin >> second_number;
+  lettura(secondNumber);
 
-  cout << "Sum: " << first_number + second_number << endl;
+  cout << "Sum: " << sum(firstNumber, secondNumber) << endl;
 
-  return 0;
+  return EXIT_SUCCESS;
 }
