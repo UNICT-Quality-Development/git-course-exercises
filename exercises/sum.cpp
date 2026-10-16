@@ -6,3 +6,26 @@
   Insert the second number: 2
   Sum: 3
 */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int num1, num2, sum;
+    input_display(num1, num2);
+    cout << "Sum: " << sum(num1, num2) << endl;
+    return EXIT_SUCCESS;
+}
+
+void input_display(int num1, int num2) {
+    cout << "Insert the first number: ";
+    cin >> num1;
+    cout << "Insert the second number: ";
+    cin >> num2;
+    return;
+}
+
+int sum(int num1, int num2) {
+    return num1 + num2;
+}
