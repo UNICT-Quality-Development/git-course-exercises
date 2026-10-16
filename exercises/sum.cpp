@@ -7,23 +7,26 @@
   Sum: 3
 */
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 template <typename T>
 T sum(T a, T b) {
-    return a + b;
+  return a + b;
+}
+
+double input(string msg) {
+  double number = 0;
+  cout << msg;
+  cin >> number;
+  return number;
 }
 
 int main(){
     
-  double a, b = 0;
-
-  cout << "Insert the first number: " ;
-  cin >> a;
-
-  cout << "Insert the second number: " ;
-  cin >> b;
+  double a = input("Insert the first number: ");
+  double b = input("Insert the second number: ");
 
   cout << "Sum: " << sum(a,b) << endl;
 
