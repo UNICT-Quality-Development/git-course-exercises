@@ -5,7 +5,6 @@
   Insert first number: 8
   The binary number is: 1000
 */
-
 #include <iostream>
 using namespace std;
 
@@ -16,7 +15,7 @@ int main() {
 
     if (number < 0) {
         cout << "Please enter a non-negative integer." << endl;
-        return 1;
+        return EXIT_FAILURE;
     }
 
     string binary = "";
@@ -30,5 +29,5 @@ int main() {
     }
 
     cout << "The binary number is: " << binary << endl;
-    return 0;
+    return EXIT_SUCCESS;
 }
