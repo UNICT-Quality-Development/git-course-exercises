@@ -7,19 +7,21 @@
   Sum: 3
 */
 
-
 #include <iostream>
 using namespace std;
 
-int main(){
-    int first_number;
-    int second_number;
-    int sum;
-    cout<<"Insert the first number: ";
-    cin>>first_number;
-    cout<<"Insert the second number: ";
-    cin>>second_number;
-    sum = first_number + second_number;
-    cout<<"Sum: "<<sum<<"\n";
+template <typename T> T sumFunc() {
+    T firstNumber, secondNumber;
+    cout << "Insert the first number: ";
+    cin >> firstNumber;
+    cout << "Insert the second number: ";
+    cin >> secondNumber;
+    cout << "Sum: " << firstNumber + secondNumber;
+    return firstNumber + secondNumber;
+} 
+
+
+int main() {
+    sumFunc<double>();
     return 0;
 }
