@@ -22,5 +22,5 @@ int main() {
   cout << "Insert the second number: ";
   num2 = obtain_number("2");
   cout << "Sum: " << num1 + num2 << endl;
-  return 0;
+  return EXIT_SUCCESS;
 }
