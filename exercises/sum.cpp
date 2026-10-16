@@ -8,18 +8,23 @@
 */
 
 #include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int sum(int a, int b) {
+    return a + b;
+}
 
 int main() {
     int num1, num2;
 
-    std::cout << "Insert the first number: ";
-    std::cin >> num1;
+    cout << "Insert the first number: ";
+    cin >> num1;
 
-    std::cout << "Insert the second number: ";
-    std::cin >> num2;
+    cout << "Insert the second number: ";
+    cin >> num2;
 
-    int sum = num1 + num2;
-    std::cout << "Sum: " << sum << std::endl;
+    cout << "Sum: " << sum(num1, num2) << endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
