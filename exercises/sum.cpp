@@ -14,9 +14,8 @@ using namespace std;
 int main() {
     int num1, num2, sum;
     input_display(num1, num2);
-    sum = num1 + num2;
-    cout << "Sum: " << sum << endl;
-    return 0;
+    cout << "Sum: " << sum(num1, num2) << endl;
+    return EXIT_SUCCESS;
 }
 
 void input_display(int num1, int num2) {
@@ -25,4 +24,8 @@ void input_display(int num1, int num2) {
     cout << "Insert the second number: ";
     cin >> num2;
     return;
+}
+
+int sum(int num1, int num2) {
+    return num1 + num2;
 }
