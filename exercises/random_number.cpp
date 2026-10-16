@@ -5,14 +5,13 @@
   The random number is: 4
 */
 
-
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+using namespace std;
 
 int main() {
-    std::srand(std::time(0));
-    int random_number = std::rand() % 10 + 1;
-    std::cout << "The random number is: " << random_number << std::endl;
-    return 0;
+    srand(time(0));
+    cout << "The random number is: " << rand() % 10 + 1 << endl;
+    return EXIT_SUCCESS;
 }
