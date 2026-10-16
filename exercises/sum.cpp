@@ -18,7 +18,7 @@ template <typename T> T sumFunc() {
     cin >> secondNumber;
     cout << "Sum: " << firstNumber + secondNumber;
     return firstNumber + secondNumber;
-} 
+}
 
 
 int main() {
