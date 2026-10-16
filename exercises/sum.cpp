@@ -10,12 +10,12 @@
 #include <iostream>
 using namespace std;
 
-int main(){
+int main() {
   int a, b;
-  cout << "Inserire primo numero: ";
+  cout << "Insert the first number: ";
   cin >> a;
-  cout << "Inserire secondo numero: ";
+  cout << "Insert the second number: ";
   cin >> b;
-  cout << "La somma e': " << a+b;
-  return 0;
+  cout << "Sum: " << a + b;
+  return EXIT_SUCCESS;
 }
