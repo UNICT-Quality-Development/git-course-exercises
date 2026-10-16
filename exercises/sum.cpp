@@ -1,19 +1,17 @@
 #include <iostream>
-using namespace std;
 
 int main() {
-  int num1, num2, sum;
-  
-  cout << "Insert the first number: ";
-  cin >> num1;
-  
-  cout << "Insert the second number: ";
-  cin >> num2;
-  
+  int num1, num2, sum = 0;
+
+  std::cout << "Enter number 1: ";
+  std::cin >> num1;
+  std::cout << "Enter number 2: ";
+  std::cin >> num2;
+
   sum = num1 + num2;
 
-  cout << "Sum: " << sum << endl;
-  
+  std::cout << "Sum: " << sum << std::endl;
+
   return EXIT_SUCCESS;
 
 }
