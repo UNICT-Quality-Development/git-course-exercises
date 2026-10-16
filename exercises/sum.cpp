@@ -9,10 +9,18 @@
 #include <iostream>
 using namespace std;
 
+int obtain_number(const string& position) {
+  cout << "Insert the " << position << " number: ";
+  int number;
+  cin >> number;
+  return number;
+}
 int main() {
   int num1, num2;
   cout << "Insert the first number: ";
-  cin >> num1;
+  num1 = obtain_number("1");
   cout << "Insert the second number: ";
-  cin >> num2;
+  num2 = obtain_number("2");
+  cout << "Sum: " << num1 + num2 << endl;
+  return 0;
 }
