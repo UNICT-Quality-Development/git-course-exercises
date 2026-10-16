@@ -19,10 +19,10 @@ int main() {
     int num1, num2;
 
     cout << "Insert the first number: ";
-    cin >> num1;
+    if (!(cin >> num1)) return 1;
 
     cout << "Insert the second number: ";
-    cin >> num2;
+    if (!(cin >> num2)) return 1;
 
     cout << "Sum: " << sum(num1, num2) << endl;
 
