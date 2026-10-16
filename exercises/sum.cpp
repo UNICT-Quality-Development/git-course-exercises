@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void lettura(int numero){
+void lettura(int &numero){
   cin >> numero;
 }
 
@@ -31,7 +31,7 @@ int main()
   cout << "Insert the second number: ";
   lettura(secondNumber);
 
-  cout << "Sum: " << sum(firstNumber, secondNumber) << endl;
+  cout << "Sum: " << sum<int>(firstNumber, secondNumber) << endl;
 
   return EXIT_SUCCESS;
 }
