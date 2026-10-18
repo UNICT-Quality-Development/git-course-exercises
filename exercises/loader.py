@@ -6,18 +6,22 @@ class loader:
         self.velocity = 1
     def load(self):
         for i in range (self.seconds):
+            symb = ""
             if i%4 == 0:
-                print("|", end="\r")
+                symb = "|"
             elif i%4 == 1:
-                print("/", end="\r")
+                symb = "/"
             elif i%4 == 2:
-                print("-", end="\r")
+                symb = "-"
             elif i%4 == 3:
-                print("\\", end="\r")
+                symb = "\\"
+            print(f"Loading {symb}", end="\r")            
             time.sleep(1/self.velocity)
             
-            if self.velocity > self.seconds/2:
-                self.velocity = self.seconds/2
+            if self.velocity == self.seconds/100:
+                #print(f"\n{self.velocity}")
+                self.velocity = 0
+
                 
             self.velocity+=1
 if __name__ == "__main__":
