@@ -23,7 +23,7 @@ double input(string msg) {
   return number;
 }
 
-int main(){  
+int main(){
   double a = input("Insert the first number: ");
   double b = input("Insert the second number: ");
 
