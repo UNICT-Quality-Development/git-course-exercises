@@ -19,7 +19,6 @@ int func_random (mt19937 generator) {
 }
 
 int main() {
-  
   random_device seed;
   mt19937 generator(seed());
 
